@@ -1,12 +1,15 @@
 class Point {
-  constructor(id, name, city, lat, long) {
+  constructor(id, name, city, lat, long, email, phone) {
     this.id = "P" + id;
     this.name = name;
     this.city = city;
     this.lat = lat;
     this.long = long;
     this.availableTests = ["R"];
-    function createAppointment() {}
+    this.contacts = {
+      email: email,
+      phone: phone,
+    };
   }
 }
 
@@ -24,7 +27,15 @@ class User {
   }
 }
 
-let array = [194374, "Unilabs", "Porto", "xxxxx", "xxxxx"];
+let array = [
+  194374,
+  "Unilabs",
+  "Porto",
+  "xxxxx",
+  "xxxxx",
+  "sadas@gmail.com",
+  "93123122",
+];
 const newPoint = new Point(...array);
 
 let array2 = [
@@ -40,4 +51,4 @@ let array2 = [
 ];
 const newUser = new User(...array2);
 
-console.log(newUser.dob);
+console.log(newPoint);
