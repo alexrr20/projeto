@@ -464,10 +464,7 @@ nav {
   align-items: center;
 }
 
-nav {
-  width: 100%;
-}
-
+nav,
 #logo {
   width: 100%;
 }
@@ -475,6 +472,6 @@ nav {
 .link {
   text-decoration: none;
   color: #272a3d;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.5em;
 }
