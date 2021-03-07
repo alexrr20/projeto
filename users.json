@@ -1,0 +1,24 @@
+[
+  {
+    "id": "U502987",
+    "username": "alexrr10",
+    "password": "alexrr10",
+    "name": "Alexandre Bessa Gonçalves",
+    "gender": "masculino",
+    "dob": "2000-03-09",
+    "city": "Arouca",
+    "email": "alex11.bessa@gmail.com",
+    "phone": "9118324300"
+  },
+  {
+    "id": "U690223",
+    "username": "lucky",
+    "password": "lucky",
+    "name": "Lucky",
+    "gender": "masculino",
+    "dob": "2012-04-25",
+    "city": "Arouca",
+    "email": "lucky@gmail.com",
+    "phone": "923131221"
+  }
+]

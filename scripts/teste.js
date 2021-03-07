@@ -1,18 +1,3 @@
-class Point {
-  constructor(id, name, city, lat, long, email, phone) {
-    this.id = "P" + id;
-    this.name = name;
-    this.city = city;
-    this.lat = lat;
-    this.long = long;
-    this.availableTests = ["R"];
-    this.contacts = {
-      email: email,
-      phone: phone,
-    };
-  }
-}
-
 class User {
   constructor(id, username, password, name, gender, dob, city, email, phone) {
     this.id = "U" + id;
@@ -24,31 +9,55 @@ class User {
     this.city = city;
     this.email = email;
     this.phone = phone;
+    this.login = function () {
+      this.loggedIn = true;
+    };
+    this.logout = function () {
+      delete this.loggedIn;
+    };
   }
 }
 
-let array = [
-  194374,
-  "Unilabs",
-  "Porto",
-  "xxxxx",
-  "xxxxx",
-  "sadas@gmail.com",
-  "93123122",
-];
-const newPoint = new Point(...array);
+function getId() {
+  return Math.floor(100000 + Math.random() * 900000);
+}
 
-let array2 = [
-  312313,
-  "alexrr10",
-  "alexrr10",
-  "Alexandre",
-  "Male",
-  "9 March 2000",
-  "Arouca",
-  "alex11.bessa@gmail.com",
-  "911824300",
-];
-const newUser = new User(...array2);
+function addUser() {
+  let id = getId();
+  let username = document.getElementById("nuInput").value;
+  let password = document.getElementById("pInput").value;
+  let cpassword = document.getElementById("cpInput").value;
+  let name = document.getElementById("ncInput").value;
+  let gender = document.getElementById("gInput").value;
+  let dob = document.getElementById("dnInput").value;
+  let city = document.getElementById("lInput").value;
+  let email = document.getElementById("eInput").value;
+  let phone = document.getElementById("ntInput").value;
+  let lsUser = localStorage.getItem("users");
+  lsUser = JSON.parse(lsUser);
 
-console.log(newPoint);
+  let userArray = [];
+  userArray.push(id, username, password, name, gender, dob, city, email, phone);
+
+  if (password != cpassword) {
+    return false;
+  }
+
+  const newUser = new User(...userArray);
+
+  if (lsUser === null) {
+    lsUser = {
+      [newUser.id]: newUser,
+    };
+    localStorage.setItem("users", JSON.stringify(lsUser));
+  } else {
+    lsUser = {
+      ...lsUser,
+      [newUser.id]: newUser,
+    };
+    localStorage.setItem("users", JSON.stringify(lsUser));
+  }
+}
+
+let btnNewAccount = document.getElementById("submit");
+btnNewAccount.addEventListener("click", addUser);
