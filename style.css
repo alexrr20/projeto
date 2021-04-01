@@ -1,0 +1,31 @@
+:root {
+  --azul: #1e1c41;
+  --verde: #1abf5b;
+  --bege: #fff0d2;
+  --bg: var(--bege);
+  --fg: var(--azul);
+}
+
+body {
+  background-color: var(--bg);
+  transition: background 200ms ease-in-out, color 700ms ease-in-out;
+}
+
+#logo {
+  width: 170px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fg);
+}
+
+.light {
+  --bg: var(--bege);
+  --fg: var(--azul);
+}
+
+.dark {
+  --bg: var(--azul);
+  --fg: var(--bege);
+}
