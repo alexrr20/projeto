@@ -83,15 +83,22 @@
       });
 
       btnSubmit[2].addEventListener("click", function(){
-        let lsUser = JSON.parse(localStorage.getItem("User"))
-        let inpUser = document.querySelectorAll(".inpUser")
-        let userLogin = inpUser[0].value
+        if(!(localStorage.getItem("Logged In"))){
+          let lsUser = JSON.parse(localStorage.getItem("User"))
+          let inpUser = document.querySelectorAll(".inpUser")
+          let userLogin = inpUser[0].value
 
-        for(let i = 0; i<lsUser.length;i++){
-          if(lsUser[i].username == userLogin){
-            localStorage.setItem("Logged In",JSON.stringify(lsUser[i]))
+          for(let i = 0; i<lsUser.length;i++){
+            if(lsUser[i].username == userLogin){
+              localStorage.setItem("Logged In",JSON.stringify(lsUser[i]))
+            }
           }
+          btnSubmit[2].textContent = "LOGOUT"
+        } else {
+          localStorage.removeItem("Logged In")
+          btnSubmit[2].textContent = "LOGIN"
         }
+
       })
       
     </script>
