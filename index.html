@@ -9,7 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
   </head>
   <body class="light">
-    <img src="logo2.svg" alt="logo" id="logo">
+    <header>
+      <img src="logo.svg" alt="logo" id="logo">
+      <nav>
+        
+      </nav>
+    </header>
     <input type="text" class="inpUser"></input>
     <button type="submit" class="btnSubmit">Add Account</button>
     <button type="submit" class="btnSubmit">Add All Accounts</button>
@@ -26,46 +31,64 @@
       let imgLogo = document.querySelectorAll("#logo")
       let body = document.body;
 
+
       btnDark[0].addEventListener("click",()=>{
         body.classList.replace("light","dark")
-        imgLogo[0].src="logo.svg"
+        imgLogo[0].src="logo2.svg"
       })
 
       btnLight[0].addEventListener("click",()=>{
         body.classList.replace("dark","light")
-        imgLogo[0].src="logo2.svg"
+        imgLogo[0].src="logo.svg"
       })
 
-      let User = function(username){
-        let obj = {}
-        obj.username = username;
-        obj.hello = function(){
+      class User{
+        constructor(username){
+          this.username = username;
+        }
+         
+        hello = function(){
           console.log("Hello")
         }
-
-        return obj
       }
 
       btnSubmit[0].addEventListener("click", function () {
         let lsUser = JSON.parse(localStorage.getItem("User"));
         let inpUser = document.querySelectorAll(".inpUser")
         let userAdd = inpUser[0].value
-        let newUser = User(userAdd)
+        let newUser = new User(userAdd)
+
+        console.log(newUser)
         
         if (!lsUser){
           let arrayAdd = [newUser]
+          console.log(arrayAdd)
           localStorage.setItem("User", JSON.stringify(arrayAdd))
         } else {
           lsUser.push(newUser)
+          console.log(JSON.stringify(lsUser))
           localStorage.setItem("User", JSON.stringify(lsUser))
         }
       })
 
       btnRemove[0].addEventListener("click", function () {
         let lsUser = JSON.parse(localStorage.getItem("User"));
+        
+        if (!(lsUser)){
+          alert("Esta conta não existe! Tente de novo")
+            return
+        }
+
         let inpUser = document.querySelectorAll(".inpUser");
         let userRemove = inpUser[0].value;
-        let indexRemove = lsUser.indexOf(userRemove)
+        let indexRemove = function() {
+          for(let i =0;i<lsUser.length;i++){
+            if(lsUser[i].username == userRemove){
+              return i;
+            }
+          }
+          return -1;
+        }
 
         lsUser.splice(indexRemove, 1);
         if (!(userRemove.length) || indexRemove == -1){

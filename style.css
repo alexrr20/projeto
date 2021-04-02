@@ -7,12 +7,23 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-color: var(--bg);
+  color: var(--fg);
   transition: background 200ms ease-in-out, color 700ms ease-in-out;
 }
 
+header {
+  display: flex;
+  justify-content: center;
+  height: 67px;
+  background-color: var(--verde);
+}
+
 #logo {
-  width: 170px;
+  padding-top: 3px;
+  width: 64px;
 }
 
 a {
@@ -28,4 +39,8 @@ a {
 .dark {
   --bg: var(--azul);
   --fg: var(--bege);
+}
+
+.dark header {
+  background-color: var(--bege);
 }
