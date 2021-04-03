@@ -1,7 +1,63 @@
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Black.woff2") format("woff2"),
+    url("AzoSans-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Light.woff2") format("woff2"),
+    url("AzoSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Bold.woff2") format("woff2"),
+    url("AzoSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Thin.woff2") format("woff2"),
+    url("AzoSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Regular.woff2") format("woff2"),
+    url("AzoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Medium.woff2") format("woff2"),
+    url("AzoSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --azul: #1e1c41;
+  --azul: #15142e;
   --verde: #1abf5b;
+  --verdeEscuro: #1ab559;
   --bege: #fff0d2;
+  --begeEscuro: #e6d8bd;
   --bg: var(--bege);
   --fg: var(--azul);
 }
@@ -12,18 +68,61 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   transition: background 200ms ease-in-out, color 700ms ease-in-out;
+  font-family: "Azo Sans", sans-serif;
 }
 
 header {
   display: flex;
-  justify-content: center;
-  height: 67px;
+  flex-direction: column;
+  align-items: center;
+  height: 115px;
   background-color: var(--verde);
 }
 
+#logoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 75px;
+}
+
 #logo {
-  padding-top: 3px;
-  width: 64px;
+  width: 75px;
+}
+
+nav {
+  background-color: var(--verdeEscuro);
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 11px 30px -6px rgba(0, 0, 0, 0.3);
+}
+
+#navList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 40%;
+}
+
+li a {
+  color: #fff0d2;
+  font-size: 14px;
+  padding: 0 13px;
+}
+
+li:first-child {
+  font-weight: 700;
+}
+
+main {
+  padding-left: 100px;
+  padding-top: 100px;
 }
 
 a {
@@ -43,4 +142,12 @@ a {
 
 .dark header {
   background-color: var(--bege);
+}
+
+.dark nav {
+  background-color: var(--begeEscuro);
+}
+
+.dark li a {
+  color: #15142e;
 }

@@ -10,19 +10,29 @@
   </head>
   <body class="light">
     <header>
-      <img src="logo.svg" alt="logo" id="logo">
+      <div id="logoContainer">
+        <img src="logo.svg" alt="logo" id="logo">
+      </div>
       <nav>
-        
+        <ul id="navList">
+          <li><a href="#">Página Inicial</a></li>
+          <li><a href="#">Pontos de Testagem</a></li>
+          <li><a href="#">Info</a></li>
+          <li><a href="#">Agendar Teste</a></li>
+          <li><a href="#"></a></li>
+          <li><button type="submit" class="btnSubmit">LOGIN</button></li>
+        </ul>
       </nav>
     </header>
-    <input type="text" class="inpUser"></input>
-    <button type="submit" class="btnSubmit">Add Account</button>
-    <button type="submit" class="btnSubmit">Add All Accounts</button>
-    <button type="reset" class="btnRemove">Remove Account</button>
-    <button type="reset" class="btnRemove">Remove All Accounts</button>
-    <button type="submit" class="btnSubmit">LOGIN</button>
-    <a id="btnLight" href="#">Light Theme</a>
-    <a id="btnDark" href="#">Dark Theme</a>
+    <main>
+      <input type="text" class="inpUser"></input>
+      <button type="submit" class="btnSubmit">Add Account</button>
+      <button type="submit" class="btnSubmit">Add All Accounts</button>
+      <button type="reset" class="btnRemove">Remove Account</button>
+      <button type="reset" class="btnRemove">Remove All Accounts</button>
+      <a id="btnLight" href="#">Light Theme</a>
+      <a id="btnDark" href="#">Dark Theme</a>
+    </main>
     <script>
       let btnSubmit = document.querySelectorAll(".btnSubmit");
       let btnRemove = document.querySelectorAll(".btnRemove");
