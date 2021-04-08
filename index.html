@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TEST TEST TEST</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <link rel="icon" href="logo3.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.1/chart.min.js"></script>
   </head>
   <body class="light">
     <header>
       <div id="logoContainer">
         <img src="logo.svg" alt="logo" id="logo">
       </div>
-      <nav>
+      <nav id="navbar">
         <ul id="navList">
           <li><a href="#">Página Inicial</a></li>
           <li><a href="#">Pontos de Testagem</a></li>
@@ -25,13 +26,56 @@
       </nav>
     </header>
     <main>
-      <input type="text" class="inpUser"></input>
-      <button type="submit" class="btnSubmit">Add Account</button>
-      <button type="submit" class="btnSubmit">Add All Accounts</button>
-      <button type="reset" class="btnRemove">Remove Account</button>
-      <button type="reset" class="btnRemove">Remove All Accounts</button>
-      <a id="btnLight" href="#">Light Theme</a>
-      <a id="btnDark" href="#">Dark Theme</a>
+      <div id="titleContainer">
+        <h1>Perguntas Frequentes</h1>
+        <h4>Que tipos de teste existem<span class="spanVerde">?</span> Quais são os requisitos para viajar<span class="spanVerde">?</span><br>Qualquer que seja a sua dúvida, provavelmente encontrará aqui a resposta.</h4>
+      </div>
+      <div id="gridContainer">
+        <div class="wrapper">
+          <h1>TEST TEST TEST</h1>
+          <div class="wrap-1">
+            <input type="radio" id="tab-1" name="tabs">
+            <label for="tab-1"><div>tab one</div><div class="cross"></div></label>
+            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia autem quasi inventore unde nobis voluptatibus illum quae rerum laudantium minima, excepturi quis maiores. Eaque quae, nam delectus explicabo, deserunt ipsum!</div>
+          </div>
+          <div class="wrap-2">
+            <input type="radio" id="tab-2" name="tabs">
+            <label for="tab-2"><div>Por que razão foi criada a Test Test Test?</div><div class="cross"></div></label>
+            <div class="content">Decidimos apostar neste projeto quando percebemos que o processo de testagem no nosso país era
+              muito pouco intuitivo. As pessoas têm vidas preenchidas, por isso esperemos que com a Test Test Test</div>
+          </div>
+          <div class="wrap-3">
+            <input type="radio" id="tab-3" name="tabs">
+            <label for="tab-3"><div>tab three</div><div class="cross"></div></label>
+            <div class="questions">
+              <div class="question-wrap">
+                <input type="radio" id="question-1" name="question">
+                <label for="question-1"><div>question one</div> <div class="cross"></div></label>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam atque, soluta doloribus distinctio saepe labore voluptates facere illum alias perferendis praesentium quia vel accusamus incidunt corporis veniam sapiente. Voluptate, quasi.
+                </div>
+              </div>
+              <div class="question-wrap">
+                <input type="radio" id="question-2" name="question">
+                <label for="question-2"><div>question two</div> <div class="cross"></div></label>
+                <div class="content">
+                  Ipsam atque, soluta doloribus distinctio saepe labore voluptates facere illum alias perferendis praesentium quia vel accusamus incidunt corporis veniam sapiente. Voluptate, quasi.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <input type="text" class="inpUser"></input>
+        <button type="submit" class="btnSubmit">Add Account</button>
+        <button type="submit" class="btnSubmit">Add All Accounts</button>
+        <button type="reset" class="btnRemove">Remove Account</button>
+        <button type="reset" class="btnRemove">Remove All Accounts</button>
+        <a id="btnLight" href="#">Light Theme</a>
+        <a id="btnDark" href="#">Dark Theme</a>
+        <div class="canvasContainer"><canvas id="myChart"></canvas></div>
+      </div>
     </main>
     <script>
       let btnSubmit = document.querySelectorAll(".btnSubmit");
@@ -133,7 +177,42 @@
         }
 
       })
-      
+
+      let myChart = document.getElementById("myChart").getContext("2d")
+
+      Chart.defaults.font.family = "Azo Sans";
+      Chart.defaults.font.size = 16;
+
+      let barChart = new Chart(myChart,{
+        type:"bar",
+        data:{
+          labels:["Teste1", "Teste2", "Teste3"],
+          datasets:[{
+            label:"Population",
+            data:[3,5,1]
+          }]
+        },
+        options:{
+        }
+      });
+
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {scrollFunc()};
+
+      // Get the navbar
+      var navbar = document.getElementsByTagName("nav")[0];
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function scrollFunc() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      } 
     </script>
   </body>
 </html>
