@@ -1,0 +1,266 @@
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Black.woff2") format("woff2"),
+    url("AzoSans-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Light.woff2") format("woff2"),
+    url("AzoSans-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Bold.woff2") format("woff2"),
+    url("AzoSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Thin.woff2") format("woff2"),
+    url("AzoSans-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Regular.woff2") format("woff2"),
+    url("AzoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Azo Sans";
+  src: url("AzoSans-Medium.woff2") format("woff2"),
+    url("AzoSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --azul: #15142e;
+  --azulClaro: #484758;
+  --verde: #1abf5b;
+  --verdeEscuro: #1ab559;
+  --bege: #fff0d2;
+  --begeEscuro: #e6d8bd;
+  --bg: var(--bege);
+  --fg: var(--azul);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background 200ms ease-in-out, color 700ms ease-in-out;
+  font-family: "Azo Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 120px;
+  position: relative;
+  z-index: 1;
+}
+
+#logoContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 75px;
+  padding-top: 15px;
+}
+
+#logo {
+  width: 75px;
+}
+
+nav {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#navList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 90%;
+}
+
+li a {
+  color: #fff0d2;
+  font-size: 14px;
+  padding: 0 13px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--fg);
+}
+
+li:first-child {
+  font-weight: 700;
+}
+
+#videoBG {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+}
+
+#gradient {
+  content: "";
+  position: absolute;
+  background: linear-gradient(180deg, #000000af 0%, #22222200 100%);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #videoBG {
+    width: auto;
+    height: 100%;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 99;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 1000px;
+  margin-bottom: 100px;
+}
+
+h2 {
+  color: var(--bege);
+  font-weight: 700;
+  font-size: 55px;
+  margin: 0;
+}
+
+h4 {
+  color: var(--bege);
+  margin: 5px 0 30px 0;
+  font-weight: 100;
+  font-size: 23px;
+}
+
+#search-form {
+  display: grid;
+  grid-template-columns: 40% 25% 25% 5%;
+  grid-gap: 1%;
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+.search-item-container {
+  position: relative;
+}
+
+.search-item {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--azul);
+  font-family: "Azo Sans", sans-serif;
+  font-size: 14px;
+  background-color: var(--bege);
+  outline: none;
+  border: 0;
+  padding-left: 52px;
+  padding-top: 3px;
+}
+
+.icon {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.sic-4 {
+  background-color: var(--verde);
+  width: 100%;
+  cursor: pointer;
+}
+
+.sic-4 svg {
+  top: 5px;
+  left: 5px;
+  height: 80%;
+  width: 80%;
+}
+
+.dropdown {
+  background-color: var(--bege);
+}
+
+#linkMap {
+  height: 230px;
+  background-color: var(--bege);
+  position: absolute;
+}
+
+@media screen and (max-width: 1000px) {
+  #search-form {
+    grid-template-columns: auto auto 8%;
+    grid-template-rows: 45px 45px;
+    row-gap: 6px;
+  }
+
+  .sic-1 {
+    grid-column: 1/4;
+  }
+
+  .icon {
+    top: 10px;
+    left: 14px;
+  }
+}
