@@ -27,6 +27,11 @@
           <li><button type="submit" class="btnSubmit">LOGIN</button></li>
         </ul>
       </nav>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </header>
     <main>
       <div id="main-container">
@@ -57,7 +62,64 @@
               placeholder="Posto de Testagem"
             />
             <div class="dropdown hidden">
-              <a href="#" id="linkMap">Ver Mapa</a>
+              <div class="list-container">
+                <ul>
+                  <li>
+                    <h5>Hospital CUF Porto</h5>
+                    <h6>Estrada da Circunvalação</h6>
+                  </li>
+                  <li>
+                    <h5>Instituto CUF Porto</h5>
+                    <h6>Rua Fonte das Sete Bicas</h6>
+                  </li>
+                  <li>
+                    <h5>Parque da Cidade</h5>
+                    <h6>Estrada Interior da Circunvalação</h6>
+                  </li>
+                  <li>
+                    <h5>Hospital da Luz - Arrábida</h5>
+                    <h6>Praceta de Henrique Moreira</h6>
+                  </li>
+                  <li>
+                    <h5>Hospital da Luz - Clínica do Porto</h5>
+                    <h6>Rua Beato Inácio de Azevedo</h6>
+                  </li>
+                  <li>
+                    <h5>Unilabs Arouca</h5>
+                    <h6>Rua Dr. Ângelo Miranda</h6>
+                  </li>
+                  <li>
+                    <h5>Unilabs Espinho</h5>
+                    <h6>Rua 15</h6>
+                  </li>
+                  <li>
+                    <h5>Unilabs Porto</h5>
+                    <h6>Rua do Campo Alegre</h6>
+                  </li>
+                </ul>
+              </div>
+              <div id="linkMap-Container">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon-map icon-tabler icon-tabler-map"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#1ab559"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <polyline
+                    points="3 7 9 4 15 7 21 4 21 17 15 20 9 17 3 20 3 7"
+                  />
+                  <line x1="9" y1="4" x2="9" y2="17" />
+                  <line x1="15" y1="7" x2="15" y2="20" />
+                </svg>
+                <a href="#" id="linkMap">Ver Mapa</a>
+              </div>
             </div>
           </div>
           <div class="search-item-container sic-2">
@@ -119,5 +181,6 @@
         </div>
       </div>
     </main>
+    <script src="js/index.js"></script>
   </body>
 </html>
