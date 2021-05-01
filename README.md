@@ -24,7 +24,3 @@ Devem os grupos de trabalho selecionar o tema pretendido no dia **11 de Março**
 | Apresentação Intermédia II | 5/6 de Maio         | ^^                           |
 | Entrega Final              | 15 de Junho         | 50%                          |
 | Apresentação Final         | 16 de Junho         | ^^                           |
-
-#TODO:
-
-- Mudar imagem de fundo inicial (retirar verde)
