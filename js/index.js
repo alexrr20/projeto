@@ -145,3 +145,21 @@ if (body.classList.contains("inicioBody")) {
     dropdown[0].classList.replace("shown", "hidden");
   });
 }
+
+if (body.classList.contains("loginBody")) {
+  let burger = document.querySelectorAll(".burger")[0];
+  let nav = document.querySelectorAll("#navbar")[0];
+
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
+    if (nav.classList.contains("nav-active")) {
+      for (child in burger.children) {
+        burger.children[child].style.backgroundColor = "white";
+      }
+    } else {
+      for (child in burger.children) {
+        burger.children[child].style.backgroundColor = "#1e1c41";
+      }
+    }
+  });
+}
