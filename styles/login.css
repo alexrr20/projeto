@@ -183,7 +183,6 @@ a {
 .btnSubmit {
   box-sizing: border-box;
   background-color: var(--verde);
-
   height: 30px;
   border: 0;
   border-radius: 4px;
