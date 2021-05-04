@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ / TEST TEST TEST</title>
     <link rel="stylesheet" href="styles/faq.css" />
-    <link rel="icon" href="logo3.png" />
+    <link rel="icon" href="media/logo3.png" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.1/chart.min.js"></script>
   </head>
   <body class="light faqBody">
     <header>
       <div id="logoContainer">
-        <img src="logo.svg" alt="logo" id="logo" />
+        <img src="media/logo.svg" alt="logo" id="logo" />
       </div>
       <nav id="navbar">
         <ul id="navList">
@@ -64,7 +64,12 @@
               <path d="M20 12h-13l3 -3m0 6l-3 -3" /></svg
             ><button type="submit" class="btnSubmit">Login</button>
           </li>
-          <li class="btnTheme" style="padding: 0">
+          <li
+            class="btnTheme"
+            style="padding: 0"
+            onmousedown="mouseDown()"
+            onmouseup="mouseUp()"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-bulb icon3"
@@ -78,7 +83,10 @@
               stroke-linejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7" />
+              <path
+                class="lightSVG"
+                d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"
+              />
               <path
                 d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
               />
@@ -97,7 +105,7 @@
       <div class="container1">
         <div class="mainHeader">
           <h1>Perguntas<br />Frequentes</h1>
-          <h3>
+          <h3 class="mainHeaderH3">
             "<span class="spanHeader">Que tipos de teste existem?</span>" "<span
               class="spanHeader"
               >Quais são os requisitos para viajar?</span
@@ -134,7 +142,77 @@
           </div>
           <div class="mainSearchContainer">
             <h5>Categorias mais vistas</h5>
+            <div class="mainSearchContent">
+              <div class="mainSearchItem">
+                <h6>TEST TEST TEST</h6>
+                <p>Dúvidas relacionadas com a nossa empresa</p>
+                <a href="#">Vêr Categoria</a>
+              </div>
+              <div class="mainSearchItem">
+                <h6>COVID-19</h6>
+                <p>Dúvidas relacionadas com a COVID-19</p>
+                <a href="#">Vêr Categoria</a>
+              </div>
+              <div class="mainSearchItem">
+                <h6>Testagem</h6>
+                <p>Dúvidas relacionadas com a testagem à COVID-19</p>
+                <a href="#resultHeader">Vêr Categoria</a>
+              </div>
+              <div class="mainSearchItem">
+                <h6>Viagens</h6>
+                <p>Dúvidas relacionadas com viagens em tempos de pandemia</p>
+                <a href="#">Vêr Categoria</a>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="container2">
+        <div id="resultHeader">
+          <h2>Testagem</h2>
+          <h3 class="resultHeaderH3">
+            Dúvidas relacionadas com a testagem à COVID-19
+          </h3>
+        </div>
+        <div id="resultContent">
+          <div class="resultItem">
+            <button class="accordion">Que tipos de teste existem?</button>
+            <div class="panel">
+              <p>teste</p>
+            </div>
+          </div>
+          <div class="border"></div>
+          <div class="resultItem">
+            <button class="accordion">Qual é o preço de cada teste?</button>
+            <div class="panel">
+              <p>
+                Dependendo do teste, o preço pode ser mais elevado ou mais
+                acessível, mas mesmo dentro do mesmo tipo, os preços podem
+                variar bastante. Mesmo assim, é possível ter uma noção do preço
+                habitual.
+              </p>
+              <ul>
+                <li><span>Teste Rápido -</span> entre 5 a 10 euros</li>
+                <li><span>Teste de Anticorpos -</span> entre 50 a 100 euros</li>
+                <li><span>Teste PCR -</span> entre 50 a 100 euros</li>
+              </ul>
+            </div>
+          </div>
+          <div class="border"></div>
+          <div class="resultItem">
+            <button class="accordion">É possível o teste estar errado?</button>
+          </div>
+          <div class="border"></div>
+          <div class="resultItem">
+            <button class="accordion">Os testes são dolorosos?</button>
+          </div>
+          <div class="border"></div>
+          <div class="resultItem">
+            <button class="accordion">
+              Quanto tempo é necessário para saber o resultado?
+            </button>
+          </div>
+          <div class="border"></div>
         </div>
       </div>
     </main>

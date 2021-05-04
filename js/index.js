@@ -16,22 +16,45 @@ burger.addEventListener("click", () => {
   }
 });
 
+document.querySelectorAll(".btnSubmit")[1].onclick = function () {
+  location.href = "login.html";
+};
+
 if (body.classList.contains("faqBody")) {
   let btnSubmit = document.querySelectorAll(".btnSubmit");
   let btnRemove = document.querySelectorAll(".btnRemove");
-  let btnLight = document.querySelectorAll("#btnLight");
-  let btnDark = document.querySelectorAll("#btnDark");
+  let btnTheme = document.querySelectorAll(".btnTheme");
   let imgLogo = document.querySelectorAll("#logo");
+  let acc = document.getElementsByClassName("accordion");
 
-  btnDark[0].addEventListener("click", () => {
-    body.classList.replace("light", "dark");
-    imgLogo[0].src = "logo2.svg";
+  btnTheme[0].addEventListener("click", () => {
+    body.classList.toggle("dark");
+    imgLogo[0].src = "media/logo.svg";
   });
 
-  btnLight[0].addEventListener("click", () => {
-    body.classList.replace("dark", "light");
-    imgLogo[0].src = "logo.svg";
-  });
+  /* EVENT LISTENER onmousedown E onmouseup NÃO FUNCIONAVAM*/
+  function mouseDown() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "hidden";
+  }
+
+  function mouseUp() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "visible";
+  }
+
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
 
   class User {
     constructor(username) {
@@ -139,6 +162,7 @@ if (body.classList.contains("inicioBody")) {
   let input = document.querySelectorAll(".search-item");
   let burger = document.querySelectorAll(".burger")[0];
   let nav = document.querySelectorAll("#navbar")[0];
+  let btnTheme = document.querySelectorAll(".btnTheme");
 
   burger.addEventListener("click", () => {
     nav.classList.toggle("nav-active");
@@ -160,7 +184,40 @@ if (body.classList.contains("inicioBody")) {
   input[0].addEventListener("focusout", () => {
     dropdown[0].classList.replace("shown", "hidden");
   });
+
+  btnTheme[0].addEventListener("click", () => {
+    body.classList.toggle("dark");
+    imgLogo[0].src = "logo.svg";
+  });
+
+  /* EVENT LISTENER onmousedown E onmouseup NÃO FUNCIONAVAM*/
+  function mouseDown() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "hidden";
+  }
+
+  function mouseUp() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "visible";
+  }
 }
 
 if (body.classList.contains("loginBody")) {
+  let btnTheme = document.querySelectorAll(".btnTheme");
+
+  btnTheme[0].addEventListener("click", () => {
+    body.classList.toggle("dark");
+    imgLogo[0].src = "logo.svg";
+  });
+
+  /* EVENT LISTENER onmousedown E onmouseup NÃO FUNCIONAVAM*/
+  function mouseDown() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "hidden";
+  }
+
+  function mouseUp() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "visible";
+  }
 }
