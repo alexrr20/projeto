@@ -255,6 +255,7 @@ form {
 .ipContainer {
   display: grid;
   grid-template-columns: 43% 43%;
+  max-width: 870px;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 20px 50px;
   margin-bottom: 50px;
@@ -307,11 +308,11 @@ input {
   width: 100%;
   background-color: var(--bege);
   font-family: "Azo Sans", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   border: 0;
   margin: 10px 0;
-  padding-top: 5px;
-  padding-left: 50px;
+  padding-top: 2px;
+  padding-left: 60px;
   font-size: 18px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
 }

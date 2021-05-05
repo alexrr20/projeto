@@ -105,13 +105,41 @@
         <h1>Iniciar Sessão</h1>
         <div class="form">
           <form action="">
-            <input type="text" placeholder="Utilizador" id="inpUtilizador" />
-            <input type="password" placeholder="Palavra-Passe" id="inpPw" />
+            <input
+              type="text"
+              placeholder="Utilizador"
+              id="inpUtilizador"
+              class="input"
+            />
+            <input
+              type="password"
+              placeholder="Palavra-Passe"
+              id="inpPw"
+              class="input"
+            />
             <a href="#" id="forgotpw">Esqueceu-se da palavra-passe?</a>
-            <div id="keepSessionContainer">
-              <div id="chkKeepSession"></div>
-              <p>Manter a sessão iniciada</p>
-            </div>
+            <label class="checkbox">
+              <span class="checkbox__input">
+                <input type="checkbox" name="checked" checked />
+                <span class="checkbox__control"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-check"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    stroke-width="3"
+                    stroke="#1e1c41"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M5 12l5 5l10 -10" /></svg
+                ></span>
+              </span>
+              <span class="radio__label">Manter a sessão iniciada</span>
+            </label>
             <button type="submit" id="btnLogin">ENTRAR</button>
             <p id="linkNewAccount">
               <span><a href="signup.html">Clique aqui</a></span

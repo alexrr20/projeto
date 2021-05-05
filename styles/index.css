@@ -327,7 +327,7 @@ h4 {
   outline: none;
   border: 0;
   padding-left: 52px;
-  padding-top: 3px;
+  padding-top: 6px;
 }
 
 .sic-4 {
@@ -370,6 +370,20 @@ h4 {
   z-index: 990;
   transition: height 0.27s;
 }
+.dropdown2 {
+  margin-top: 6px;
+  width: 100%;
+  height: 230px;
+  background-color: var(--bege);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bege);
+  position: relative;
+  z-index: 990;
+  transition: height 0.27s;
+}
 
 .hidden {
   height: 0%;
@@ -380,10 +394,17 @@ h4 {
   padding: 10px 0;
   display: flex;
   justify-content: center;
+  border-top: 1px solid rgba(72, 71, 88, 0.2);
+  width: 50%;
+  margin-bottom: 2px;
+}
+
+#linkMap {
+  margin-top: 3px;
 }
 
 .icon-map {
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 ul {
@@ -409,6 +430,20 @@ ul {
   cursor: pointer;
 }
 
+.dropdown2 .list-container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.dropdown2 .list-container ul li h5 {
+  font-weight: 500;
+}
+
+.dropdown2 .list-container ul li h5 span {
+  color: #80808a;
+  font-weight: 400;
+}
+
 h6,
 h5 {
   margin: 0;
@@ -421,8 +456,17 @@ h5 {
 
 h6 {
   font-weight: 400;
-  font-size: 13px;
+  font-size: 11px;
   color: #80808a;
+}
+
+#linkMap-Container2 {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2px;
+  width: 100%;
+  font-size: 13px;
 }
 
 @media screen and (max-width: 1000px) {
