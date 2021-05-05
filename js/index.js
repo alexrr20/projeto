@@ -1,7 +1,26 @@
 let body = document.getElementsByTagName("body")[0];
-
 let burger = document.querySelectorAll(".burger")[0];
 let nav = document.querySelectorAll("#navbar")[0];
+class User {
+  constructor(nome, dob, nif, localidade, genero, email, telefone, passe) {
+    this.nome = nome;
+    this.dob = dob;
+    this.nif = nif;
+    this.localidade = localidade;
+    this.genero = genero;
+    this.email = email;
+    this.telefone = telefone;
+    this.passe = passe;
+  }
+
+  get nome() {
+    return nome;
+  }
+
+  set nome(value) {
+    this.nome = value;
+  }
+}
 
 burger.addEventListener("click", () => {
   nav.classList.toggle("nav-active");
@@ -20,6 +39,7 @@ document.querySelectorAll(".btnSubmit")[1].onclick = function () {
   location.href = "login.html";
 };
 
+// PÁGINA FAQ
 if (body.classList.contains("faqBody")) {
   let btnSubmit = document.querySelectorAll(".btnSubmit");
   let btnRemove = document.querySelectorAll(".btnRemove");
@@ -54,16 +74,6 @@ if (body.classList.contains("faqBody")) {
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
     });
-  }
-
-  class User {
-    constructor(username) {
-      this.username = username;
-    }
-
-    hello = function () {
-      console.log("Hello");
-    };
   }
 
   btnSubmit[0].addEventListener("click", function () {
@@ -157,6 +167,7 @@ if (body.classList.contains("faqBody")) {
   });
 }
 
+// PÁGINA INICIO
 if (body.classList.contains("inicioBody")) {
   let dropdown = document.querySelectorAll(".dropdown");
   let input = document.querySelectorAll(".search-item");
@@ -202,6 +213,7 @@ if (body.classList.contains("inicioBody")) {
   }
 }
 
+// PÁGINA LOGIN
 if (body.classList.contains("loginBody")) {
   let btnTheme = document.querySelectorAll(".btnTheme");
 
@@ -219,5 +231,75 @@ if (body.classList.contains("loginBody")) {
   function mouseUp() {
     let lightSVG = document.querySelectorAll(".lightSVG");
     lightSVG[0].style.visibility = "visible";
+  }
+}
+
+if (body.classList.contains("signupBody")) {
+  let btnTheme = document.querySelectorAll(".btnTheme");
+  let btnCriar = document.querySelectorAll("#btnCriar")[0];
+  let inpUser = document.querySelectorAll(".inpUser");
+
+  btnTheme[0].addEventListener("click", () => {
+    body.classList.toggle("dark");
+    imgLogo[0].src = "media/logo.svg";
+  });
+
+  /* EVENT LISTENER onmousedown E onmouseup NÃO FUNCIONAVAM*/
+  function mouseDown() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "hidden";
+  }
+
+  function mouseUp() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "visible";
+  }
+
+  btnCriar.addEventListener("click", () => {
+    if (inpUser[7].value != inpUser[8].value) {
+      alert("As palavras-passe inseridas não são iguais");
+      return;
+    }
+
+    const newUser = new User(
+      inpUser[0].value,
+      inpUser[1].value,
+      inpUser[2].value,
+      inpUser[3].value,
+      inpUser[4].value,
+      inpUser[5].value,
+      inpUser[6].value,
+      inpUser[7].value
+    );
+
+    // Vamos buscar o conteúdo da localstorage e guardámos numa array
+    let lsUser = JSON.parse(localStorage.getItem("Users"));
+    let users = [];
+    if (lsUser) {
+      for (let x = 0; x < lsUser.length; x++) {
+        users.push(lsUser[x]);
+      }
+    }
+
+    // Guarda-se o objeto newUser na array users e manda-se para a localstorage
+    users.push(newUser);
+    localStorage.setItem("Users", JSON.stringify(users));
+  });
+
+  // Funções para limitar o número de caracteres no input NIF
+  function maxLengthCheck(object) {
+    if (object.value.length > object.max.length)
+      object.value = object.value.slice(0, object.max.length);
+  }
+
+  function isNumeric(evt) {
+    var theEvent = evt || window.event;
+    var key = theEvent.keyCode || theEvent.which;
+    key = String.fromCharCode(key);
+    var regex = /[0-9]|\./;
+    if (!regex.test(key)) {
+      theEvent.returnValue = false;
+      if (theEvent.preventDefault) theEvent.preventDefault();
+    }
   }
 }
