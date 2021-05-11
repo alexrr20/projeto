@@ -267,6 +267,7 @@ if (body.classList.contains("loginBody")) {
   }
 }
 
+// PÁGINA SIGNUP
 if (body.classList.contains("signupBody")) {
   let btnTheme = document.querySelectorAll(".btnTheme");
   let btnCriar = document.querySelectorAll("#btnCriar")[0];
@@ -334,5 +335,44 @@ if (body.classList.contains("signupBody")) {
       theEvent.returnValue = false;
       if (theEvent.preventDefault) theEvent.preventDefault();
     }
+  }
+}
+
+if (body.classList.contains("postosBody")) {
+  function rangeSlide(value) {
+    document.getElementById(
+      "rangeValue"
+    ).innerHTML = `<span class="bold">${value}</span> Km`;
+  }
+
+  let filtroToggle = document.querySelectorAll("#filtroToggle")[0];
+
+  filtroToggle.addEventListener("click", () => {
+    document.querySelectorAll(".filtros1")[0].classList.toggle("hidden");
+    if (
+      document.querySelectorAll(".filtros1")[0].classList.contains("hidden")
+    ) {
+      filtroToggle.innerHTML = "Mostrar";
+    } else {
+      filtroToggle.innerHTML = "Esconder";
+    }
+  });
+
+  let btnTheme = document.querySelectorAll(".btnTheme");
+
+  btnTheme[0].addEventListener("click", () => {
+    body.classList.toggle("dark");
+    imgLogo[0].src = "logo.svg";
+  });
+
+  /* EVENT LISTENER onmousedown E onmouseup NÃO FUNCIONAVAM*/
+  function mouseDown() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "hidden";
+  }
+
+  function mouseUp() {
+    let lightSVG = document.querySelectorAll(".lightSVG");
+    lightSVG[0].style.visibility = "visible";
   }
 }

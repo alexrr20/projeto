@@ -330,6 +330,11 @@ h4 {
   padding-top: 6px;
 }
 
+.si-2,
+.si-3 {
+  cursor: pointer;
+}
+
 .sic-4 {
   background-color: var(--verde);
   width: 100%;
