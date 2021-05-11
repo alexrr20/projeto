@@ -348,12 +348,12 @@ if (body.classList.contains("postosBody")) {
   let filtroToggle = document.querySelectorAll("#filtroToggle")[0];
 
   filtroToggle.addEventListener("click", () => {
-    document.querySelectorAll(".filtros1")[0].classList.toggle("hidden");
-    if (
-      document.querySelectorAll(".filtros1")[0].classList.contains("hidden")
-    ) {
+    let panel = document.querySelectorAll(".filtros1")[0];
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
       filtroToggle.innerHTML = "Mostrar";
     } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
       filtroToggle.innerHTML = "Esconder";
     }
   });

@@ -118,7 +118,19 @@
                 Pode pesquisar por <span>posto</span>,
                 <span>tipo de teste</span> ou <span>morada</span>.
               </h4>
-              <input type="text" id="inpPosto" />
+              <div class="svgInpContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin icon4" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1e1c41" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <circle cx="12" cy="11" r="3" />
+                  <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                <input
+               
+                  type="text"
+                  placeholder="Posto de Testagem"
+                  id="inpPosto"
+                />
+              </div>
             </div>
             <div class="asideInsideContainer2">
               <div class="filtrosHeader">
@@ -138,32 +150,62 @@
                 <div class="filtros1-3">
                   <h4>Ordenar por</h4>
                   <div class="svgInpContainer">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="icon icon-tabler icon-tabler-key icon4"
-                      width="28"
-                      height="28"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="#1e1c41"
-                      fill="none"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <circle cx="8" cy="15" r="4" />
-                      <line x1="10.85" y1="12.15" x2="19" y2="4" />
-                      <line x1="18" y1="5" x2="20" y2="7" />
-                      <line x1="15" y1="8" x2="17" y2="10" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sort-descending icon4" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1e1c41" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <line x1="4" y1="6" x2="13" y2="6" />
+                      <line x1="4" y1="12" x2="11" y2="12" />
+                      <line x1="4" y1="18" x2="11" y2="18" />
+                      <polyline points="15 15 18 18 21 15" />
+                      <line x1="18" y1="6" x2="18" y2="18" />
                     </svg>
                     <input
                       readonly
                       type="text"
                       placeholder="Ordem Alfabética"
-                      id="inpPw"
-                      class="inpUser"
+                      id="inpOrdem"
                     />
                   </div>
+                </div>
+              </div>
+            </div>
+            <div class="asideInsideContainer3">
+              <h3>Resultados</h3>
+              <div class="results">
+                <div class="list-container">
+                  <ul class="dropdownList">
+                    <li>
+                      <h5>Hospital CUF Porto</h5>
+                      <h6>Estrada da Circunvalação</h6>
+                    </li>
+                    <li>
+                      <h5>Instituto CUF Porto</h5>
+                      <h6>Rua Fonte das Sete Bicas</h6>
+                    </li>
+                    <li>
+                      <h5>Parque da Cidade</h5>
+                      <h6>Estrada Interior da Circunvalação</h6>
+                    </li>
+                    <li>
+                      <h5>Hospital da Luz - Arrábida</h5>
+                      <h6>Praceta de Henrique Moreira</h6>
+                    </li>
+                    <li>
+                      <h5>Hospital da Luz - Clínica do Porto</h5>
+                      <h6>Rua Beato Inácio de Azevedo</h6>
+                    </li>
+                    <li>
+                      <h5>Unilabs Arouca</h5>
+                      <h6>Rua Dr. Ângelo Miranda</h6>
+                    </li>
+                    <li>
+                      <h5>Unilabs Espinho</h5>
+                      <h6>Rua 15</h6>
+                    </li>
+                    <li>
+                      <h5>Unilabs Porto</h5>
+                      <h6>Rua do Campo Alegre</h6>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
