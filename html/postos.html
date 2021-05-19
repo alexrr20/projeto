@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/postos.css" />
+    <link rel="icon" href="../img/logo3.png" />
+    <title>Postos de Testagem / Test Test Test</title>
+  </head>
+  <body class="light postosBody">
+    <header>
+      <div id="logoContainer">
+        <img src="../img/logo.svg" alt="logo" id="logo" />
+      </div>
+      <nav id="navbar">
+        <ul id="navList">
+          <li><a href="index.html">Página Inicial</a></li>
+          <li><a href="#">Pontos de Testagem</a></li>
+          <li><a href="#">Tipos de Testes</a></li>
+          <li><a href="faq.html">Perguntas Frequentes</a></li>
+          <li class="divider" style="padding: 0px"></li>
+          <li style="padding-right: 5px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-calendar-plus icon1"
+              width="21"
+              height="21"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#fff0d2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="4" y="5" width="16" height="16" rx="2" />
+              <line x1="16" y1="3" x2="16" y2="7" />
+              <line x1="8" y1="3" x2="8" y2="7" />
+              <line x1="4" y1="11" x2="20" y2="11" />
+              <line x1="10" y1="16" x2="14" y2="16" />
+              <line x1="12" y1="14" x2="12" y2="18" />
+            </svg>
+            <button type="submit" class="btnSubmit">Agendar Teste</button>
+          </li>
+          <li style="padding-left: 5px; padding-right: 10px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-login icon2"
+              width="21"
+              height="21"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#fff0d2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+              />
+              <path d="M20 12h-13l3 -3m0 6l-3 -3" /></svg
+            ><button type="submit" class="btnSubmit">Login</button>
+          </li>
+          <li
+            class="btnTheme"
+            style="padding: 0"
+            onmousedown="mouseDown()"
+            onmouseup="mouseUp()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-bulb icon3"
+              width="21"
+              height="21"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#1E1C41"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                class="lightSVG"
+                d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"
+              />
+              <path
+                d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+              />
+              <line x1="9.7" y1="17" x2="14.3" y2="17" />
+            </svg>
+          </li>
+        </ul>
+      </nav>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </header>
+    <main>
+      <div id="container1">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48059.70956663139!2d-8.65705895426968!3d41.162202239488636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465abc4e153c1%3A0xa648d95640b114bc!2sPorto!5e0!3m2!1spt-PT!2spt!4v1620310475553!5m2!1spt-PT!2spt"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+        <aside>
+          <div class="asideContainer">
+            <div class="asideInsideContainer1">
+              <h2>Pesquisa</h2>
+              <h4>
+                Pode pesquisar por <span>posto</span>,
+                <span>tipo de teste</span> ou <span>morada</span>.
+              </h4>
+              <div class="svgInpContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin icon4" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1e1c41" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <circle cx="12" cy="11" r="3" />
+                  <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Posto de Testagem"
+                  id="inpPosto"
+                  onkeyup="search()"
+                />
+              </div>
+            </div>
+            <div class="asideInsideContainer2">
+              <div class="filtrosHeader">
+                <h3>Filtros</h3>
+                <p id="filtroToggle">Mostrar</p>
+              </div>
+              <div class="filtros1 hidden">
+                <div class="filtros1-1">
+                  <h4>Distância</h4>
+                  <span id="rangeValue"><span class="bold">0</span> Km</span>
+                </div>
+                <input class="range slider" type="range" name="" value="0" min="0" max="50" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+                <div class="filtros1-2">
+                  <span><span class="bold">0</span> Km</span>
+                  <span><span class="bold">50</span> Km</span>
+                </div>
+                <div class="filtros1-3">
+                  <h4>Ordenar por</h4>
+                  <div class="svgInpContainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sort-descending icon4" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1e1c41" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                      <line x1="4" y1="6" x2="13" y2="6" />
+                      <line x1="4" y1="12" x2="11" y2="12" />
+                      <line x1="4" y1="18" x2="11" y2="18" />
+                      <polyline points="15 15 18 18 21 15" />
+                      <line x1="18" y1="6" x2="18" y2="18" />
+                    </svg>
+                    <input
+                      readonly
+                      type="text"
+                      placeholder="Ordem Alfabética"
+                      id="inpOrdem"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="asideInsideContainer3">
+              <h3>Resultados</h3>
+              <div class="results">
+                <div class="list-container">
+                  <ul class="dropdownList">
+                    <li>
+                      <a href="#container2">
+                      <div class="info">
+                        <h5>Hospital CUF Porto</h5>
+                        <h6>Estrada da Circunvalação</h6>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                      </svg>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#container2">
+                      <div class="info">
+                        <h5>Instituto CUF Porto</h5>
+                        <h6>Rua Fonte das Sete Bicas</h6>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                      </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#container2">
+                      <div class="info">                      
+                        <h5>Parque da Cidade</h5>
+                        <h6>Estrada Interior da Circunvalação</h6>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                      </svg>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#container2">
+                      <div class="info">
+                        <h5>Hospital da Luz - Arrábida</h5>
+                        <h6>Praceta de Henrique Moreira</h6></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                      </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#container2">
+                      <div class="info">
+                        <h5>Hospital da Luz - Clínica do Porto</h5>
+                        <h6>Rua Beato Inácio de Azevedo</h6>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                      </svg>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#container2">
+                      <div class="info">
+                        <h5>Unilabs Arouca</h5>
+                        <h6>Rua Dr. Ângelo Miranda</h6>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                      </svg>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#container2">
+                      <div class="info">
+                        <h5>Unilabs Espinho</h5>
+                        <h6>Rua 15</h6>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                      </svg>
+                    </a>
+                    </li>
+                    <li>
+                      <a href="#container2">
+                      <div class="info">
+                        <h5>Unilabs Porto</h5>
+                        <h6>Rua do Campo Alegre</h6>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <line x1="18" y1="6" x2="18" y2="6.01" />
+                        <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+                        <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+                        <line x1="9" y1="4" x2="9" y2="17" />
+                        <line x1="15" y1="15" x2="15" y2="20" />
+                      </svg>
+                    </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div id="container2">
+        <div class="container2-1">
+          <h3>Nome</h3>
+          <h2>${posto.nome}</h2>
+          <div class="postoInfoContainer">
+            <div class="postoInfo">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin iconInfo" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#2CCE6C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="11" r="3" />
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+              </svg>
+              <div class="postoInfoText">
+                <h4>Morada</h4>
+                <p>${posto.morada}</p>
+              </div>
+            </div>
+            <div class="postoInfo">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone iconInfo" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.8" stroke="#2CCE6C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+              </svg>
+              <div class="postoInfoText">
+                <h4>Contacto</h4>
+                <p>${posto.contacto}</p>
+              </div>
+            </div>
+            <div class="postoInfo">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock iconInfo" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#2CCE6C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="12" r="9" />
+                <polyline points="12 7 12 12 15 15" />
+              </svg>
+              <div class="postoInfoText">
+                <h4>Horário</h4>
+                <p>S${posto.horario}</p>
+              </div>
+            </div>
+            <div class="postoInfo">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world iconInfo" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2CCE6C" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="12" cy="12" r="9" />
+                <line x1="3.6" y1="9" x2="20.4" y2="9" />
+                <line x1="3.6" y1="15" x2="20.4" y2="15" />
+                <path d="M11.5 3a17 17 0 0 0 0 18" />
+                <path d="M12.5 3a17 17 0 0 1 0 18" />
+              </svg>
+              <div class="postoInfoText">
+                <h4>Website</h4>
+                <p>${posto.website}</p>
+              </div>
+            </div>
+          </div>
+          <div class="container2-1bottom">
+            <p id="pTestes">Este posto realiza testes <span class="bold">Serológicos</span>, <span class="bold">Antigénicos</span> e <span class="bold">de Anticorpos</span>.</p>
+            <div class="btnContainer">
+              <div class="wrapper">
+                <a class="cta" href="#">
+                  <span>Marcar teste aqui</span>
+                  <span>
+                    <svg
+                      width="30px"
+                      height="30px"
+                      viewBox="0 0 66 43"
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <g
+                        id="arrow"
+                        stroke="none"
+                        stroke-width="1"
+                        fill="none"
+                        fill-rule="evenodd"
+                      >
+                        <path
+                          class="one"
+                          d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                          fill="#fff0d2"
+                        ></path>
+                        <path
+                          class="two"
+                          d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                          fill="#fff0d2"
+                        ></path>
+                        <path
+                          class="three"
+                          d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                          fill="#fff0d2"
+                        ></path>
+                      </g>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <button id="btnGosto" class="btnSecondary"><p>Gosto</p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-up" width="35" height="35" viewBox="0 0 24 24" stroke-width="2.3" stroke="#2cce6c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 11v8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
+              </svg></button>
+            </div>
+          </div>
+        </div>
+        <div class="container2-2">
+          <div class="avaliacoesContainer">
+            <h3>Avaliações</h3>
+            <div>
+              <form class="rating">
+                <label>
+                  <input type="radio" name="stars" value="1" />
+                  <span class="icon">★</span>
+                </label>
+                <label>
+                  <input type="radio" name="stars" value="2" />
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                </label>
+                <label>
+                  <input type="radio" name="stars" value="3" />
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>   
+                </label>
+                <label>
+                  <input type="radio" name="stars" value="4" />
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                </label>
+                <label>
+                  <input type="radio" name="stars" value="5" checked/>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                </label>
+              </form>
+              <p><span class="bold">4/5</span> Estrelas</p>
+              <p><span class="bold">134</span> Gostos</p>
+            </div>
+          </div>
+          <div class="comentariosContainer">
+            <div class="comentario">
+              <img src="../img/user.svg" alt="user" class="comentarioIcon">
+              <p class="comentarioUser"><span class="bold">João Silva</span> diz</p>
+              <p class="comentarioTexto"><span class="bold">"</span> Funcionários simpáticos e atendimento rápido <span class="bold">"</span></p>
+            </div>
+            <div class="comentario">
+              <img src="../img/user.svg" alt="user" class="comentarioIcon">
+              <p class="comentarioUser"><span class="bold">João Silva</span> diz</p>
+              <p class="comentarioTexto"><span class="bold">"</span> Funcionários simpáticos e atendimento rápido <span class="bold">"</span></p>
+            </div>
+            <div class="comentario">
+              <img src="../img/user.svg" alt="user" class="comentarioIcon">
+              <p class="comentarioUser"><span class="bold">João Silva</span> diz</p>
+              <p class="comentarioTexto"><span class="bold">"</span> Funcionários simpáticos e atendimento rápido <span class="bold">"</span></p>
+            </div>
+          </div>
+          <div class="addComentarioContainer">
+            <h4>Deixar Avaliação</h4>
+            <form class="addComentario">
+              <div class="rating">
+                <label>
+                  <input type="radio" name="stars" value="1" />
+                  <span class="icon">★</span>
+                </label>
+                <label>
+                  <input type="radio" name="stars" value="2" />
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                </label>
+                <label>
+                  <input type="radio" name="stars" value="3" />
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>   
+                </label>
+                <label>
+                  <input type="radio" name="stars" value="4" />
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                </label>
+                <label>
+                  <input type="radio" name="stars" value="5" />
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                  <span class="icon">★</span>
+                </label>
+              </div>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#1e1c41" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M12 20l-3 -3h-2a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-2l-3 3" />
+                  <line x1="8" y1="9" x2="16" y2="9" />
+                  <line x1="8" y1="13" x2="14" y2="13" />
+                </svg>
+              <input type="text" placeholder="Comentário" id="addComentario">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
