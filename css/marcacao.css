@@ -1,0 +1,416 @@
+@font-face {
+	font-family: "Azo Sans";
+	src: url("AzoSans-Black.woff2") format("woff2"),
+		url("AzoSans-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Azo Sans";
+	src: url("AzoSans-Light.woff2") format("woff2"),
+		url("AzoSans-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Azo Sans";
+	src: url("AzoSans-Bold.woff2") format("woff2"),
+		url("AzoSans-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Azo Sans";
+	src: url("AzoSans-Thin.woff2") format("woff2"),
+		url("AzoSans-Thin.woff") format("woff");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Azo Sans";
+	src: url("AzoSans-Regular.woff2") format("woff2"),
+		url("AzoSans-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Azo Sans";
+	src: url("AzoSans-Medium.woff2") format("woff2"),
+		url("AzoSans-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	--azul: #1e1c41;
+	--azulClaro: #484758;
+	--verde: #00d06f;
+	--verdeEscuro: #1ab559;
+	--bege: #fff0d2;
+	--begeEscuro: #e6d8bd;
+	--bg: var(--verde);
+	--fg: var(--bege);
+}
+
+::selection {
+	background-color: var(--azul);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("../media/bg.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: var(--bg);
+	color: var(--fg);
+	transition: background 200ms ease-in-out, color 700ms ease-in-out;
+	font-family: "Azo Sans", sans-serif;
+}
+
+header {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 9vh;
+	background-color: var(--azul);
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
+	position: relative;
+	z-index: 1000;
+}
+
+#logoContainer {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#logo {
+	width: 69px;
+}
+
+nav {
+	background-color: var(--azul);
+	height: 40px;
+	display: flex;
+	padding-left: 10px;
+}
+
+#navList {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	list-style-type: none;
+	width: 100%;
+}
+
+.navBtn {
+	padding: 10px;
+}
+
+#navList li {
+	padding: 0 30px;
+	position: relative;
+}
+
+.icon1 {
+	position: absolute;
+	top: 4px;
+	right: 100px;
+}
+
+.icon2 {
+	position: absolute;
+	top: 4px;
+	right: 57px;
+}
+
+.btnTheme {
+	border-radius: 3px;
+	position: relative;
+	width: 25px;
+	height: 25px;
+	background-color: var(--bege);
+	cursor: pointer;
+}
+
+.icon3 {
+	position: absolute;
+	top: 2px;
+	left: 1.5px;
+}
+
+li a {
+	color: #fff0d2;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: var(--fg);
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+	transition: all 0.3s;
+	will-change: width;
+}
+nav ul li a:hover {
+	color: #fff7e8;
+}
+
+/* stroke */
+nav ul li a {
+	position: relative;
+}
+nav ul li a:after {
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0%;
+	content: ".";
+	color: transparent;
+	background: var(--verde);
+	height: 3px;
+}
+nav ul li a:hover:after {
+	width: 100%;
+}
+
+.divider {
+	background-color: var(--bege);
+	width: 2px;
+	height: 70%;
+}
+
+.burger {
+	display: none;
+}
+
+.burger div {
+	width: 25px;
+	height: 4px;
+	background-color: var(--azul);
+	margin: 5px;
+}
+
+.btnSubmit {
+	box-sizing: border-box;
+	background-color: var(--verde);
+	height: 30px;
+	border: 0;
+	border-radius: 4px;
+	font-family: "Azo Sans", sans-serif;
+	font-weight: 500;
+	font-size: 11px;
+	color: var(--bege);
+	padding: 9px 10px 9px 40px;
+}
+
+.mainAsideContainer {
+	display: flex;
+	width: 80%;
+	max-width: 1000px;
+}
+
+.container {
+}
+
+.tipoButtonsContainer {
+	display: flex;
+}
+
+.btnTipo {
+	width: 150px;
+	height: 180px;
+	background-color: var(--azul);
+	color: var(--bege);
+	border: 0;
+	border-radius: 10px;
+	font-family: "Azo Sans", sans-serif;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding-bottom: 18px;
+	position: relative;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
+	margin: 0 7px;
+}
+
+.btnBege {
+	background-color: var(--bege);
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 10px 10px 0 0;
+	height: 72%;
+	width: 100%;
+}
+
+h1 {
+	font-size: 79px;
+	font-weight: bold;
+	margin-top: 90px;
+	margin-bottom: 5px;
+}
+
+p {
+	font-weight: 300;
+}
+
+p a {
+	font-weight: bold;
+}
+
+input {
+	box-sizing: border-box;
+	height: 50px;
+	width: 100%;
+	background-color: var(--bege);
+	font-family: "Azo Sans", sans-serif;
+	font-weight: 400;
+	border: 0;
+	margin: 10px 0;
+	padding-top: 3px;
+	padding-left: 60px;
+	font-size: 18px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
+}
+
+input::placeholder {
+	color: rgba(72, 71, 88, 0.36);
+	font-size: 15px;
+}
+
+.svgInpContainer {
+	position: relative;
+}
+
+.icon4 {
+	position: absolute;
+	top: 22px;
+	left: 10px;
+}
+
+.dropdown {
+	width: 100%;
+	height: 230px;
+	background-color: var(--bege);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bege);
+	position: relative;
+	z-index: 990;
+	transition: height 0.27s;
+}
+
+.hidden {
+	height: 0%;
+	visibility: hidden;
+	display: none;
+}
+
+#linkMap-Container {
+	padding: 10px 0;
+	display: flex;
+	justify-content: center;
+	border-top: 1px solid rgba(72, 71, 88, 0.2);
+	width: 50%;
+	margin-bottom: 2px;
+}
+
+#linkMap {
+	margin-top: 3px;
+	color: var(--azul);
+}
+
+.icon-map {
+	margin-right: 7px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.list-container {
+	height: 90%;
+	overflow: auto;
+	width: 100%;
+	padding-left: 40px;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+
+.list-container ul li {
+	font-size: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 20px 0;
+	cursor: pointer;
+}
+
+h6,
+h5 {
+	margin: 0;
+}
+
+h5 {
+	font-weight: 400;
+	font-size: 18px;
+	color: var(--azul);
+}
+
+h6 {
+	font-weight: 400;
+	font-size: 11px;
+	color: #80808a;
+}
+
+aside {
+	position: fixed;
+	top: 200px;
+	right: 400px;
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+.dark {
+	background-color: var(--azul);
+	color: var(--bege);
+}
+
+.dark #btnLogin {
+	background-color: var(--verde);
+}
+
+.dark #linkNewAccount span a {
+	color: var(--verde);
+}
