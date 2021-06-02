@@ -343,13 +343,14 @@ li {
 h4 {
   font-size: 23px;
   font-weight: bold;
+  
 }
 
 .bgImg {
   width: 510px;
   position: absolute;
   right: 0;
-  bottom: 412px;
+  bottom: 567px;
   right: -90px;
 }
 
