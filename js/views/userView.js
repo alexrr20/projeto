@@ -21,6 +21,7 @@ export default class UserView {
         this.loginUtilizador = document.getElementById('inpUtilizador');
         this.loginPassword = document.getElementById('inpPassword');
         this.loginButton = document.getElementById('btnLogin');
+        this.logoutButton = document.getElementById('btnLogout');
         this.bindLoginForm();
 
         this.messages = document.querySelector('#messages')
@@ -65,5 +66,26 @@ export default class UserView {
             this.updateButtons('logout');
             location.reload()
         });
+    }
+
+
+    checkLoginStatus() {
+        if (this.userController.isLogged()) {
+            this.updateButtons('login');
+        } else {
+            this.updateButtons('logout');
+        }
+    }
+
+    updateButtons(event) {
+        switch (event) {
+            case 'login':
+                this.loginButton.style.visibility = 'hidden'
+                this.logoutButton.style.visibility = 'visible'
+                break;
+            case 'logout':
+                this.loginButton.style.visibility = 'visible'
+                this.logoutButton.style.visibility = 'hidden'
+        }
     }
 }    
