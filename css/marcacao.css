@@ -232,6 +232,7 @@ nav ul li a:hover:after {
 	display: flex;
 	width: 80%;
 	max-width: 1000px;
+	margin-left: 200px;
 }
 
 .container {
