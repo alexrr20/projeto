@@ -26,4 +26,44 @@ export default class UserView {
         this.messages = document.querySelector('#messages')
         this.checkLoginStatus();
     }
+
+    bindRegisterForm() {
+        this.registerButton.addEventListener('click', () => {
+
+            try {
+                if (this.registerPw.value !== this.registerPw2.value) {
+                    throw Error('Password and Confirm Password are not equal');
+                }
+                this.userController.register(this.registerUsername.value, this.registerPw.value);
+                this.displayMessage('User registered with success!', 'success');
+            } catch (e) {
+                this.displayMessage(e, 'danger');
+            }
+        });
+    }
+
+    bindLoginForm() {
+        this.loginButton.addEventListener('click', () => {
+            try {
+                this.userController.login(this.loginUtilizador.value, this.loginPassword.value);
+                this.displayMessage('User logged in with success!', 'success');
+
+                // Wait 1 second before reloading, so the user can see the login success message
+                setTimeout(() => {
+                    this.updateButtons('login');
+                    location.reload()
+                },
+                    1000);
+
+            } catch (e) {
+                this.displayMessage(e, 'danger');
+            }
+        });
+
+        this.logoutButton.addEventListener('click', () => {
+            this.userController.logout();
+            this.updateButtons('logout');
+            location.reload()
+        });
+    }
 }    
