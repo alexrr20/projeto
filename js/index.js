@@ -36,7 +36,7 @@ burger.addEventListener("click", () => {
 });
 
 document.querySelectorAll(".btnSubmit")[1].onclick = function () {
-	location.href = "login.html";
+	location.href = "./html/login.html";
 };
 
 // PÁGINA FAQ
