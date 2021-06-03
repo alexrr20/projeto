@@ -32,4 +32,8 @@ export default class loginView {
 			}
 		});
 	}
+
+	displayMessage(message) {
+		alert(message);
+	}
 }

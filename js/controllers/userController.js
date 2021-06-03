@@ -31,13 +31,11 @@ export default class userController {
 	}
 
 	login(email, password, check) {
-		console.log(check);
 		if (
 			this.users.some(
 				(user) => user.email === email && user.password === password
 			)
 		) {
-			console.log(check);
 			check.checked
 				? localStorage.setItem("loggedUser", email)
 				: sessionStorage.setItem("loggedUser", email);
