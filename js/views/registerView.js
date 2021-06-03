@@ -1,6 +1,6 @@
 import userController from "../controllers/userController.js";
 
-export default class userView {
+export default class registerView {
 	constructor() {
 		this.userController = new userController();
 

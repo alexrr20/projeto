@@ -34,7 +34,6 @@ export default class loginView {
 	}
 
 	displayMessage(message, color) {
-		console.log(color);
 		Swal.fire({
 			title: message,
 			position: "bottom",

@@ -15,10 +15,6 @@ burger.addEventListener("click", () => {
 	}
 });
 
-document.querySelectorAll(".btnSubmit")[1].onclick = function () {
-	location.href = "./html/login.html";
-};
-
 // PÁGINA FAQ
 if (body.classList.contains("faqBody")) {
 	let btnSubmit = document.querySelectorAll(".btnSubmit");

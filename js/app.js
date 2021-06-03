@@ -1,4 +1,4 @@
-import userView from "./views/userView.js";
+import registerView from "./views/registerView.js";
 import loginView from "./views/loginView.js";
 import navView from "./views/navView.js";
 
@@ -7,9 +7,9 @@ class App {
 		// Mapeamento entre os ficheiros HTML e as views que estes vão carregar
 		this.routes = {
 			"": [navView],
-			index: [userView],
+			index: [navView],
 			login: [loginView],
-			signup: [userView],
+			signup: [registerView],
 		};
 
 		// importa dados dummy para testes

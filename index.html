@@ -1,304 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="icon" href="img/logo3.png" />
-    <title>Início / TEST TEST TEST</title>
-  </head>
-  <body class="light inicioBody">
-    <div id="gradient"></div>
-    <video id="videoBG" poster="" autoplay muted loop>
-      <source src="img/bg.mp4" type="video/mp4" />
-    </video>
-    <header>
-      <div id="logoContainer">
-        <img src="img/logo.svg" alt="logo" id="logo" />
-      </div>
-      <nav id="navbar">
-        <ul id="navList">
-          <li><a href="index.html">Página Inicial</a></li>
-          <li><a href="html/postos.html">Pontos de Testagem</a></li>
-          <li><a href="">Tipos de Testes</a></li>
-          <li><a href="html/faq.html">Perguntas Frequentes</a></li>
-          <li class="divider" style="padding: 0px"></li>
-          <li style="padding-right: 5px">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-calendar-plus icon1"
-              width="21"
-              height="21"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#fff0d2"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <rect x="4" y="5" width="16" height="16" rx="2" />
-              <line x1="16" y1="3" x2="16" y2="7" />
-              <line x1="8" y1="3" x2="8" y2="7" />
-              <line x1="4" y1="11" x2="20" y2="11" />
-              <line x1="10" y1="16" x2="14" y2="16" />
-              <line x1="12" y1="14" x2="12" y2="18" />
-            </svg>
-            <button type="submit" class="btnSubmit">Agendar Teste</button>
-          </li>
-          <li style="padding-left: 5px; padding-right: 10px">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-login icon2"
-              width="21"
-              height="21"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#fff0d2"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
-              />
-              <path d="M20 12h-13l3 -3m0 6l-3 -3" /></svg
-            ><button type="submit" class="btnSubmit" href="html/login.html">Login</button>
-            <button id="btnLogout" style="visibility: hidden">LOGOUT</button>
-          </li>
-          <li
-            class="btnTheme"
-            style="padding: 0"
-            onmousedown="mouseDown()"
-            onmouseup="mouseUp()"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-bulb icon3"
-              width="21"
-              height="21"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#1E1C41"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path
-                class="lightSVG"
-                d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"
-              />
-              <path
-                d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
-              />
-              <line x1="9.7" y1="17" x2="14.3" y2="17" />
-            </svg>
-          </li>
-        </ul>
-      </nav>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </header>
-    <main>
-      <div id="main-container">
-        <h2>
-          Marque o seu <span style="color: #0cd85e">teste</span> num instante
-        </h2>
-        <h4>Escolha um posto, o tipo de teste e horário preferido.</h4>
-        <div id="search-form">
-          <div class="search-item-container sic-1">
-            <svg
-              class="icon"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M21 8.77217L14.0208 1.79299C12.8492 0.621414 10.9497 0.621413 9.77817 1.79299L3 8.57116V23.0858H10V17.0858C10 15.9812 10.8954 15.0858 12 15.0858C13.1046 15.0858 14 15.9812 14 17.0858V23.0858H21V8.77217ZM11.1924 3.2072L5 9.39959V21.0858H8V17.0858C8 14.8767 9.79086 13.0858 12 13.0858C14.2091 13.0858 16 14.8767 16 17.0858V21.0858H19V9.6006L12.6066 3.2072C12.2161 2.81668 11.5829 2.81668 11.1924 3.2072Z"
-                fill="#15142e"
-              />
-            </svg>
-            <input
-              class="search-item si-1"
-              type="text"
-              placeholder="Posto de Testagem"
-            />
-            <div class="dropdown hidden">
-              <div class="list-container">
-                <ul class="dropdownList">
-                  <li>
-                    <h5>Hospital CUF Porto</h5>
-                    <h6>Estrada da Circunvalação</h6>
-                  </li>
-                  <li>
-                    <h5>Instituto CUF Porto</h5>
-                    <h6>Rua Fonte das Sete Bicas</h6>
-                  </li>
-                  <li>
-                    <h5>Parque da Cidade</h5>
-                    <h6>Estrada Interior da Circunvalação</h6>
-                  </li>
-                  <li>
-                    <h5>Hospital da Luz - Arrábida</h5>
-                    <h6>Praceta de Henrique Moreira</h6>
-                  </li>
-                  <li>
-                    <h5>Hospital da Luz - Clínica do Porto</h5>
-                    <h6>Rua Beato Inácio de Azevedo</h6>
-                  </li>
-                  <li>
-                    <h5>Unilabs Arouca</h5>
-                    <h6>Rua Dr. Ângelo Miranda</h6>
-                  </li>
-                  <li>
-                    <h5>Unilabs Espinho</h5>
-                    <h6>Rua 15</h6>
-                  </li>
-                  <li>
-                    <h5>Unilabs Porto</h5>
-                    <h6>Rua do Campo Alegre</h6>
-                  </li>
-                </ul>
-              </div>
-              <div id="linkMap-Container">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon-map icon-tabler icon-tabler-map"
-                  width="23"
-                  height="23"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="#1ab559"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <polyline
-                    points="3 7 9 4 15 7 21 4 21 17 15 20 9 17 3 20 3 7"
-                  />
-                  <line x1="9" y1="4" x2="9" y2="17" />
-                  <line x1="15" y1="7" x2="15" y2="20" />
-                </svg>
-                <a href="#" id="linkMap">Ver Mapa</a>
-              </div>
-            </div>
-          </div>
-          <div class="search-item-container sic-2">
-            <svg
-              class="icon"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M6 4C3.79086 4 2 5.79086 2 8V16C2 18.2091 3.79086 20 6 20H18C20.2091 20 22 18.2091 22 16V8C22 5.79086 20.2091 4 18 4H6ZM14 6H10V18H14V6ZM16 6V18H18C19.1046 18 20 17.1046 20 16V8C20 6.89543 19.1046 6 18 6H16ZM6 18H8V6H6C4.89543 6 4 6.89543 4 8V16C4 17.1046 4.89543 18 6 18Z"
-                fill="currentColor"
-              />
-            </svg>
-            <input
-              readonly
-              class="search-item si-2"
-              type="text"
-              placeholder="Tipo de Teste"
-            />
-            <div class="dropdown2 hidden">
-              <div class="list-container">
-                <ul class="dropdownList">
-                  <li>
-                    <h5><span>Teste</span> Rápido</h5>
-                  </li>
-                  <li>
-                    <h5><span>Teste</span> PCR</h5>
-                  </li>
-                  <li>
-                    <h5><span>Teste</span> Serológico</h5>
-                  </li>
-                  <li>
-                    <h5><span>Teste</span> de Anticorpos</h5>
-                  </li>
-                </ul>
-              </div>
-              <div id="linkMap-Container2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="icon-map icon-tabler icon-tabler-map"
-                  width="23"
-                  height="23"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="#1ab559"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <polyline
-                    points="3 7 9 4 15 7 21 4 21 17 15 20 9 17 3 20 3 7"
-                  />
-                  <line x1="9" y1="4" x2="9" y2="17" />
-                  <line x1="15" y1="7" x2="15" y2="20" />
-                </svg>
-                <a href="#" id="linkMap2">Que teste devo fazer?</a>
-              </div>
-            </div>
-          </div>
-          <div class="search-item-container sic-3">
-            <svg
-              class="icon"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path d="M9 7H11V12H16V14H9V7Z" fill="currentColor" />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
-                fill="#15142e"
-              />
-            </svg>
-            <input
-              readonly
-              class="search-item si-3"
-              type="text"
-              placeholder="Horário"
-            />
-          </div>
-          <div class="search-item-container sic-4">
-            <svg
-              class="icon"
-              width="34"
-              height="34"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13.6378 15.529L15.052 16.9432L20.0018 11.9934L15.052 7.0437L13.6378 8.45791L16.1363 10.9564H7.99823C5.78909 10.9564 3.99823 12.7472 3.99823 14.9564V16.9564H5.99823V14.9564C5.99823 13.8518 6.89366 12.9564 7.99823 12.9564H16.2104L13.6378 15.529Z"
-                fill="#fff0d2"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script src="js/index.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="icon" href="img/logo3.png" />
+		<title>Início / TEST TEST TEST</title>
+	</head>
+	<body class="light inicioBody">
+		<div id="gradient"></div>
+		<video id="videoBG" poster="" autoplay muted loop>
+			<source src="img/bg.mp4" type="video/mp4" />
+		</video>
+		<header>
+			<div id="logoContainer">
+				<img src="img/logo.svg" alt="logo" id="logo" />
+			</div>
+			<nav id="navbar">
+				<ul id="navList">
+					<li><a href="index.html">Página Inicial</a></li>
+					<li><a href="html/postos.html">Pontos de Testagem</a></li>
+					<li><a href="">Tipos de Testes</a></li>
+					<li><a href="html/faq.html">Perguntas Frequentes</a></li>
+					<li class="divider" style="padding: 0px"></li>
+					<li style="padding-right: 5px">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="
+								icon icon-tabler icon-tabler-calendar-plus
+								icon1
+							"
+							width="21"
+							height="21"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="#fff0d2"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<rect x="4" y="5" width="16" height="16" rx="2" />
+							<line x1="16" y1="3" x2="16" y2="7" />
+							<line x1="8" y1="3" x2="8" y2="7" />
+							<line x1="4" y1="11" x2="20" y2="11" />
+							<line x1="10" y1="16" x2="14" y2="16" />
+							<line x1="12" y1="14" x2="12" y2="18" />
+						</svg>
+						<button
+							type="submit"
+							class="btnSubmit"
+							onclick="location.href='marcacao.html'"
+						>
+							Agendar Teste
+						</button>
+					</li>
+					<li style="padding-left: 5px; padding-right: 10px">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-login icon2"
+							width="21"
+							height="21"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="#fff0d2"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path
+								d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"
+							/>
+							<path d="M20 12h-13l3 -3m0 6l-3 -3" /></svg
+						><button
+							type="submit"
+							class="btnSubmit"
+							onclick="location.href='html/login.html'"
+						>
+							Login
+						</button>
+						<button id="btnLogout" style="visibility: hidden">
+							Logout
+						</button>
+					</li>
+					<li
+						class="btnTheme"
+						style="padding: 0"
+						onmousedown="mouseDown()"
+						onmouseup="mouseUp()"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="icon icon-tabler icon-tabler-bulb icon3"
+							width="21"
+							height="21"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="#1E1C41"
+							fill="none"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+							<path
+								class="lightSVG"
+								d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"
+							/>
+							<path
+								d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"
+							/>
+							<line x1="9.7" y1="17" x2="14.3" y2="17" />
+						</svg>
+					</li>
+				</ul>
+			</nav>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</header>
+		<main>
+			<div id="main-container">
+				<h2>
+					Marque o seu <span style="color: #0cd85e">teste</span> num
+					instante
+				</h2>
+				<h4>Escolha um posto, o tipo de teste e horário preferido.</h4>
+				<div id="search-form">
+					<div class="search-item-container sic-1">
+						<svg
+							class="icon"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M21 8.77217L14.0208 1.79299C12.8492 0.621414 10.9497 0.621413 9.77817 1.79299L3 8.57116V23.0858H10V17.0858C10 15.9812 10.8954 15.0858 12 15.0858C13.1046 15.0858 14 15.9812 14 17.0858V23.0858H21V8.77217ZM11.1924 3.2072L5 9.39959V21.0858H8V17.0858C8 14.8767 9.79086 13.0858 12 13.0858C14.2091 13.0858 16 14.8767 16 17.0858V21.0858H19V9.6006L12.6066 3.2072C12.2161 2.81668 11.5829 2.81668 11.1924 3.2072Z"
+								fill="#15142e"
+							/>
+						</svg>
+						<input
+							class="search-item si-1"
+							type="text"
+							placeholder="Posto de Testagem"
+						/>
+						<div class="dropdown hidden">
+							<div class="list-container">
+								<ul class="dropdownList">
+									<li>
+										<h5>Hospital CUF Porto</h5>
+										<h6>Estrada da Circunvalação</h6>
+									</li>
+									<li>
+										<h5>Instituto CUF Porto</h5>
+										<h6>Rua Fonte das Sete Bicas</h6>
+									</li>
+									<li>
+										<h5>Parque da Cidade</h5>
+										<h6>
+											Estrada Interior da Circunvalação
+										</h6>
+									</li>
+									<li>
+										<h5>Hospital da Luz - Arrábida</h5>
+										<h6>Praceta de Henrique Moreira</h6>
+									</li>
+									<li>
+										<h5>
+											Hospital da Luz - Clínica do Porto
+										</h5>
+										<h6>Rua Beato Inácio de Azevedo</h6>
+									</li>
+									<li>
+										<h5>Unilabs Arouca</h5>
+										<h6>Rua Dr. Ângelo Miranda</h6>
+									</li>
+									<li>
+										<h5>Unilabs Espinho</h5>
+										<h6>Rua 15</h6>
+									</li>
+									<li>
+										<h5>Unilabs Porto</h5>
+										<h6>Rua do Campo Alegre</h6>
+									</li>
+								</ul>
+							</div>
+							<div id="linkMap-Container">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon-map icon-tabler icon-tabler-map"
+									width="23"
+									height="23"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="#1ab559"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"
+									/>
+									<polyline
+										points="3 7 9 4 15 7 21 4 21 17 15 20 9 17 3 20 3 7"
+									/>
+									<line x1="9" y1="4" x2="9" y2="17" />
+									<line x1="15" y1="7" x2="15" y2="20" />
+								</svg>
+								<a href="#" id="linkMap">Ver Mapa</a>
+							</div>
+						</div>
+					</div>
+					<div class="search-item-container sic-2">
+						<svg
+							class="icon"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M6 4C3.79086 4 2 5.79086 2 8V16C2 18.2091 3.79086 20 6 20H18C20.2091 20 22 18.2091 22 16V8C22 5.79086 20.2091 4 18 4H6ZM14 6H10V18H14V6ZM16 6V18H18C19.1046 18 20 17.1046 20 16V8C20 6.89543 19.1046 6 18 6H16ZM6 18H8V6H6C4.89543 6 4 6.89543 4 8V16C4 17.1046 4.89543 18 6 18Z"
+								fill="currentColor"
+							/>
+						</svg>
+						<input
+							readonly
+							class="search-item si-2"
+							type="text"
+							placeholder="Tipo de Teste"
+						/>
+						<div class="dropdown2 hidden">
+							<div class="list-container">
+								<ul class="dropdownList">
+									<li>
+										<h5><span>Teste</span> Rápido</h5>
+									</li>
+									<li>
+										<h5><span>Teste</span> PCR</h5>
+									</li>
+									<li>
+										<h5><span>Teste</span> Serológico</h5>
+									</li>
+									<li>
+										<h5>
+											<span>Teste</span> de Anticorpos
+										</h5>
+									</li>
+								</ul>
+							</div>
+							<div id="linkMap-Container2">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									class="icon-map icon-tabler icon-tabler-map"
+									width="23"
+									height="23"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="#1ab559"
+									fill="none"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										stroke="none"
+										d="M0 0h24v24H0z"
+										fill="none"
+									/>
+									<polyline
+										points="3 7 9 4 15 7 21 4 21 17 15 20 9 17 3 20 3 7"
+									/>
+									<line x1="9" y1="4" x2="9" y2="17" />
+									<line x1="15" y1="7" x2="15" y2="20" />
+								</svg>
+								<a href="#" id="linkMap2"
+									>Que teste devo fazer?</a
+								>
+							</div>
+						</div>
+					</div>
+					<div class="search-item-container sic-3">
+						<svg
+							class="icon"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M9 7H11V12H16V14H9V7Z"
+								fill="currentColor"
+							/>
+							<path
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+								fill="#15142e"
+							/>
+						</svg>
+						<input
+							readonly
+							class="search-item si-3"
+							type="text"
+							placeholder="Horário"
+						/>
+					</div>
+					<div class="search-item-container sic-4">
+						<svg
+							class="icon"
+							width="34"
+							height="34"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M13.6378 15.529L15.052 16.9432L20.0018 11.9934L15.052 7.0437L13.6378 8.45791L16.1363 10.9564H7.99823C5.78909 10.9564 3.99823 12.7472 3.99823 14.9564V16.9564H5.99823V14.9564C5.99823 13.8518 6.89366 12.9564 7.99823 12.9564H16.2104L13.6378 15.529Z"
+								fill="#fff0d2"
+							/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="js/index.js"></script>
+	</body>
 </html>
