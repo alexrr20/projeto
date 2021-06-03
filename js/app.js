@@ -1,4 +1,5 @@
 import userView from "./views/userView.js";
+import loginView from "./views/loginView.js";
 
 class App {
 	constructor() {
@@ -6,7 +7,7 @@ class App {
 		this.routes = {
 			"": [userView],
 			index: [userView],
-			login: [userView],
+			login: [loginView],
 			signup: [userView],
 		};
 

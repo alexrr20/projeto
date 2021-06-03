@@ -1,6 +1,6 @@
 import userController from "../controllers/userController.js";
 
-export default class UserView {
+export default class userView {
 	constructor() {
 		this.userController = new userController();
 
@@ -16,13 +16,6 @@ export default class UserView {
 		this.registerPw2 = document.getElementById("inpPw2");
 		this.registerButton = document.getElementById("btnCriar");
 		this.bindRegisterForm();
-
-		// login DOM
-		this.loginEmail = document.getElementById("inpEmail");
-		this.loginPassword = document.getElementById("inpPw");
-		this.loginButton = document.getElementById("btnLogin");
-		this.logoutButton = document.getElementById("btnLogout");
-		this.bindLoginForm();
 
 		this.messages = document.querySelector("#messages");
 		this.checkLoginStatus();
@@ -51,32 +44,6 @@ export default class UserView {
 			} catch (e) {
 				this.displayMessage(e, "danger");
 			}
-		});
-	}
-
-	bindLoginForm() {
-		this.loginButton.addEventListener("click", () => {
-			try {
-				this.userController.login(
-					this.loginEmail.value,
-					this.loginPassword.value
-				);
-				this.displayMessage("User logged in with success!", "success");
-
-				// Wait 1 second before reloading, so the user can see the login success message
-				setTimeout(() => {
-					this.updateButtons("login");
-					location.reload();
-				}, 1000);
-			} catch (e) {
-				this.displayMessage(e, "danger");
-			}
-		});
-
-		this.logoutButton.addEventListener("click", () => {
-			this.userController.logout();
-			this.updateButtons("logout");
-			location.reload();
 		});
 	}
 

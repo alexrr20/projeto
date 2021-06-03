@@ -30,13 +30,17 @@ export default class userController {
 		}
 	}
 
-	login(email, password) {
+	login(email, password, check) {
+		console.log(check);
 		if (
 			this.users.some(
 				(user) => user.email === email && user.password === password
 			)
 		) {
-			sessionStorage.setItem("loggedUser", username);
+			console.log(check);
+			check.checked
+				? localStorage.setItem("loggedUser", email)
+				: sessionStorage.setItem("loggedUser", email);
 			return true;
 		} else {
 			throw Error("Invalid login!");
