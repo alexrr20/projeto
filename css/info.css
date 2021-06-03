@@ -70,7 +70,7 @@
   body {
     margin: 0;
     padding: 0;
-    background-color: var(--bg);
+    background-color: var(--fg);
     color: var(--fg);
     transition: background 200ms ease-in-out, color 700ms ease-in-out;
     font-family: "Azo Sans", sans-serif;
@@ -234,13 +234,17 @@
   .container {
     width: 80%;
     max-width: 1000px;
+    margin-left: 16.5%;
+    margin-right: 25%;
   }
   
   h1 {
+    color: #1e1c41;
     font-size: 89px;
     font-weight: bold;
     margin-top: 90px;
     margin-bottom: 5px;
+    text-align: center;
   }
   
   h2 {
@@ -249,11 +253,13 @@
   }
 
   h3 {
+    color: #1e1c41;
     font-size: 18px;
     font-weight: normal;
     margin-bottom: 24px;
+    text-align: center;
   }
-  
+
   form {
     display: flex;
     flex-direction: column;
