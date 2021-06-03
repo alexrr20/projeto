@@ -1,6 +1,7 @@
 import registerView from "./views/registerView.js";
 import loginView from "./views/loginView.js";
 import navView from "./views/navView.js";
+import testCentersView from "./views/testCentersView.js";
 
 class App {
 	constructor() {
@@ -10,6 +11,7 @@ class App {
 			index: [navView],
 			login: [loginView],
 			signup: [registerView],
+			postos: [testCentersView],
 		};
 
 		// importa dados dummy para testes
@@ -63,9 +65,42 @@ class App {
 			},
 		];
 
+		const testCenters = [
+			{
+				testCenterName: "testCenterName1",
+				address: "address1",
+				contact: {
+					email: "email1",
+					phone: "phone1",
+				},
+				website: "website1",
+				availableTests: "availableTests1",
+				likes: 9,
+				rating: 4,
+			},
+
+			{
+				testCenterName: "testCenterName2",
+				address: "address2",
+				contact: {
+					email: "email2",
+					phone: "phone2",
+				},
+				website: "website2",
+				availableTests: "availableTests2",
+				likes: 53,
+				rating: 5,
+			},
+		];
+
 		// Load the fixtures in case there is no data in the local storage
 		if (!localStorage.users) {
 			localStorage.setItem("users", JSON.stringify(users));
+		}
+
+		// Load the fixtures in case there is no data in the local storage
+		if (!localStorage.testCenters) {
+			localStorage.setItem("testCenters", JSON.stringify(testCenters));
 		}
 	}
 }
