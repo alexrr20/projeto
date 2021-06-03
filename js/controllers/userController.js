@@ -41,7 +41,7 @@ export default class userController {
 				: sessionStorage.setItem("loggedUser", email);
 			return true;
 		} else {
-			throw Error("Invalid login!", "orange");
+			throw Error("Login inválido!", "orange");
 		}
 	}
 

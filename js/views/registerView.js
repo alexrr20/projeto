@@ -26,7 +26,7 @@ export default class registerView {
 			try {
 				if (this.registerPw.value !== this.registerPw2.value) {
 					console.log("yes");
-					throw Error("Password and Confirm Password are not equal");
+					throw Error("As Passwords digitadas não coincidem!");
 				}
 				console.log("no");
 				this.userController.register(
@@ -40,7 +40,7 @@ export default class registerView {
 					this.registerPw.value
 				);
 				console.log("no2");
-				this.displayMessage("User registered with success!", "success");
+				this.displayMessage("Utilizador registado com sucesso!", "success");
 			} catch (e) {
 				this.displayMessage(e, "danger");
 			}
