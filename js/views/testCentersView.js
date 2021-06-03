@@ -4,8 +4,43 @@ export default class testCentersView {
 	constructor() {
 		this.testCentersController = new testCentersController();
 
+		this.bindAddTestCenters();
+
 		this.listItems = document.querySelectorAll(".info");
 		this.bindShowInfo();
+	}
+
+	bindAddTestCenters() {
+		let ul = document.querySelectorAll(".dropdownList")[0];
+		for (
+			let i = 0;
+			i < this.testCentersController.getTestCenters().length;
+			i++
+		) {
+			console.log(
+				this.testCentersController.getTestCenters()[i].testCenterName
+			);
+			let li = document.createElement("li");
+			li.innerHTML = `
+            <a href="#container2">
+            <div class="info">
+              <h5>${
+					this.testCentersController.getTestCenters()[i]
+						.testCenterName
+				}</h5>
+              <h6>${this.testCentersController.getTestCenters()[i].address}</h6>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2 mapIcon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00d06f" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <line x1="18" y1="6" x2="18" y2="6.01" />
+              <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5" />
+              <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15" />
+              <line x1="9" y1="4" x2="9" y2="17" />
+              <line x1="15" y1="15" x2="15" y2="20" />
+            </svg>
+          </a>`;
+			ul.appendChild(li);
+		}
 	}
 
 	bindShowInfo() {

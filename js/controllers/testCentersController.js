@@ -13,4 +13,8 @@ export default class testCenterController {
 		);
 		testCenter.likes += 1;
 	}
+
+	getTestCenters() {
+		return this.testCenters;
+	}
 }
