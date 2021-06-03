@@ -9,11 +9,11 @@ export default class navView {
 	}
 
 	btnRedirect() {
-		console.log(false);
+		console.log(true);
 		this.navButtons[1].onclick = function () {
 			location.href = ".../html/login.html";
 		};
 	}
 }
 
-console.log(true);
+console.log(false);
