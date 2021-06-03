@@ -1,9 +1,10 @@
-export default class UserModel {
-	constructor(name, dob, nif, local, gender, email, phone, password) {
-		this.name = name;
+export default class userModel {
+	constructor(id, usersName, dob, nif, city, gender, email, phone, password) {
+		this.id = id;
+		this.usersName = usersName;
 		this.dob = dob;
 		this.nif = nif;
-		this.local = local;
+		this.city = city;
 		this.gender = gender;
 		this.email = email;
 		this.phone = phone;
