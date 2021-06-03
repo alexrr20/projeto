@@ -1,11 +1,12 @@
 import userView from "./views/userView.js";
 import loginView from "./views/loginView.js";
+import navView from "./views/navView.js";
 
 class App {
 	constructor() {
 		// Mapeamento entre os ficheiros HTML e as views que estes vão carregar
 		this.routes = {
-			"": [userView],
+			"": [navView],
 			index: [userView],
 			login: [loginView],
 			signup: [userView],

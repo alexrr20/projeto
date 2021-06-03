@@ -28,7 +28,7 @@ export default class loginView {
 					location.reload();
 				}, 1000);*/
 			} catch (e) {
-				this.displayMessage(e, "danger");
+				this.displayMessage(e);
 			}
 		});
 	}

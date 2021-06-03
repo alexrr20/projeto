@@ -1,26 +1,6 @@
 let body = document.getElementsByTagName("body")[0];
 let burger = document.querySelectorAll(".burger")[0];
 let nav = document.querySelectorAll("#navbar")[0];
-class User {
-	constructor(nome, dob, nif, localidade, genero, email, telefone, passe) {
-		this.nome = nome;
-		this.dob = dob;
-		this.nif = nif;
-		this.localidade = localidade;
-		this.genero = genero;
-		this.email = email;
-		this.telefone = telefone;
-		this.passe = passe;
-	}
-
-	get nome() {
-		return nome;
-	}
-
-	set nome(value) {
-		this.nome = value;
-	}
-}
 
 burger.addEventListener("click", () => {
 	nav.classList.toggle("nav-active");
