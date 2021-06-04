@@ -20,7 +20,10 @@ export default class loginView {
 					this.loginPassword.value,
 					this.sessionCheck
 				);
-				this.displayMessage("Utilizador autenticado com sucesso!", "green");
+				this.displayMessage(
+					"Utilizador autenticado com sucesso!",
+					"green"
+				);
 
 				// Wait 1 second before reloading, so the user can see the login success message
 				/*setTimeout(() => {

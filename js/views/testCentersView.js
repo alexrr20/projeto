@@ -10,6 +10,15 @@ export default class testCentersView {
 		this.bindShowInfo();
 	}
 
+	likeStars(testCenterName) {
+		let testCenter =
+			this.testCentersController.getTestCenterInfo(testCenterName);
+		let ratingStars = document.querySelectorAll(".ratingStar");
+		for (let i = 0; i < testCenter.rating; i++) {
+			ratingStars[i].style.color = "#2cce6c";
+		}
+	}
+
 	loadComments(testCenterName) {
 		let testCenter =
 			this.testCentersController.getTestCenterInfo(testCenterName);
@@ -33,7 +42,6 @@ export default class testCentersView {
 			".container2-1bottom"
 		)[0];
 		let testString = "Este posto realiza os seguintes testes: ";
-		console.log(testCenter.availableTests);
 		if (testCenter.availableTests.rapido == true) {
 			testString += `<span class="bold"> Rápido </span>/`;
 		}
@@ -220,36 +228,13 @@ export default class testCentersView {
           <div class="avaliacoesContainer">
             <h3>Avaliações</h3>
             <div>
-              <form class="rating">
+              <form class="rating ratingCima">
                 <label>
-                  <input type="radio" name="stars" value="1" />
-                  <span class="icon">★</span>
-                </label>
-                <label>
-                  <input type="radio" name="stars" value="2" />
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
-                </label>
-                <label>
-                  <input type="radio" name="stars" value="3" />
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>   
-                </label>
-                <label>
-                  <input type="radio" name="stars" value="4" />
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
-                </label>
-                <label>
-                  <input type="radio" name="stars" value="5" checked/>
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
-                  <span class="icon">★</span>
+                  <span class="icon ratingStar">★</span>
+                  <span class="icon ratingStar">★</span>
+                  <span class="icon ratingStar">★</span>
+                  <span class="icon ratingStar">★</span>
+                  <span class="icon ratingStar">★</span>
                 </label>
               </form>
               <p><span class="bold" id="ratingCounter">${testCenter.rating}/5</span> Estrelas</p>
@@ -310,6 +295,7 @@ export default class testCentersView {
 				this.bindLike();
 				this.loadComments(testCenterName);
 				this.loadAvailableTests(testCenterName);
+				this.likeStars(testCenterName);
 			});
 		}
 	}

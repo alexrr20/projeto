@@ -575,11 +575,6 @@ h6 {
 	font-size: 18px;
 }
 
-.dark {
-	background-color: var(--azul);
-	color: var(--bege);
-}
-
 .wrapper {
 	display: flex;
 	justify-content: center;
@@ -663,7 +658,7 @@ path.two {
 }
 
 .btnSecondary {
-	background-color: var(--bege);
+	background-color: transparent;
 	border-radius: 5px;
 	border: 3px solid var(--verde);
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
@@ -690,6 +685,14 @@ path.two {
 	margin-top: 6px;
 	margin-bottom: 0;
 	margin-right: 20px;
+}
+
+.rating label input {
+	cursor: pointer;
+}
+
+.ratingCima label span {
+	cursor: default;
 }
 
 .rating {
@@ -812,4 +815,14 @@ path.two {
 	box-shadow: none;
 	border-bottom: 2px solid var(--azul);
 	font-size: 13px;
+}
+
+.dark {
+	background-color: var(--azul);
+	color: var(--bege);
+}
+
+.dark h3,
+.dark h4 {
+	color: var(--begeEscuro) !important;
 }
