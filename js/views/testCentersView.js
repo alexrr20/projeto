@@ -14,7 +14,6 @@ export default class testCentersView {
 		let testCenter =
 			this.testCentersController.getTestCenterInfo(testCenterName);
 		let commentsDiv = document.querySelectorAll(".comentariosContainer")[0];
-		console.log(testCenter);
 		for (let i = 0; i < testCenter.comments.length; i++) {
 			let newComment = document.createElement("div");
 			newComment.setAttribute("class", "comentario");
@@ -27,7 +26,32 @@ export default class testCentersView {
 		}
 	}
 
-	loadAvailableTests() {}
+	loadAvailableTests(testCenterName) {
+		let testCenter =
+			this.testCentersController.getTestCenterInfo(testCenterName);
+		let stringContainer = document.querySelectorAll(
+			".container2-1bottom"
+		)[0];
+		let testString = "Este posto realiza os seguintes testes: ";
+		console.log(testCenter.availableTests);
+		if (testCenter.availableTests.rapido == true) {
+			testString += `<span class="bold"> Rápido </span>/`;
+		}
+		if (testCenter.availableTests.pcr == true) {
+			testString += `<span class="bold"> PCR </span>/`;
+		}
+		if (testCenter.availableTests.serologico == true) {
+			testString += `<span class="bold"> Serológico </span>/`;
+		}
+		if (testCenter.availableTests.anticorpos == true) {
+			testString += `<span class="bold"> Anticorpos </span>/`;
+		}
+		testString = testString.slice(0, -1);
+		let testStringHTML = document.createElement("p");
+		testStringHTML.setAttribute("id", "pTestes");
+		testStringHTML.innerHTML = `${testString}`;
+		stringContainer.prepend(testStringHTML);
+	}
 
 	bindLike() {
 		document
@@ -144,7 +168,6 @@ export default class testCentersView {
               </div>
             </div>
             <div class="container2-1bottom">
-            <p id="pTestes">Este posto realiza os seguintes testes: <span class="bold">Serológicos</span> / <span class="bold">Antigénicos</span> / <span class="bold"> Anticorpos</span>.</p>
             <div class="btnContainer">
               <div class="wrapper">
                 <a class="cta" href="#">
@@ -286,6 +309,7 @@ export default class testCentersView {
 				main.appendChild(newDiv);
 				this.bindLike();
 				this.loadComments(testCenterName);
+				this.loadAvailableTests(testCenterName);
 			});
 		}
 	}

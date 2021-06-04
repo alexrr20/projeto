@@ -74,7 +74,12 @@ class App {
 					phone: "phone1",
 				},
 				website: "website1",
-				availableTests: "availableTests1",
+				availableTests: {
+					rapido: true,
+					pcr: false,
+					serologico: true,
+					anticorpos: false,
+				},
 				openHours: "24h",
 				likes: 9,
 				rating: 4,
