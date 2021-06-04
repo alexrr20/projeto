@@ -10,7 +10,24 @@ export default class testCentersView {
 		this.bindShowInfo();
 	}
 
-	loadComments() {}
+	loadComments(testCenterName) {
+		let testCenter =
+			this.testCentersController.getTestCenterInfo(testCenterName);
+		let commentsDiv = document.querySelectorAll(".comentariosContainer")[0];
+		console.log(testCenter);
+		for (let i = 0; i < testCenter.comments.length; i++) {
+			let newComment = document.createElement("div");
+			newComment.setAttribute("class", "comentario");
+			newComment.innerHTML = `
+            <img src="../img/user.svg" alt="user" class="comentarioIcon">
+            <p class="comentarioUser"><span class="bold">${testCenter.comments[i].userComment}</span> diz</p>
+            <p class="comentarioTexto"><span class="bold">"</span>${testCenter.comments[i].comment}<span class="bold">"</span></p>
+          `;
+			commentsDiv.appendChild(newComment);
+		}
+	}
+
+	loadAvailableTests() {}
 
 	bindLike() {
 		document
@@ -108,7 +125,7 @@ export default class testCentersView {
                 </svg>
                 <div class="postoInfoText">
                   <h4>Horário</h4>
-                  <p></p>
+                  <p>${testCenter.openHours}</p>
                 </div>
               </div>
               <div class="postoInfo">
@@ -127,7 +144,7 @@ export default class testCentersView {
               </div>
             </div>
             <div class="container2-1bottom">
-            <p id="pTestes">Este posto realiza testes <span class="bold">Serológicos</span>, <span class="bold">Antigénicos</span> e <span class="bold">de Anticorpos</span>.</p>
+            <p id="pTestes">Este posto realiza os seguintes testes: <span class="bold">Serológicos</span> / <span class="bold">Antigénicos</span> / <span class="bold"> Anticorpos</span>.</p>
             <div class="btnContainer">
               <div class="wrapper">
                 <a class="cta" href="#">
@@ -217,21 +234,6 @@ export default class testCentersView {
             </div>
           </div>
           <div class="comentariosContainer">
-            <div class="comentario">
-              <img src="../img/user.svg" alt="user" class="comentarioIcon">
-              <p class="comentarioUser"><span class="bold">João Silva</span> diz</p>
-              <p class="comentarioTexto"><span class="bold">"</span> Funcionários simpáticos e atendimento rápido <span class="bold">"</span></p>
-            </div>
-            <div class="comentario">
-              <img src="../img/user.svg" alt="user" class="comentarioIcon">
-              <p class="comentarioUser"><span class="bold">João Silva</span> diz</p>
-              <p class="comentarioTexto"><span class="bold">"</span> Funcionários simpáticos e atendimento rápido <span class="bold">"</span></p>
-            </div>
-            <div class="comentario">
-              <img src="../img/user.svg" alt="user" class="comentarioIcon">
-              <p class="comentarioUser"><span class="bold">João Silva</span> diz</p>
-              <p class="comentarioTexto"><span class="bold">"</span> Funcionários simpáticos e atendimento rápido <span class="bold">"</span></p>
-            </div>
           </div>
           <div class="addComentarioContainer">
             <h4>Deixar Avaliação</h4>
@@ -283,6 +285,7 @@ export default class testCentersView {
 `;
 				main.appendChild(newDiv);
 				this.bindLike();
+				this.loadComments(testCenterName);
 			});
 		}
 	}

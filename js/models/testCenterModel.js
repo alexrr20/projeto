@@ -17,7 +17,12 @@ export default class postoModel {
 			phone: contact.phone,
 		};
 		this.website = website;
-		this.availableTests = availableTests;
+		this.availableTests = {
+			rapido: availableTests.rapido,
+			pcr: availableTests.pcr,
+			serologico: availableTests.serologico,
+			anticorpos: availableTests.anticorpos,
+		};
 		this.openHours = openHours;
 		this.likes = likes;
 		this.rating = rating;

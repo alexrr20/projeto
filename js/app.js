@@ -95,7 +95,12 @@ class App {
 					phone: "phone2",
 				},
 				website: "website2",
-				availableTests: "availableTests2",
+				availableTests: {
+					rapido: true,
+					pcr: true,
+					serologico: true,
+					anticorpos: false,
+				},
 				openHours: "24h",
 				likes: 53,
 				rating: 5,
