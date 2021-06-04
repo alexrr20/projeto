@@ -5,8 +5,10 @@ export default class postoModel {
 		contact,
 		website,
 		availableTests,
+		openHours,
 		likes,
-		rating
+		rating,
+		comments
 	) {
 		this.testCenterName = testCenterName;
 		this.address = address;
@@ -16,7 +18,15 @@ export default class postoModel {
 		};
 		this.website = website;
 		this.availableTests = availableTests;
+		this.openHours = openHours;
 		this.likes = likes;
 		this.rating = rating;
+		this.comments = [
+			{
+				userComment: comments.userComment,
+				comment: comments.comment,
+				userRating: comments.userRating,
+			},
+		];
 	}
 }

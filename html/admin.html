@@ -1,192 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin / Test Test Test</title>
-  </head>
-  <body>
-    <form action="" style="display: flex; flex-direction: column">
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          width: 200px;
-          margin: 20px;
-        "
-      >
-        <label for="">NOME</label>
-        <input type="text" />
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          width: 200px;
-          margin: 20px;
-        "
-      >
-        <label for="">MORADA</label>
-        <input type="text" />
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          width: 200px;
-          margin: 20px;
-        "
-      >
-        <label for="">CONTACTO</label>
-        <input type="text" />
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          width: 200px;
-          margin: 20px;
-        "
-      >
-        <label for="">HORARIO</label>
-        <input type="text" />
-      </div>
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          width: 200px;
-          margin: 20px;
-        "
-      >
-        <label for="">WEBSITE</label>
-        <input type="text" />
-      </div>
-      <button style="margin-left: 30px; height: 50px; width: 100px">
-        ADD POSTO
-      </button>
-      <button style="margin-left: 30px; height: 50px; width: 100px">
-        ADD DEFAULT POSTOS
-      </button>
-    </form>
-    <script>
-      class Posto {
-        nome = "";
-        morada = "";
-        contacto = "";
-        horario = "";
-        website = "";
-
-        constructor(nome, morada, contacto, horario, website) {
-          this.nome = nome;
-          this.morada = morada;
-          this.contacto = contacto;
-          this.horario = horario;
-          this.website = website;
-        }
-
-        get nome() {
-          return this.nome;
-        }
-
-        set nome(value) {
-          this.nome = value;
-        }
-
-        get morada() {
-          return this.morada;
-        }
-
-        set morada(value) {
-          this.morada = value;
-        }
-
-        get contacto() {
-          return this.contacto;
-        }
-
-        set contacto(value) {
-          this.contacto = value;
-        }
-
-        get horario() {
-          return this.horario;
-        }
-
-        set horario(value) {
-          this.horario = value;
-        }
-
-        get website() {
-          return this.website;
-        }
-
-        set website(value) {
-          this.website = value;
-        }
-      }
-
-      let button = document.getElementsByTagName("button");
-      let input = document.getElementsByTagName("input");
-
-      button[0].addEventListener("click", () => {
-        let nome = input[0].value;
-        let morada = input[1].value;
-        let contacto = input[2].value;
-        let horario = input[3].value;
-        let website = input[4].value;
-        let newPosto = new Posto(nome, morada, contacto, horario, website);
-
-        let lsPostos = JSON.parse(localStorage.getItem("Postos"));
-        let postosArray = [];
-        if (lsPostos) {
-          for (let x = 0; x < lsPostos.length; x++) {
-            postosArray.push(lsPostos[x]);
-          }
-        }
-        postosArray.push(newPosto);
-
-        localStorage.Postos = JSON.stringify(postosArray);
-      });
-
-      button[1].addEventListener("click", () => {
-        let newPosto1 = new Posto(
-          "Hospital xxxxxx1",
-          "Rua xxxxxx1",
-          "xxxxxxxx1",
-          "24H",
-          "www.xxxx1.pt"
-        );
-        let newPosto1 = new Posto(
-          "Hospital xxxxxx2",
-          "Rua xxxxxx2",
-          "xxxxxxxx2",
-          "24H",
-          "www.xxxx2.pt"
-        );
-        let newPosto1 = new Posto(
-          "Hospital xxxxxx3",
-          "Rua xxxxxx3",
-          "xxxxxxxx3",
-          "24H",
-          "www.xxxx3.pt"
-        );
-        let newPosto1 = new Posto(
-          "Hospital xxxxxx4",
-          "Rua xxxxxx4",
-          "xxxxxxxx4",
-          "24H",
-          "www.xxxx4.pt"
-        );
-        let newPosto1 = new Posto(
-          "Hospital xxxxxx5",
-          "Rua xxxxxx5",
-          "xxxxxxxx5",
-          "24H",
-          "www.xxxx5.pt"
-        );
-      });
-    </script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin / Test Test Test</title>
+	</head>
+	<body>
+		<form action="" style="display: flex; flex-direction: column">
+			<div
+				style="
+					display: flex;
+					flex-direction: column;
+					width: 200px;
+					margin: 20px;
+				"
+			>
+				<label for="">NOME</label>
+				<input type="text" />
+			</div>
+			<div
+				style="
+					display: flex;
+					flex-direction: column;
+					width: 200px;
+					margin: 20px;
+				"
+			>
+				<label for="">MORADA</label>
+				<input type="text" />
+			</div>
+			<div
+				style="
+					display: flex;
+					flex-direction: column;
+					width: 200px;
+					margin: 20px;
+				"
+			>
+				<label for="">CONTACTO</label>
+				<input type="text" />
+			</div>
+			<div
+				style="
+					display: flex;
+					flex-direction: column;
+					width: 200px;
+					margin: 20px;
+				"
+			>
+				<label for="">HORARIO</label>
+				<input type="text" />
+			</div>
+			<div
+				style="
+					display: flex;
+					flex-direction: column;
+					width: 200px;
+					margin: 20px;
+				"
+			>
+				<label for="">WEBSITE</label>
+				<input type="text" />
+			</div>
+			<button style="margin-left: 30px; height: 50px; width: 100px">
+				ADD POSTO
+			</button>
+			<button style="margin-left: 30px; height: 50px; width: 100px">
+				ADD DEFAULT POSTOS
+			</button>
+		</form>
+	</body>
 </html>

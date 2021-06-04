@@ -8,13 +8,20 @@ export default class testCenterController {
 	}
 
 	addLike(testCenterName) {
-		const testCenter = this.testCenters.some(
-			(testCenter) => testCenter.testCenterName === testCenterName
-		);
+		let testCenter = this.getTestCenterInfo(testCenterName);
 		testCenter.likes += 1;
+		return testCenter.likes;
 	}
 
 	getTestCenters() {
 		return this.testCenters;
+	}
+
+	getTestCenterInfo(testCenterName) {
+		for (let i = 0; i < this.testCenters.length; i++) {
+			if (this.testCenters[i].testCenterName === testCenterName) {
+				return this.testCenters[i];
+			}
+		}
 	}
 }

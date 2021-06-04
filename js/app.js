@@ -75,8 +75,16 @@ class App {
 				},
 				website: "website1",
 				availableTests: "availableTests1",
+				openHours: "24h",
 				likes: 9,
 				rating: 4,
+				comments: [
+					{
+						userComment: "userComment1",
+						comment: "comment1",
+						userRating: 4,
+					},
+				],
 			},
 
 			{
@@ -88,8 +96,16 @@ class App {
 				},
 				website: "website2",
 				availableTests: "availableTests2",
+				openHours: "24h",
 				likes: 53,
 				rating: 5,
+				comments: [
+					{
+						userComment: "userComment2",
+						comment: "comment2",
+						userRating: 4,
+					},
+				],
 			},
 		];
 

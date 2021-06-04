@@ -39,8 +39,10 @@ export default class registerView {
 					this.registerPhone.value,
 					this.registerPw.value
 				);
-				console.log("no2");
-				this.displayMessage("Utilizador registado com sucesso!", "success");
+				this.displayMessage(
+					"Utilizador registado com sucesso!",
+					"success"
+				);
 			} catch (e) {
 				this.displayMessage(e, "danger");
 			}
