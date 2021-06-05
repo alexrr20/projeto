@@ -150,6 +150,7 @@ if (body.classList.contains("faqBody")) {
 if (body.classList.contains("inicioBody")) {
 	let dropdown = document.querySelectorAll(".dropdown");
 	let dropdown2 = document.querySelectorAll(".dropdown2");
+	let dropdown3 = document.querySelectorAll(".dropdown3");
 	let input = document.querySelectorAll(".search-item");
 	let burger = document.querySelectorAll(".burger")[0];
 	let nav = document.querySelectorAll("#navbar")[0];
@@ -198,6 +199,16 @@ if (body.classList.contains("inicioBody")) {
 			dropdown2[0].classList.replace("shown", "hidden");
 		}, 100);
 	});
+
+	/*input[2].addEventListener("focus", () => {
+		dropdown3[0].classList.replace("hidden", "shown");
+	});
+
+	input[2].addEventListener("focusout", () => {
+		setTimeout(function () {
+			dropdown3[0].classList.replace("shown", "hidden");
+		}, 100);
+	});*/
 
 	for (let i = 0; i < dropdownList[1].childNodes.length; i++) {
 		if (dropdownList[1].childNodes[i].nodeName == "LI") {
