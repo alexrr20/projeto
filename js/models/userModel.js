@@ -9,5 +9,6 @@ export default class userModel {
 		this.email = email;
 		this.phone = phone;
 		this.password = password;
+		this.likes = [];
 	}
 }

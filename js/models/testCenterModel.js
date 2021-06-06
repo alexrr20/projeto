@@ -1,5 +1,6 @@
 export default class postoModel {
 	constructor(
+		id,
 		testCenterName,
 		address,
 		contact,
@@ -10,6 +11,7 @@ export default class postoModel {
 		rating,
 		comments
 	) {
+		this.id = id;
 		this.testCenterName = testCenterName;
 		this.address = address;
 		this.contact = {

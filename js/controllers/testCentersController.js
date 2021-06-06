@@ -9,8 +9,24 @@ export default class testCenterController {
 
 	addLike(testCenterName) {
 		let testCenter = this.getTestCenterInfo(testCenterName);
+
+		if (sessionStorage.getItem("loggedUser")) {
+			let userLogged = sessionStorage.getItem("loggedUser");
+		} else {
+			let userLogged = localStorage.getItem("loggedUser");
+		}
+
+		for (let i = 0; i < this.users.length; i++) {
+			if (this.users[i].email === email) {
+				return this.users[i];
+			}
+		}
+
 		testCenter.likes += 1;
-		return testCenter.likes;
+		this.testCenters[testCenter.id].likes = testCenter.likes;
+		localStorage.setItem("testCenters", JSON.stringify(this.testCenters));
+		userLogged.likes.push(testCenter.id);
+		return this.testCenters[testCenter.id].likes;
 	}
 
 	getTestCenters() {

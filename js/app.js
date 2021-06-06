@@ -42,7 +42,7 @@ class App {
 	#importDataFixtures() {
 		const users = [
 			{
-				id: 1,
+				id: 0,
 				usersName: "usersName1",
 				dob: "dob1",
 				nif: "nif1",
@@ -51,9 +51,10 @@ class App {
 				email: "email1",
 				phone: "phone1",
 				password: "password1",
+				likes: [],
 			},
 			{
-				id: 2,
+				id: 1,
 				usersName: "usersName2",
 				dob: "dob2",
 				nif: "nif2",
@@ -62,11 +63,13 @@ class App {
 				email: "email2",
 				phone: "phone2",
 				password: "password2",
+				likes: [],
 			},
 		];
 
 		const testCenters = [
 			{
+				id: 0,
 				testCenterName: "testCenterName1",
 				address: "address1",
 				contact: {
@@ -93,6 +96,7 @@ class App {
 			},
 
 			{
+				id: 1,
 				testCenterName: "testCenterName2",
 				address: "address2",
 				contact: {

@@ -674,6 +674,7 @@ path.two {
 	align-items: center;
 	padding-left: 26px;
 	padding-right: 15px;
+	text-align: left;
 }
 
 .btnSecondary:hover {

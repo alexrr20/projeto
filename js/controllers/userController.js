@@ -52,4 +52,12 @@ export default class userController {
 	isLogged() {
 		return sessionStorage.getItem("loggedUser") !== null ? true : false;
 	}
+
+	getUserInfo(email) {
+		for (let i = 0; i < this.users.length; i++) {
+			if (this.users[i].email === email) {
+				return this.users[i];
+			}
+		}
+	}
 }

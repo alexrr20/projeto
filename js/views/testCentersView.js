@@ -1,13 +1,29 @@
 import testCentersController from "../controllers/testCentersController.js";
+import userController from "../controllers/userController.js";
 
 export default class testCentersView {
 	constructor() {
 		this.testCentersController = new testCentersController();
+		this.userController = new userController();
 
 		this.bindAddTestCenters();
 
 		this.listItems = document.querySelectorAll(".info");
 		this.bindShowInfo();
+	}
+
+	displayMessage(message, color) {
+		Swal.fire({
+			title: message,
+			position: "bottom",
+			background: color,
+			allowEscapeKey: false,
+			allowEnterKey: false,
+			showConfirmButton: false,
+			showCancelButton: false,
+			backdrop: false,
+			timer: 2000,
+		});
 	}
 
 	likeStars(testCenterName) {
@@ -68,9 +84,16 @@ export default class testCentersView {
 				let testCenterName =
 					document.querySelectorAll(".container2-1")[0].childNodes[3]
 						.innerHTML;
+				if (this.userController.isLogged()) {
+					var newLikes =
+						this.testCentersController.addLike(testCenterName);
+				} else {
+					this.displayMessage(
+						"Necessita de iniciar sessão para adicionar um gosto",
+						"orange"
+					);
+				}
 				let likeCounter = document.querySelectorAll("#likeCounter")[0];
-				let newLikes =
-					this.testCentersController.addLike(testCenterName);
 				likeCounter.innerHTML = `${newLikes}`;
 			});
 	}
