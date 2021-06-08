@@ -15,17 +15,18 @@ export default class testCenterController {
 		} else {
 			let userLogged = localStorage.getItem("loggedUser");
 		}
+		/*
 
 		for (let i = 0; i < this.users.length; i++) {
 			if (this.users[i].email === email) {
 				return this.users[i];
 			}
-		}
+		}*/
 
 		testCenter.likes += 1;
 		this.testCenters[testCenter.id].likes = testCenter.likes;
 		localStorage.setItem("testCenters", JSON.stringify(this.testCenters));
-		userLogged.likes.push(testCenter.id);
+		//userLogged.likes.push(testCenter.id);
 		return this.testCenters[testCenter.id].likes;
 	}
 

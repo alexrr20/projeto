@@ -155,7 +155,7 @@ if (body.classList.contains("inicioBody")) {
 	let burger = document.querySelectorAll(".burger")[0];
 	let nav = document.querySelectorAll("#navbar")[0];
 	let btnTheme = document.querySelectorAll(".btnTheme");
-	let dropdownList = document.querySelectorAll(".dropdownList")[0];
+	let dropdownList = document.querySelectorAll(".dropdownList");
 	let inp = document.querySelectorAll("input");
 
 	burger.addEventListener("click", () => {
@@ -181,11 +181,11 @@ if (body.classList.contains("inicioBody")) {
 		}, 100);
 	});
 
-	for (let i = 0; i < dropdownList.childNodes.length; i++) {
-		if (dropdownList.childNodes[i].nodeName == "LI") {
-			dropdownList.childNodes[i].addEventListener("click", () => {
+	for (let i = 0; i < dropdownList[0].childNodes.length; i++) {
+		if (dropdownList[0].childNodes[i].nodeName == "LI") {
+			dropdownList[0].childNodes[i].addEventListener("click", () => {
 				inp[0].value =
-					dropdownList.childNodes[i].childNodes[1].innerHTML;
+					dropdownList[0].childNodes[i].childNodes[1].innerHTML;
 			});
 		}
 	}
@@ -200,6 +200,16 @@ if (body.classList.contains("inicioBody")) {
 		}, 100);
 	});
 
+	for (let i = 0; i < dropdownList[1].childNodes.length; i++) {
+		if (dropdownList[1].childNodes[i].nodeName == "LI") {
+			dropdownList[1].childNodes[i].addEventListener("click", () => {
+				inp[1].value = "Teste Rápido";
+				/*inp[1].value =
+					dropdownList[1].childNodes[i].childNodes[1].innerHTML;*/
+			});
+		}
+	}
+
 	/*input[2].addEventListener("focus", () => {
 		dropdown3[0].classList.replace("hidden", "shown");
 	});
@@ -209,15 +219,6 @@ if (body.classList.contains("inicioBody")) {
 			dropdown3[0].classList.replace("shown", "hidden");
 		}, 100);
 	});*/
-
-	for (let i = 0; i < dropdownList[1].childNodes.length; i++) {
-		if (dropdownList[1].childNodes[i].nodeName == "LI") {
-			dropdownList[1].childNodes[i].addEventListener("click", () => {
-				inp[1].value =
-					dropdownList[1].childNodes[i].childNodes[1].innerHTML;
-			});
-		}
-	}
 
 	btnTheme[0].addEventListener("click", () => {
 		body.classList.toggle("dark");
