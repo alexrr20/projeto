@@ -5,11 +5,37 @@ export default class navView {
 		this.userController = new userController();
 
 		this.navButtons = document.querySelectorAll(".btnSubmit");
-		this.btnRedirect();
+		this.btnTheme = document.querySelectorAll(".btnTheme")[0];
+		this.imgLogo = document.querySelectorAll("#logo")[0];
+		this.lightSVG = document.querySelectorAll(".lightSVG")[0];
+		this.body = document.getElementsByTagName("body")[0];
+
+		this.bindBtnTheme();
+		this.btnLoginChange();
 	}
 
-	btnRedirect() {
-		console.log(true);
+	bindBtnTheme() {
+		this.btnTheme.addEventListener("click", () => {
+			this.body.classList.toggle("dark");
+			this.imgLogo.src = "../../img/logo.svg";
+		});
+
+		this.btnTheme.addEventListener("mousedown", () => {
+			this.lightSVG.style.visibility = "hidden";
+		});
+
+		this.btnTheme.addEventListener("mouseup", () => {
+			this.lightSVG.style.visibility = "visible";
+		});
+	}
+
+	btnLoginChange() {
+		if (this.userController.isLogged()) {
+			this.navButtons[1].innerHTML = "Logout";
+			this.navButtons[1].addEventListener("click", () => {
+				this.userController.logout();
+			});
+		}
 	}
 }
 

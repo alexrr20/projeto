@@ -46,11 +46,16 @@ export default class userController {
 	}
 
 	logout() {
-		sessionStorage.removeItem("loggedUser");
+		sessionStorage.getItem("loggedUser") !== null
+			? sessionStorage.removeItem("loggedUser")
+			: localStorage.removeItem("loggedUser");
 	}
 
 	isLogged() {
-		return sessionStorage.getItem("loggedUser") !== null ? true : false;
+		return sessionStorage.getItem("loggedUser") !== null ||
+			localStorage.getItem("loggedUser") !== null
+			? true
+			: false;
 	}
 
 	getUserInfo(email) {

@@ -9,9 +9,10 @@ class App {
 		this.routes = {
 			"": [navView],
 			index: [navView],
-			login: [loginView],
-			signup: [registerView],
-			postos: [testCentersView],
+			login: [loginView, navView],
+			signup: [registerView, navView],
+			postos: [testCentersView, navView],
+			faq: [navView],
 		};
 
 		// importa dados dummy para testes

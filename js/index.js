@@ -225,7 +225,7 @@ if (body.classList.contains("inicioBody")) {
 		imgLogo[0].src = "logo.svg";
 	});
 
-	/* EVENT LISTENER onmousedown E onmouseup NÃO FUNCIONAVAM*/
+	/* EVENT LISTENER onmousedown E onmouseup NÃO FUNCIONAVAM
 	function mouseDown() {
 		let lightSVG = document.querySelectorAll(".lightSVG");
 		lightSVG[0].style.visibility = "hidden";
@@ -234,7 +234,7 @@ if (body.classList.contains("inicioBody")) {
 	function mouseUp() {
 		let lightSVG = document.querySelectorAll(".lightSVG");
 		lightSVG[0].style.visibility = "visible";
-	}
+	}*/
 }
 
 if (body.classList.contains("marcacaoBody")) {
@@ -406,24 +406,6 @@ if (body.classList.contains("postosBody")) {
 			filtroToggle.innerHTML = "Esconder";
 		}
 	});
-
-	let btnTheme = document.querySelectorAll(".btnTheme");
-
-	btnTheme[0].addEventListener("click", () => {
-		body.classList.toggle("dark");
-		imgLogo[0].src = "logo.svg";
-	});
-
-	/* EVENT LISTENER onmousedown E onmouseup NÃO FUNCIONAVAM*/
-	function mouseDown() {
-		let lightSVG = document.querySelectorAll(".lightSVG");
-		lightSVG[0].style.visibility = "hidden";
-	}
-
-	function mouseUp() {
-		let lightSVG = document.querySelectorAll(".lightSVG");
-		lightSVG[0].style.visibility = "visible";
-	}
 
 	let inpPosto = document.querySelectorAll("#inpPosto")[0];
 	inpPosto.focus();
