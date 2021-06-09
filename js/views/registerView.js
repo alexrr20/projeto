@@ -82,4 +82,5 @@ export default class registerView {
 			timer: 2000,
 		});
 	}
+	
 }
