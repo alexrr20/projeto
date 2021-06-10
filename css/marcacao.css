@@ -1,7 +1,7 @@
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Black.woff2") format("woff2"),
-		url("AzoSans-Black.woff") format("woff");
+	src: url("../fonts/AzoSans-Black.woff2") format("woff2"),
+		url("../fonts/AzoSans-Black.woff") format("woff");
 	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Light.woff2") format("woff2"),
-		url("AzoSans-Light.woff") format("woff");
+	src: url("../fonts/AzoSans-Light.woff2") format("woff2"),
+		url("../fonts/AzoSans-Light.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Bold.woff2") format("woff2"),
-		url("AzoSans-Bold.woff") format("woff");
+	src: url("../fonts/AzoSans-Bold.woff2") format("woff2"),
+		url("../fonts/AzoSans-Bold.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Thin.woff2") format("woff2"),
-		url("AzoSans-Thin.woff") format("woff");
+	src: url("../fonts/AzoSans-Thin.woff2") format("woff2"),
+		url("../fonts/AzoSans-Thin.woff") format("woff");
 	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Regular.woff2") format("woff2"),
-		url("AzoSans-Regular.woff") format("woff");
+	src: url("../fonts/AzoSans-Regular.woff2") format("woff2"),
+		url("../fonts/AzoSans-Regular.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Medium.woff2") format("woff2"),
-		url("AzoSans-Medium.woff") format("woff");
+	src: url("../fonts/AzoSans-Medium.woff2") format("woff2"),
+		url("../fonts/AzoSans-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -420,49 +420,48 @@ aside {
 	font-size: 14px;
 	margin-bottom: 0.6px;
 	margin-left: 3px;
-  }
-  
-  .checkbox {
+}
+
+.checkbox {
 	display: flex;
 	justify-content: left;
 	align-items: left;
 	margin: 20px 0 5px 0;
-  }
-  
-  .checkbox__input input {
+}
+
+.checkbox__input input {
 	opacity: 0;
 	width: 0.9em;
 	height: 0.9em;
-  }
-  
-  .checkbox__control {
+}
+
+.checkbox__control {
 	display: inline-grid;
 	width: 0.9em;
 	height: 0.9em;
 	border-radius: 0.2em;
 	background-color: var(--bege);
-  }
-  
-  .checkbox__input {
+}
+
+.checkbox__input {
 	display: grid;
 	grid-template-areas: "checkbox";
-  }
-  
-  .checkbox__input > * {
+}
+
+.checkbox__input > * {
 	grid-area: checkbox;
-  }
-  
-  .checkbox__control svg {
+}
+
+.checkbox__control svg {
 	transition: transform 0.1s ease-in 25ms;
 	transform: scale(0);
 	transform-origin: bottom left;
-  }
-  
-  .checkbox__input input:checked + .checkbox__control svg {
+}
+
+.checkbox__input input:checked + .checkbox__control svg {
 	transform: scale(1);
-  }
-  
-  .checkbox__input input:focus + .checkbox__control {
+}
+
+.checkbox__input input:focus + .checkbox__control {
 	box-shadow: 0 0 0 0.05em #000, 0 0 0.15em 0.1em currentColor;
-  }
-  
+}

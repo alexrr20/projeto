@@ -1,542 +1,542 @@
 @font-face {
-  font-family: "Azo Sans";
-  src: url("AzoSans-Black.woff2") format("woff2"),
-    url("AzoSans-Black.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Azo Sans";
+	src: url("../fonts/AzoSans-Black.woff2") format("woff2"),
+		url("../fonts/AzoSans-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Azo Sans";
-  src: url("AzoSans-Light.woff2") format("woff2"),
-    url("AzoSans-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Azo Sans";
+	src: url("../fonts/AzoSans-Light.woff2") format("woff2"),
+		url("../fonts/AzoSans-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Azo Sans";
-  src: url("AzoSans-Bold.woff2") format("woff2"),
-    url("AzoSans-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Azo Sans";
+	src: url("../fonts/AzoSans-Bold.woff2") format("woff2"),
+		url("../fonts/AzoSans-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Azo Sans";
-  src: url("AzoSans-Thin.woff2") format("woff2"),
-    url("AzoSans-Thin.woff") format("woff");
-  font-weight: 100;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Azo Sans";
+	src: url("../fonts/AzoSans-Thin.woff2") format("woff2"),
+		url("../fonts/AzoSans-Thin.woff") format("woff");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Azo Sans";
-  src: url("AzoSans-Regular.woff2") format("woff2"),
-    url("AzoSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Azo Sans";
+	src: url("../fonts/AzoSans-Regular.woff2") format("woff2"),
+		url("../fonts/AzoSans-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Azo Sans";
-  src: url("AzoSans-Medium.woff2") format("woff2"),
-    url("AzoSans-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+	font-family: "Azo Sans";
+	src: url("../fonts/AzoSans-Medium.woff2") format("woff2"),
+		url("../fonts/AzoSans-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
 }
 
 :root {
-  --azul: #1e1c41;
-  --azulClaro: #484758;
-  --verde: #00d06f;
-  --verdeEscuro: #1ab559;
-  --bege: #fff0d2;
-  --begeEscuro: #e6d8bd;
-  --bg: var(--bege);
-  --fg: var(--azul);
+	--azul: #1e1c41;
+	--azulClaro: #484758;
+	--verde: #00d06f;
+	--verdeEscuro: #1ab559;
+	--bege: #fff0d2;
+	--begeEscuro: #e6d8bd;
+	--bg: var(--bege);
+	--fg: var(--azul);
 }
 
 ::selection {
-  background-color: var(--verde);
+	background-color: var(--verde);
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg);
-  color: var(--fg);
-  transition: background 200ms ease-in-out, color 700ms ease-in-out;
-  font-family: "Azo Sans", sans-serif;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg);
+	color: var(--fg);
+	transition: background 200ms ease-in-out, color 700ms ease-in-out;
+	font-family: "Azo Sans", sans-serif;
 }
 
 header {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 9vh;
-  background-color: var(--azul);
-  position: relative;
-  z-index: 1000;
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 9vh;
+	background-color: var(--azul);
+	position: relative;
+	z-index: 1000;
 }
 
 #logoContainer {
-  display: flex;
-  justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
 }
 
 #logo {
-  width: 69px;
+	width: 69px;
 }
 
 nav {
-  background-color: var(--azul);
-  height: 40px;
-  display: flex;
-  padding-left: 10px;
+	background-color: var(--azul);
+	height: 40px;
+	display: flex;
+	padding-left: 10px;
 }
 
 #navList {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  list-style-type: none;
-  width: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	list-style-type: none;
+	width: 100%;
 }
 
 .navBtn {
-  padding: 10px;
+	padding: 10px;
 }
 
 #navList li {
-  padding: 0 30px;
-  position: relative;
+	padding: 0 30px;
+	position: relative;
 }
 
 .icon1 {
-  position: absolute;
-  top: 4px;
-  right: 100px;
+	position: absolute;
+	top: 4px;
+	right: 100px;
 }
 
 .icon2 {
-  position: absolute;
-  top: 4px;
-  right: 57px;
+	position: absolute;
+	top: 4px;
+	right: 57px;
 }
 
 .btnTheme {
-  border-radius: 3px;
-  position: relative;
-  width: 25px;
-  height: 25px;
-  background-color: var(--bege);
-  cursor: pointer;
+	border-radius: 3px;
+	position: relative;
+	width: 25px;
+	height: 25px;
+	background-color: var(--bege);
+	cursor: pointer;
 }
 
 .icon3 {
-  position: absolute;
-  top: 2px;
-  left: 1.5px;
+	position: absolute;
+	top: 2px;
+	left: 1.5px;
 }
 
 li a {
-  color: #fff0d2;
-  font-size: 14px;
-  cursor: pointer;
+	color: #fff0d2;
+	font-size: 14px;
+	cursor: pointer;
 }
 
 a {
-  text-decoration: none;
-  color: var(--fg);
+	text-decoration: none;
+	color: var(--fg);
 }
 
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
-  transition: all 0.3s;
-  will-change: width;
+	transition: all 0.3s;
+	will-change: width;
 }
 nav ul li a:hover {
-  color: #fff7e8;
+	color: #fff7e8;
 }
 
 /* stroke */
 nav ul li a {
-  position: relative;
+	position: relative;
 }
 nav ul li a:after {
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: ".";
-  color: transparent;
-  background: var(--verde);
-  height: 3px;
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0%;
+	content: ".";
+	color: transparent;
+	background: var(--verde);
+	height: 3px;
 }
 nav ul li a:hover:after {
-  width: 100%;
+	width: 100%;
 }
 
 .divider {
-  background-color: var(--bege);
-  width: 2px;
-  height: 70%;
+	background-color: var(--bege);
+	width: 2px;
+	height: 70%;
 }
 
 .burger {
-  display: none;
+	display: none;
 }
 
 .burger div {
-  width: 25px;
-  height: 4px;
-  background-color: var(--azul);
-  margin: 5px;
+	width: 25px;
+	height: 4px;
+	background-color: var(--azul);
+	margin: 5px;
 }
 
 .btnSubmit {
-  box-sizing: border-box;
-  background-color: var(--verde);
-  height: 30px;
-  border: 0;
-  border-radius: 4px;
-  font-family: "Azo Sans", sans-serif;
-  font-weight: 500;
-  font-size: 11px;
-  color: var(--bege);
-  padding: 9px 10px 9px 40px;
-  cursor: pointer;
+	box-sizing: border-box;
+	background-color: var(--verde);
+	height: 30px;
+	border: 0;
+	border-radius: 4px;
+	font-family: "Azo Sans", sans-serif;
+	font-weight: 500;
+	font-size: 11px;
+	color: var(--bege);
+	padding: 9px 10px 9px 40px;
+	cursor: pointer;
 }
 
 .container1 {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .mainHeader {
-  background-color: var(--azul);
-  height: 45vh;
-  color: var(--bege);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
+	background-color: var(--azul);
+	height: 45vh;
+	color: var(--bege);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
 }
 
 h1 {
-  margin: 0;
-  text-align: center;
-  font-size: 92px;
-  line-height: 90px;
+	margin: 0;
+	text-align: center;
+	font-size: 92px;
+	line-height: 90px;
 }
 
 .mainHeaderH3 {
-  font-weight: 300;
-  font-size: 19px;
-  line-height: 32px;
-  text-align: center;
+	font-weight: 300;
+	font-size: 19px;
+	line-height: 32px;
+	text-align: center;
 }
 
 .spanHeader {
-  font-weight: 500;
+	font-weight: 500;
 }
 
 .mainSearch {
-  display: flex;
-  justify-content: center;
-  height: 46vh;
+	display: flex;
+	justify-content: center;
+	height: 46vh;
 }
 
 .mainSearchContainer {
-  width: 50%;
-  padding: 30px 80px 0 120px;
+	width: 50%;
+	padding: 30px 80px 0 120px;
 }
 
 .mainSearch .mainSearchContainer:nth-child(2) {
-  padding: 30px 120px 0 80px;
+	padding: 30px 120px 0 80px;
 }
 
 h5 {
-  margin: 0;
-  font-size: 22px;
-  font-weight: bold;
+	margin: 0;
+	font-size: 22px;
+	font-weight: bold;
 }
 
 h6 {
-  margin: 2px 0 0 0;
-  font-weight: 300;
-  font-size: 14px;
+	margin: 2px 0 0 0;
+	font-weight: 300;
+	font-size: 14px;
 }
 
 .inpBox {
-  position: relative;
+	position: relative;
 }
 
 .icon4 {
-  position: absolute;
-  left: 17px;
-  bottom: 22px;
+	position: absolute;
+	left: 17px;
+	bottom: 22px;
 }
 
 #inpCategoria {
-  background-color: var(--azul);
-  font-family: "Azo Sans", sans-serif;
-  height: 48px;
-  font-weight: 500;
-  border: 0;
-  margin: 10px 0;
-  padding-top: 5px;
-  padding-left: 68px;
-  font-size: 18px;
-  color: var(--bege);
-  width: 70%;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
+	background-color: var(--azul);
+	font-family: "Azo Sans", sans-serif;
+	height: 48px;
+	font-weight: 500;
+	border: 0;
+	margin: 10px 0;
+	padding-top: 5px;
+	padding-left: 68px;
+	font-size: 18px;
+	color: var(--bege);
+	width: 70%;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
 }
 
 .mainSearchContent {
-  margin-top: 15px;
-  display: grid;
-  grid-template-rows: 50% 50%;
-  grid-template-columns: 50% 50%;
-  grid-gap: 20px;
+	margin-top: 15px;
+	display: grid;
+	grid-template-rows: 50% 50%;
+	grid-template-columns: 50% 50%;
+	grid-gap: 20px;
 }
 
 .mainSearchItem {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .mainSearchItem h6 {
-  font-weight: 500;
-  font-size: 20px;
+	font-weight: 500;
+	font-size: 20px;
 }
 
 .mainSearchItem p {
-  font-weight: 300;
-  margin: 0;
-  width: 70%;
+	font-weight: 300;
+	margin: 0;
+	width: 70%;
 }
 
 .mainSearchItem a {
-  color: var(--verde);
-  margin-top: 7px;
-  font-size: 15px;
+	color: var(--verde);
+	margin-top: 7px;
+	font-size: 15px;
 }
 
 .container2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .container2 h2 {
-  font-size: 92px;
-  font-weight: 500;
-  margin-bottom: 0;
+	font-size: 92px;
+	font-weight: 500;
+	margin-bottom: 0;
 }
 
 .container2 h3 {
-  font-weight: 300;
-  font-size: 25px;
-  margin: 0;
+	font-weight: 300;
+	font-size: 25px;
+	margin: 0;
 }
 
 #resultContent {
-  width: 49%;
-  max-width: 1000px;
-  margin-top: 80px;
+	width: 49%;
+	max-width: 1000px;
+	margin-top: 80px;
 }
 
 .resultItem h4 {
-  color: var(--verde);
-  font-size: 20px;
-  font-weight: 500;
-  text-align: left;
+	color: var(--verde);
+	font-size: 20px;
+	font-weight: 500;
+	text-align: left;
 }
 
 .resultItem {
-  margin: 15px 0;
+	margin: 15px 0;
 }
 
 .border {
-  width: 100%;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
+	width: 100%;
+	height: 1px;
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 1190px) {
-  #navList li {
-    padding: 0 20px;
-  }
+	#navList li {
+		padding: 0 20px;
+	}
 
-  .mainSearch {
-    flex-direction: column;
-  }
+	.mainSearch {
+		flex-direction: column;
+	}
 }
 
 @media screen and (max-width: 1050px) {
-  #navList li {
-    padding: 0 10px;
-  }
-  #logo {
-    width: 90px;
-  }
-  body {
-    overflow-x: hidden;
-  }
+	#navList li {
+		padding: 0 10px;
+	}
+	#logo {
+		width: 90px;
+	}
+	body {
+		overflow-x: hidden;
+	}
 
-  main {
-    width: 100%;
-  }
+	main {
+		width: 100%;
+	}
 
-  header {
-    display: flex;
-    flex-direction: row;
-  }
+	header {
+		display: flex;
+		flex-direction: row;
+	}
 
-  nav {
-    position: absolute;
-    right: 0px;
-    height: 100vh;
-    width: 100vw;
-    top: 0;
-    background-color: var(--verde);
-    display: flex;
-    align-items: center;
-    transform: translateX(100%);
-    transition: transform 0.3s;
-    will-change: transform;
-  }
+	nav {
+		position: absolute;
+		right: 0px;
+		height: 100vh;
+		width: 100vw;
+		top: 0;
+		background-color: var(--verde);
+		display: flex;
+		align-items: center;
+		transform: translateX(100%);
+		transition: transform 0.3s;
+		will-change: transform;
+	}
 
-  header {
-    background-color: transparent;
-    justify-content: center;
-    height: 100px;
-    width: 100%;
-  }
+	header {
+		background-color: transparent;
+		justify-content: center;
+		height: 100px;
+		width: 100%;
+	}
 
-  nav {
-    background-color: var(--azul);
-  }
+	nav {
+		background-color: var(--azul);
+	}
 
-  .burger {
-    display: block;
-    margin-left: 80%;
-    position: absolute;
-    z-index: 1000;
-  }
+	.burger {
+		display: block;
+		margin-left: 80%;
+		position: absolute;
+		z-index: 1000;
+	}
 
-  #navList {
-    flex-direction: column;
-    height: 70vh;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+	#navList {
+		flex-direction: column;
+		height: 70vh;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
 
-  .divider {
-    display: none;
-  }
+	.divider {
+		display: none;
+	}
 
-  li a {
-    font-size: 43px;
-    font-weight: 500;
-  }
+	li a {
+		font-size: 43px;
+		font-weight: 500;
+	}
 }
 
 .nav-active {
-  transform: translateX(0%);
+	transform: translateX(0%);
 }
 
 .dark {
-  background-color: var(--azul);
-  color: var(--bege);
+	background-color: var(--azul);
+	color: var(--bege);
 }
 
 .dark #inpCategoria {
-  background-color: var(--bege);
+	background-color: var(--bege);
 }
 
 .dark .icon4 {
-  stroke: var(--azul);
+	stroke: var(--azul);
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  background-color: transparent;
-  font-family: "Azo Sans", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: var(--verde);
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
+	background-color: transparent;
+	font-family: "Azo Sans", sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	color: var(--verde);
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.4s;
 }
 
 .active {
-  font-size: 25px;
+	font-size: 25px;
 }
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  will-change: max-height;
+	padding: 0 18px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	will-change: max-height;
 }
 
 .panel p {
-  font-family: "Azo Sans", sans-serif;
-  font-weight: 300;
-  font-size: 17px;
-  text-align: left;
-  line-height: 24px;
+	font-family: "Azo Sans", sans-serif;
+	font-weight: 300;
+	font-size: 17px;
+	text-align: left;
+	line-height: 24px;
 }
 
 .panel ul {
-  list-style: none;
-  padding: 20px 0;
+	list-style: none;
+	padding: 20px 0;
 }
 
 .panel ul li {
-  font-size: 17px;
-  font-weight: 300;
-  text-align: left;
-  padding: 10px 0;
+	font-size: 17px;
+	font-weight: 300;
+	text-align: left;
+	padding: 10px 0;
 }
 
 .panel ul li span {
-  font-weight: 500;
+	font-weight: 500;
 }
