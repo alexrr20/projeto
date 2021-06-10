@@ -563,7 +563,7 @@ h6 {
 }
 
 .container2-1bottom {
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .btnContainer {
@@ -806,7 +806,7 @@ path.two {
 	position: relative;
 }
 
-.addComentario div:nth-child(2) svg {
+#commentAddContainer > svg {
 	position: absolute;
 	top: 21px;
 	left: 15px;
@@ -816,6 +816,13 @@ path.two {
 	box-shadow: none;
 	border-bottom: 2px solid var(--azul);
 	font-size: 13px;
+}
+
+#btnAddComment {
+	padding: 12px 15px;
+	margin: 10px 0 0 0;
+	width: 100%;
+	justify-content: center;
 }
 
 .dark {
