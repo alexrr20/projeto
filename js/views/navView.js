@@ -38,5 +38,3 @@ export default class navView {
 		}
 	}
 }
-
-console.log(false);

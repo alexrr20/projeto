@@ -65,4 +65,35 @@ export default class userController {
 			}
 		}
 	}
+
+	getLoggedUser() {
+		return sessionStorage.getItem("loggedUser") !== null
+			? sessionStorage.getItem("loggedUser")
+			: localStorage.getItem("loggedUser") !== null
+			? localStorage.getItem("loggedUser")
+			: false;
+	}
+
+	checkLike(testCenterId) {
+		let userLoggedInfo = this.getUserInfo(this.getLoggedUser());
+		if (!userLoggedInfo.likes.includes(testCenterId)) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	addLike(id) {
+		let userLoggedInfo = this.getUserInfo(this.getLoggedUser());
+		if (this.checkLike(id) === false) {
+			userLoggedInfo.likes.push(id);
+			this.users[userLoggedInfo.id].likes = userLoggedInfo.likes;
+			localStorage.setItem("users", JSON.stringify(this.users));
+		} else {
+			let index = userLoggedInfo.likes.indexOf(id);
+			userLoggedInfo.likes.splice(index, 1);
+			this.users[userLoggedInfo.id].likes = userLoggedInfo.likes;
+			localStorage.setItem("users", JSON.stringify(this.users));
+		}
+	}
 }

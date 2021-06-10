@@ -834,3 +834,8 @@ path.two {
 .dark h4 {
 	color: var(--begeEscuro) !important;
 }
+
+.dislike {
+	color: rgb(240, 135, 55);
+	border-color: rgb(240, 135, 55);
+}

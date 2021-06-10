@@ -9,7 +9,24 @@ export default class testCentersView {
 		this.bindAddTestCenters();
 
 		this.listItems = document.querySelectorAll(".info");
+
+		/* POR ALGUMA RAZÃO NÃO FUNCIONA ASSIM
+    this.btnGosto = document.querySelectorAll("#btnGosto")[0];*/
+
 		this.bindShowInfo();
+	}
+
+	likeType(testCenterName) {
+		let testCenterInfo =
+			this.testCentersController.getTestCenterInfo(testCenterName);
+		if (this.userController.checkLike(testCenterInfo.id) === false) {
+			document.querySelectorAll("#btnGosto")[0].className =
+				"btnSecondary like";
+		} else {
+			document.querySelectorAll("#btnGosto")[0].className =
+				"btnSecondary dislike";
+		}
+		return this.btnGosto;
 	}
 
 	displayMessage(message, color) {
@@ -85,11 +102,19 @@ export default class testCentersView {
 					document.querySelectorAll(".container2-1")[0].childNodes[3]
 						.innerHTML;
 				if (this.userController.isLogged()) {
-					var newLikes =
-						this.testCentersController.addLike(testCenterName);
+					let testCenterInfo =
+						this.testCentersController.getTestCenterInfo(
+							testCenterName
+						);
+					this.userController.addLike(testCenterInfo.id);
+					let newLikes = this.testCentersController.addLike(
+						testCenterName,
+						this.userController.checkLike(testCenterInfo.id)
+					);
 					let likeCounter =
 						document.querySelectorAll("#likeCounter")[0];
 					likeCounter.innerHTML = `${newLikes}`;
+					this.likeType(testCenterName);
 				} else {
 					this.displayMessage(
 						"Necessita de iniciar sessão para adicionar um gosto",
@@ -240,7 +265,7 @@ export default class testCentersView {
                   </span>
                 </a>
               </div>
-              <button id="btnGosto" class="btnSecondary"><p>Gosto</p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-up" width="35" height="35" viewBox="0 0 24 24" stroke-width="2.3" stroke="#2cce6c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <button id="btnGosto" class="btnSecondary"><p id="likeP">Gosto</p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-up" width="35" height="35" viewBox="0 0 24 24" stroke-width="2.3" stroke="#2cce6c" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <path d="M7 11v8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
               </svg></button>
@@ -322,6 +347,7 @@ export default class testCentersView {
         </div>
 `;
 				main.appendChild(newDiv);
+				console.log(this.likeType(testCenterName));
 				this.bindLike();
 				this.loadComments(testCenterName);
 				this.loadAvailableTests(testCenterName);
