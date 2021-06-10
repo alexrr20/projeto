@@ -1,7 +1,7 @@
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Black.woff2") format("woff2"),
-		url("AzoSans-Black.woff") format("woff");
+	src: url("../fonts/AzoSans-Black.woff2") format("woff2"),
+		url("../fonts/AzoSans-Black.woff") format("woff");
 	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Light.woff2") format("woff2"),
-		url("AzoSans-Light.woff") format("woff");
+	src: url("../fonts/AzoSans-Light.woff2") format("woff2"),
+		url("../fonts/AzoSans-Light.woff") format("woff");
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Bold.woff2") format("woff2"),
-		url("AzoSans-Bold.woff") format("woff");
+	src: url("../fonts/AzoSans-Bold.woff2") format("woff2"),
+		url("../fonts/AzoSans-Bold.woff") format("woff");
 	font-weight: bold;
 	font-style: normal;
 	font-display: swap;
@@ -27,8 +27,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Thin.woff2") format("woff2"),
-		url("AzoSans-Thin.woff") format("woff");
+	src: url("../fonts/AzoSans-Thin.woff2") format("woff2"),
+		url("../fonts/AzoSans-Thin.woff") format("woff");
 	font-weight: 100;
 	font-style: normal;
 	font-display: swap;
@@ -36,8 +36,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Regular.woff2") format("woff2"),
-		url("AzoSans-Regular.woff") format("woff");
+	src: url("../fonts/AzoSans-Regular.woff2") format("woff2"),
+		url("../fonts/AzoSans-Regular.woff") format("woff");
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -45,8 +45,8 @@
 
 @font-face {
 	font-family: "Azo Sans";
-	src: url("AzoSans-Medium.woff2") format("woff2"),
-		url("AzoSans-Medium.woff") format("woff");
+	src: url("../fonts/AzoSans-Medium.woff2") format("woff2"),
+		url("../fonts/AzoSans-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -563,7 +563,7 @@ h6 {
 }
 
 .container2-1bottom {
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .btnContainer {
@@ -806,7 +806,7 @@ path.two {
 	position: relative;
 }
 
-.addComentario div:nth-child(2) svg {
+#commentAddContainer > svg {
 	position: absolute;
 	top: 21px;
 	left: 15px;
@@ -816,6 +816,13 @@ path.two {
 	box-shadow: none;
 	border-bottom: 2px solid var(--azul);
 	font-size: 13px;
+}
+
+#btnAddComment {
+	padding: 12px 15px;
+	margin: 10px 0 0 0;
+	width: 100%;
+	justify-content: center;
 }
 
 .dark {

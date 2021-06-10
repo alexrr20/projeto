@@ -87,14 +87,15 @@ export default class testCentersView {
 				if (this.userController.isLogged()) {
 					var newLikes =
 						this.testCentersController.addLike(testCenterName);
+					let likeCounter =
+						document.querySelectorAll("#likeCounter")[0];
+					likeCounter.innerHTML = `${newLikes}`;
 				} else {
 					this.displayMessage(
 						"Necessita de iniciar sessão para adicionar um gosto",
 						"orange"
 					);
 				}
-				let likeCounter = document.querySelectorAll("#likeCounter")[0];
-				likeCounter.innerHTML = `${newLikes}`;
 			});
 	}
 
@@ -301,14 +302,20 @@ export default class testCentersView {
                   <span class="icon">★</span>
                 </label>
               </div>
-              <div>
+              <div id="commentAddContainer">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-message-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#1e1c41" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <path d="M12 20l-3 -3h-2a3 3 0 0 1 -3 -3v-6a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-2l-3 3" />
                   <line x1="8" y1="9" x2="16" y2="9" />
                   <line x1="8" y1="13" x2="14" y2="13" />
                 </svg>
-              <input type="text" placeholder="Comentário" id="addComentario">
+                <input type="text" placeholder="Comentário" id="addComentario">
+                <button id="btnAddComment" class="btnSecondary"><p>Adicionar Comentário</p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#2cce6c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <circle cx="12" cy="12" r="9" />
+                  <line x1="9" y1="12" x2="15" y2="12" />
+                  <line x1="12" y1="9" x2="12" y2="15" />
+                </svg></button>
               </div>
             </form>
           </div>
