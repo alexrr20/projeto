@@ -68,4 +68,19 @@ export default class registerView {
 				this.logoutButton.style.visibility = "hidden";
 		}
 	}
+
+	displayMessage(message, color) {
+		Swal.fire({
+			title: message,
+			position: "bottom",
+			background: color,
+			allowEscapeKey: false,
+			allowEnterKey: false,
+			showConfirmButton: false,
+			showCancelButton: false,
+			backdrop: false,
+			timer: 2000,
+		});
+	}
+	
 }
