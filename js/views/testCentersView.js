@@ -16,17 +16,56 @@ export default class testCentersView {
 		this.bindShowInfo();
 	}
 
+	bindBtnAddComment() {
+		document
+			.querySelectorAll("#btnAddComment")[0]
+			.addEventListener("click", () => {
+				let commentToAdd =
+					document.querySelectorAll("#addComentario")[0].value;
+				let user = this.userController.getLoggedUser();
+				let testCenterName =
+					document.querySelectorAll(".container2-1")[0].childNodes[3]
+						.innerHTML;
+				let radios = document.querySelectorAll(".radioStar");
+				for (let i = 0; i < radios.length; i++) {
+					if (radios[i].checked) {
+						var rating = i + 1;
+					}
+				}
+				this.testCentersController.addComment(
+					testCenterName,
+					commentToAdd,
+					user,
+					rating
+				);
+				this.loadComments(testCenterName);
+			});
+	}
+
 	likeType(testCenterName) {
 		let testCenterInfo =
 			this.testCentersController.getTestCenterInfo(testCenterName);
 		if (this.userController.checkLike(testCenterInfo.id) === false) {
 			document.querySelectorAll("#btnGosto")[0].className =
 				"btnSecondary like";
+			document.querySelectorAll(
+				"#btnGosto"
+			)[0].innerHTML = `<p id="likeP">Gosto</p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-thumb-up" width="35" height="35" viewBox="0 0 24 24" stroke-width="2.1" stroke="#2cce6c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M7 11v8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
+      </svg>`;
 		} else {
 			document.querySelectorAll("#btnGosto")[0].className =
 				"btnSecondary dislike";
+			document.querySelectorAll(
+				"#btnGosto"
+			)[0].innerHTML = `<p id="likeP">Remover Gosto</p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="34" height="34" viewBox="0 0 24 24" stroke-width="2" stroke="rgb(240, 135, 55)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <line x1="18" y1="6" x2="6" y2="18" />
+      <line x1="6" y1="6" x2="18" y2="18" />
+    </svg>`;
 		}
-		return this.btnGosto;
+		return document.querySelectorAll("#btnGosto")[0];
 	}
 
 	displayMessage(message, color) {
@@ -111,6 +150,7 @@ export default class testCentersView {
 						testCenterName,
 						this.userController.checkLike(testCenterInfo.id)
 					);
+					console.log(newLikes);
 					let likeCounter =
 						document.querySelectorAll("#likeCounter")[0];
 					likeCounter.innerHTML = `${newLikes}`;
@@ -297,29 +337,29 @@ export default class testCentersView {
             <form class="addComentario">
               <div class="rating">
                 <label>
-                  <input type="radio" name="stars" value="1" />
+                  <input class="radioStar" type="radio" name="stars" value="1" />
                   <span class="icon">★</span>
                 </label>
                 <label>
-                  <input type="radio" name="stars" value="2" />
+                  <input class="radioStar" type="radio" name="stars" value="2" />
                   <span class="icon">★</span>
                   <span class="icon">★</span>
                 </label>
                 <label>
-                  <input type="radio" name="stars" value="3" />
+                  <input class="radioStar" type="radio" name="stars" value="3" />
                   <span class="icon">★</span>
                   <span class="icon">★</span>
                   <span class="icon">★</span>   
                 </label>
                 <label>
-                  <input type="radio" name="stars" value="4" />
+                  <input class="radioStar" type="radio" name="stars" value="4" />
                   <span class="icon">★</span>
                   <span class="icon">★</span>
                   <span class="icon">★</span>
                   <span class="icon">★</span>
                 </label>
                 <label>
-                  <input type="radio" name="stars" value="5" />
+                  <input class="radioStar" type="radio" name="stars" value="5" />
                   <span class="icon">★</span>
                   <span class="icon">★</span>
                   <span class="icon">★</span>
@@ -335,7 +375,7 @@ export default class testCentersView {
                   <line x1="8" y1="13" x2="14" y2="13" />
                 </svg>
                 <input type="text" placeholder="Comentário" id="addComentario">
-                <button id="btnAddComment" class="btnSecondary"><p>Adicionar Comentário</p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#2cce6c" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <button type="button" id="btnAddComment" class="btnSecondary"><p>Adicionar Comentário</p><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#2cce6c" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <circle cx="12" cy="12" r="9" />
                   <line x1="9" y1="12" x2="15" y2="12" />
@@ -352,6 +392,7 @@ export default class testCentersView {
 				this.loadComments(testCenterName);
 				this.loadAvailableTests(testCenterName);
 				this.likeStars(testCenterName);
+				this.bindBtnAddComment();
 			});
 		}
 	}

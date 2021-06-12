@@ -141,12 +141,14 @@ nav {
 	position: absolute;
 	top: 4px;
 	right: 100px;
+	z-index: 1000;
 }
 
 .icon2 {
 	position: absolute;
 	top: 4px;
 	right: 57px;
+	z-index: 1000;
 }
 
 .btnTheme {

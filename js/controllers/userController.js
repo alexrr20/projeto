@@ -85,6 +85,7 @@ export default class userController {
 
 	addLike(id) {
 		let userLoggedInfo = this.getUserInfo(this.getLoggedUser());
+		console.log(this.checkLike(id));
 		if (this.checkLike(id) === false) {
 			userLoggedInfo.likes.push(id);
 			this.users[userLoggedInfo.id].likes = userLoggedInfo.likes;

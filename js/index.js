@@ -4,15 +4,6 @@ let nav = document.querySelectorAll("#navbar")[0];
 
 burger.addEventListener("click", () => {
 	nav.classList.toggle("nav-active");
-	if (nav.classList.contains("nav-active")) {
-		for (child in burger.children) {
-			burger.children[child].style.backgroundColor = "#fff0d2";
-		}
-	} else {
-		for (child in burger.children) {
-			burger.children[child].style.backgroundColor = "#1e1c41";
-		}
-	}
 });
 
 // PÁGINA FAQ
@@ -157,19 +148,6 @@ if (body.classList.contains("inicioBody")) {
 	let btnTheme = document.querySelectorAll(".btnTheme");
 	let dropdownList = document.querySelectorAll(".dropdownList");
 	let inp = document.querySelectorAll("input");
-
-	burger.addEventListener("click", () => {
-		nav.classList.toggle("nav-active");
-		if (nav.classList.contains("nav-active")) {
-			for (child in burger.children) {
-				burger.children[child].style.backgroundColor = "white";
-			}
-		} else {
-			for (child in burger.children) {
-				burger.children[child].style.backgroundColor = "#1abf5b";
-			}
-		}
-	});
 
 	input[0].addEventListener("focus", () => {
 		dropdown[0].classList.replace("hidden", "shown");

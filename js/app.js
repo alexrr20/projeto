@@ -13,6 +13,9 @@ class App {
 			signup: [registerView, navView],
 			postos: [testCentersView, navView],
 			faq: [navView],
+			info: [navView],
+			marcacao: [navView],
+			validacao: [navView],
 		};
 
 		// importa dados dummy para testes

@@ -59,8 +59,8 @@
 	--verdeEscuro: #1ab559;
 	--bege: #fff0d2;
 	--begeEscuro: #e6d8bd;
-	--bg: var(--verde);
-	--fg: var(--bege);
+	--bg: var(--bege);
+	--fg: var(--azul);
 }
 
 ::selection {
@@ -68,13 +68,13 @@
 }
 
 body {
+	width: 100vw;
 	margin: 0;
 	padding: 0;
-	background-color: var(--fg);
+	background-color: var(--bg);
 	color: var(--fg);
 	transition: background 200ms ease-in-out, color 700ms ease-in-out;
 	font-family: "Azo Sans", sans-serif;
-	overflow-x: hidden;
 }
 
 header {
@@ -225,153 +225,22 @@ nav ul li a:hover:after {
 	cursor: pointer;
 }
 
-main {
+.container1 {
+	height: 92vh;
 	display: flex;
-	justify-content: left;
-	margin-left: 155px;
-}
-
-.container {
-	width: 80%;
-	max-width: 1000px;
-	margin-left: 16.5%;
-	margin-right: 25%;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	text-align: center;
 }
 
 h1 {
-	color: #1e1c41;
-	font-size: 89px;
-	font-weight: bold;
-	margin-top: 90px;
-	margin-bottom: 5px;
-	text-align: center;
-}
-
-h2 {
-	font-size: 38px;
-	margin-bottom: 24px;
-}
-
-h3 {
-	color: #1e1c41;
-	font-size: 18px;
-	font-weight: normal;
-	margin-bottom: 24px;
-	text-align: center;
-}
-
-form {
-	display: flex;
-	flex-direction: column;
-}
-
-.ipContainer {
-	display: grid;
-	grid-template-columns: 43% 43%;
-	max-width: 870px;
-	grid-template-rows: 1fr 1fr 1fr;
-	grid-gap: 20px 50px;
-	margin-bottom: 50px;
-}
-
-.inputContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-.ipContainer1 .inputContainer:first-child {
-	grid-column: 1 / 3;
-}
-
-.ipContainer2 {
-	display: grid;
-	grid-template-columns: 43% 43%;
-	grid-template-rows: 1fr 1fr;
-}
-
-#ou {
-	font-weight: 800;
-	font-size: 36px;
-	align-self: center;
-	margin: 20px 0 10px 0;
-}
-
-.inputContainerTexto {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.inputContainerTexto p {
-	font-size: 18px;
-	font-weight: 300;
-	width: 85%;
-	margin-left: 20px;
-}
-
-.inputContainerTexto span {
-	font-size: 23px;
-	font-weight: 600;
-}
-
-input {
-	box-sizing: border-box;
-	height: 50px;
-	width: 100%;
-	background-color: var(--bege);
-	font-family: "Azo Sans", sans-serif;
-	font-weight: 400;
-	border: 0;
-	margin: 10px 0;
-	padding-top: 2px;
-	padding-left: 60px;
-	font-size: 18px;
-	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
-}
-
-input::placeholder {
-	color: rgba(72, 71, 88, 0.36);
-	font-size: 15px;
-}
-
-label {
-	font-weight: 500;
-}
-
-.svgInpContainer {
-	position: relative;
-}
-
-.icon4 {
-	position: absolute;
-	top: 22px;
-	left: 15px;
-}
-
-li {
-	list-style: none;
-}
-
-.bgImg {
-	width: 510px;
-	position: absolute;
-	bottom: 565px;
-	right: -90px;
-}
-
-#btnVoltar {
-	margin-bottom: 100px;
-	width: 37%;
-	height: 60px;
-	background-color: #1e1c41;
-	border: 0;
-	color: var(--bege);
-	font-family: "Azo Sans", sans-serif;
-	font-weight: 850;
-	border-radius: 4px;
-	font-size: 20px;
 	margin-top: 100px;
+}
+
+.ondaContainer {
+	position: absolute;
+	bottom: 0;
 }
 
 @media screen and (max-width: 1190px) {
@@ -380,27 +249,17 @@ li {
 	}
 }
 
-@media screen and (max-width: 1050px) {
-	#navList li {
-		padding: 0 10px;
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	#logo {
-		width: 90px;
-	}
+@media screen and (max-width: 1030px) {
 	body {
 		overflow-x: hidden;
 	}
 
-	main {
-		width: 100%;
-	}
-
 	header {
 		display: flex;
-		flex-direction: row;
+		width: 100vw;
+		position: relative;
+		top: 0;
+		left: 0;
 	}
 
 	nav {
@@ -417,40 +276,61 @@ li {
 		will-change: transform;
 	}
 
-	header {
-		background-color: transparent;
-		justify-content: center;
-		height: 100px;
-		width: 100%;
+	#navList {
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	nav {
-		background-color: var(--azul);
+	#navList li a {
+		font-size: 30px;
 	}
 
 	.burger {
 		display: block;
-		margin-left: 80%;
-		position: absolute;
+		margin-right: 50px;
+		position: relative;
 		z-index: 1000;
 	}
 
-	#navList {
-		flex-direction: column;
-		height: 70vh;
-		justify-content: space-between;
-		align-items: flex-start;
-		padding-left: 50px;
-		padding-right: 50px;
+	#logoContainer {
+		padding: 0 0 0 85px;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	#logo {
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		margin: auto 0;
+		top: 10%;
+		left: 50%;
 	}
 
 	.divider {
 		display: none;
 	}
 
-	li a {
-		font-size: 43px;
-		font-weight: 500;
+	.btnSubmit {
+		font-size: 20px;
+		background-color: var(--azul);
+		height: 45px;
+		width: 100%;
+	}
+
+	.icon1 {
+		top: 11px;
+	}
+
+	.icon2 {
+		top: 11px;
+		left: 15px;
 	}
 }
 

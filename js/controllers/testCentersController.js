@@ -30,4 +30,18 @@ export default class testCenterController {
 			}
 		}
 	}
+
+	addComment(testCenterName, commentToAdd, user, rating) {
+		let testCenter = this.getTestCenterInfo(testCenterName);
+		let comment = {
+			userComment: user,
+			comment: commentToAdd,
+			userRating: rating,
+		};
+
+		testCenter.comments.push(comment);
+		this.testCenters[testCenter.id].comments = testCenter.comments;
+		localStorage.setItem("testCenters", JSON.stringify(this.testCenters));
+		return this.testCenters[testCenter.id].comments;
+	}
 }
