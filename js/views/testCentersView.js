@@ -14,6 +14,68 @@ export default class testCentersView {
     this.btnGosto = document.querySelectorAll("#btnGosto")[0];*/
 
 		this.bindShowInfo();
+		this.inpFocus();
+		this.addToggle();
+		this.rangeSlide();
+		this.search();
+	}
+
+	addToggle() {
+		document
+			.querySelectorAll("#filtroToggle")[0]
+			.addEventListener("click", () => {
+				let panel = document.querySelectorAll(".filtros1")[0];
+				console.log(panel);
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+					filtroToggle.innerHTML = "Mostrar";
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+					filtroToggle.innerHTML = "Esconder";
+				}
+			});
+	}
+
+	rangeSlide() {
+		["mousemove", "change"].forEach((evt) =>
+			document.querySelectorAll(".range")[0].addEventListener(evt, () => {
+				document.getElementById(
+					"rangeValue"
+				).innerHTML = `<span class="bold">${
+					document.querySelectorAll(".range")[0].value
+				}</span> Km`;
+			})
+		);
+	}
+
+	search() {
+		let inpPosto = document.querySelectorAll("#inpPosto")[0];
+		inpPosto.addEventListener("keyup", () => {
+			let value = inpPosto.value.toUpperCase();
+			let ul = document.querySelectorAll(".dropdownList")[0];
+			let li = ul.getElementsByTagName("li");
+			for (let i = 0; i < li.length; i++) {
+				let h5 = li[i].getElementsByTagName("h5")[0];
+				let txtValue = h5.textContent || h5.innerText;
+				if (txtValue.toUpperCase().indexOf(value) > -1) {
+					li[i].style.display = "";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
+		});
+	}
+
+	inpFocus() {
+		document.querySelectorAll("#inpPosto")[0].focus();
+	}
+
+	bindAddAppointment() {
+		document
+			.querySelectorAll(".wrapper")[0]
+			.addEventListener("click", () => {
+				window.location.href = "../../html/marcacao.html";
+			});
 	}
 
 	bindBtnAddComment() {
@@ -393,6 +455,7 @@ export default class testCentersView {
 				this.loadAvailableTests(testCenterName);
 				this.likeStars(testCenterName);
 				this.bindBtnAddComment();
+				this.bindAddAppointment();
 			});
 		}
 	}

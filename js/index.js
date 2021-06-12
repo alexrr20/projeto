@@ -2,10 +2,6 @@ let body = document.getElementsByTagName("body")[0];
 let burger = document.querySelectorAll(".burger")[0];
 let nav = document.querySelectorAll("#navbar")[0];
 
-burger.addEventListener("click", () => {
-	nav.classList.toggle("nav-active");
-});
-
 // PÁGINA FAQ
 if (body.classList.contains("faqBody")) {
 	let btnSubmit = document.querySelectorAll(".btnSubmit");
@@ -366,40 +362,4 @@ if (body.classList.contains("signupBody")) {
 }
 
 if (body.classList.contains("postosBody")) {
-	function rangeSlide(value) {
-		document.getElementById(
-			"rangeValue"
-		).innerHTML = `<span class="bold">${value}</span> Km`;
-	}
-
-	let filtroToggle = document.querySelectorAll("#filtroToggle")[0];
-
-	filtroToggle.addEventListener("click", () => {
-		let panel = document.querySelectorAll(".filtros1")[0];
-		if (panel.style.maxHeight) {
-			panel.style.maxHeight = null;
-			filtroToggle.innerHTML = "Mostrar";
-		} else {
-			panel.style.maxHeight = panel.scrollHeight + "px";
-			filtroToggle.innerHTML = "Esconder";
-		}
-	});
-
-	let inpPosto = document.querySelectorAll("#inpPosto")[0];
-	inpPosto.focus();
-
-	function search() {
-		value = inpPosto.value.toUpperCase();
-		ul = document.querySelectorAll(".dropdownList")[0];
-		li = ul.getElementsByTagName("li");
-		for (let i = 0; i < li.length; i++) {
-			h5 = li[i].getElementsByTagName("h5")[0];
-			txtValue = h5.textContent || h5.innerText;
-			if (txtValue.toUpperCase().indexOf(value) > -1) {
-				li[i].style.display = "";
-			} else {
-				li[i].style.display = "none";
-			}
-		}
-	}
 }
