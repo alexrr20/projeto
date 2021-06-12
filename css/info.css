@@ -236,6 +236,11 @@ nav ul li a:hover:after {
 
 h1 {
 	margin-top: 100px;
+	font-size: 100px;
+}
+
+h3{
+	font-size: 23px;
 }
 
 .ondaContainer {
@@ -349,4 +354,8 @@ h1 {
 
 .dark #linkNewAccount span a {
 	color: var(--verde);
+}
+
+.video{
+	margin-left: 15%;
 }
