@@ -1,10 +1,12 @@
 import testCentersController from "../controllers/testCentersController.js";
 import userController from "../controllers/userController.js";
+import appointmentController from "../controllers/appointmentController.js";
 
 export default class testCentersView {
 	constructor() {
 		this.testCentersController = new testCentersController();
 		this.userController = new userController();
+		this.appointmentController = new appointmentController();
 
 		this.bindAddTestCenters();
 
@@ -71,9 +73,13 @@ export default class testCentersView {
 	}
 
 	bindAddAppointment() {
+		let testCenterName =
+			document.querySelectorAll(".container2-1")[0].childNodes[3]
+				.innerHTML;
 		document
 			.querySelectorAll(".wrapper")[0]
 			.addEventListener("click", () => {
+				this.testCentersController.storeTempInfo(testCenterName);
 				window.location.href = "../../html/marcacao.html";
 			});
 	}

@@ -7,5 +7,21 @@ export default class appointmentController {
 			: [];
 	}
 
-	newAppointment(user, testCenter, date, testType) {}
+	newAppointment(user, testCenter, testType, schedule, payment) {
+		const newId =
+			this.appointments.length > 0
+				? this.appointments[this.appointments.length - 1].id + 1
+				: 1;
+		this.appointments.push(
+			new appointmentModel(
+				newId,
+				user,
+				testCenter,
+				schedule,
+				testType,
+				payment
+			)
+		);
+		localStorage.setItem("appointments", JSON.stringify(this.appointments));
+	}
 }

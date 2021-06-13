@@ -119,42 +119,6 @@
 			<main>
 				<div class="container">
 					<h1>Agendar Teste</h1>
-					<div class="tipoContainer">
-						<h3>Tipo de Teste</h3>
-						<p>
-							Escolha o tipo de teste que pretende realizar.<br /><a
-								href="#"
-								>Clique aqui</a
-							>
-							se tiver dúvidas acerca dos testes.
-						</p>
-						<div class="tipoButtonsContainer">
-							<button class="btnTipo">
-								<div class="btnBege">
-									<p>xd</p>
-								</div>
-								Teste Rápido
-							</button>
-							<button class="btnTipo">
-								<div class="btnBege">
-									<p>xd</p>
-								</div>
-								Teste PCR
-							</button>
-							<button class="btnTipo">
-								<div class="btnBege">
-									<p>xd</p>
-								</div>
-								Teste Serológico
-							</button>
-							<button class="btnTipo">
-								<div class="btnBege">
-									<p>xd</p>
-								</div>
-								Teste Anticorpos
-							</button>
-						</div>
-					</div>
 					<div class="postoContainer">
 						<h3>Posto de Testagem</h3>
 						<p>
@@ -195,46 +159,7 @@
 							/>
 							<div class="dropdown hidden">
 								<div class="list-container">
-									<ul class="dropdownList">
-										<li>
-											<h5>Hospital CUF Porto</h5>
-											<h6>Estrada da Circunvalação</h6>
-										</li>
-										<li>
-											<h5>Instituto CUF Porto</h5>
-											<h6>Rua Fonte das Sete Bicas</h6>
-										</li>
-										<li>
-											<h5>Parque da Cidade</h5>
-											<h6>
-												Estrada Interior da
-												Circunvalação
-											</h6>
-										</li>
-										<li>
-											<h5>Hospital da Luz - Arrábida</h5>
-											<h6>Praceta de Henrique Moreira</h6>
-										</li>
-										<li>
-											<h5>
-												Hospital da Luz - Clínica do
-												Porto
-											</h5>
-											<h6>Rua Beato Inácio de Azevedo</h6>
-										</li>
-										<li>
-											<h5>Unilabs Arouca</h5>
-											<h6>Rua Dr. Ângelo Miranda</h6>
-										</li>
-										<li>
-											<h5>Unilabs Espinho</h5>
-											<h6>Rua 15</h6>
-										</li>
-										<li>
-											<h5>Unilabs Porto</h5>
-											<h6>Rua do Campo Alegre</h6>
-										</li>
-									</ul>
+									<ul class="dropdownList"></ul>
 								</div>
 								<div id="linkMap-Container">
 									<svg
@@ -265,6 +190,58 @@
 									<a href="#" id="linkMap">Ver Mapa</a>
 								</div>
 							</div>
+						</div>
+					</div>
+					<div class="tipoContainer">
+						<h3>Tipo de Teste</h3>
+						<p>
+							Escolha o tipo de teste que pretende realizar.<br /><a
+								href="#"
+								>Clique aqui</a
+							>
+							se tiver dúvidas acerca dos testes.
+						</p>
+						<div class="tipoButtonsContainer">
+							<button class="btnTipo tr">
+								<div class="btnBege">
+									<img
+										class="btnTipoImg"
+										src="../img/TR.png"
+										alt="Teste Rápido"
+									/>
+								</div>
+								Teste Rápido
+							</button>
+							<button class="btnTipo tpcr">
+								<div class="btnBege">
+									<img
+										class="btnTipoImg"
+										src="../img/PCR.png"
+										alt="Teste PCR"
+									/>
+								</div>
+								Teste PCR
+							</button>
+							<button class="btnTipo ts">
+								<div class="btnBege">
+									<img
+										class="btnTipoImg"
+										src="../img/TS.png"
+										alt="Teste Serológico"
+									/>
+								</div>
+								Teste Serológico
+							</button>
+							<button class="btnTipo ta">
+								<div class="btnBege">
+									<img
+										class="btnTipoImg"
+										src="../img/TA.png"
+										alt="Teste Antigénico"
+									/>
+								</div>
+								Teste Anticorpos
+							</button>
 						</div>
 					</div>
 					<div class="horarioContainer">
@@ -295,207 +272,68 @@
 								<polyline points="12 7 12 12 15 15" />
 							</svg>
 							<input
-								type="datetime"
+								type="date"
 								placeholder="Horário"
 								id="inpHorario"
 								class="inpHorario"
 							/>
-							<div class="dropdown hidden">
-								<div class="list-container">
-									<ul class="dropdownList">
-										<li>
-											<h5>Hospital CUF Porto</h5>
-											<h6>Estrada da Circunvalação</h6>
-										</li>
-										<li>
-											<h5>Instituto CUF Porto</h5>
-											<h6>Rua Fonte das Sete Bicas</h6>
-										</li>
-										<li>
-											<h5>Parque da Cidade</h5>
-											<h6>
-												Estrada Interior da
-												Circunvalação
-											</h6>
-										</li>
-										<li>
-											<h5>Hospital da Luz - Arrábida</h5>
-											<h6>Praceta de Henrique Moreira</h6>
-										</li>
-										<li>
-											<h5>
-												Hospital da Luz - Clínica do
-												Porto
-											</h5>
-											<h6>Rua Beato Inácio de Azevedo</h6>
-										</li>
-										<li>
-											<h5>Unilabs Arouca</h5>
-											<h6>Rua Dr. Ângelo Miranda</h6>
-										</li>
-										<li>
-											<h5>Unilabs Espinho</h5>
-											<h6>Rua 15</h6>
-										</li>
-										<li>
-											<h5>Unilabs Porto</h5>
-											<h6>Rua do Campo Alegre</h6>
-										</li>
-									</ul>
-								</div>
-								<div id="linkMap-Container">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="
-											icon-map icon-tabler icon-tabler-map
-										"
-										width="23"
-										height="23"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="#1ab559"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path
-											stroke="none"
-											d="M0 0h24v24H0z"
-											fill="none"
-										/>
-										<polyline
-											points="3 7 9 4 15 7 21 4 21 17 15 20 9 17 3 20 3 7"
-										/>
-										<line x1="9" y1="4" x2="9" y2="17" />
-										<line x1="15" y1="7" x2="15" y2="20" />
-									</svg>
-									<a href="#" id="linkMap">Ver Mapa</a>
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="pagamentoContainer">
 						<h3>Tipo de Pagamento</h3>
-						<label class="checkbox">
-							<span class="checkbox__input">
-								<input type="checkbox" name="checked" checked />
-								<span class="checkbox__control"
-									><svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="
-											icon icon-tabler icon-tabler-check
-										"
-										width="14"
-										height="14"
-										viewBox="0 0 24 24"
-										stroke-width="3"
-										stroke="#1e1c41"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path
-											stroke="none"
-											d="M0 0h24v24H0z"
-											fill="none"
-										/>
-										<path d="M5 12l5 5l10 -10" /></svg
-								></span>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									type="radio"
+									name="radio"
+									class="Multibanco"
+								/>
+								<span class="radio__control"></span>
+							</span>
+							<span class="radio__label">Multibanco</span>
+						</label>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									type="radio"
+									name="radio"
+									class="MBWay"
+								/>
+								<span class="radio__control"></span>
 							</span>
 							<span class="radio__label">MB Way</span>
 						</label>
-						<label class="checkbox">
-							<span class="checkbox__input">
-								<input type="checkbox" name="checked" />
-								<span class="checkbox__control"
-									><svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="
-											icon icon-tabler icon-tabler-check
-										"
-										width="14"
-										height="14"
-										viewBox="0 0 24 24"
-										stroke-width="3"
-										stroke="#1e1c41"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path
-											stroke="none"
-											d="M0 0h24v24H0z"
-											fill="none"
-										/>
-										<path d="M5 12l5 5l10 -10" /></svg
-								></span>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									type="radio"
+									name="radio"
+									class="Paypal"
+								/>
+								<span class="radio__control"></span>
 							</span>
-							<span class="radio__label">MultiBanco</span>
+							<span class="radio__label">Paypal</span>
 						</label>
-						<label class="checkbox">
-							<span class="checkbox__input">
-								<input type="checkbox" name="checked" />
-								<span class="checkbox__control"
-									><svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="
-											icon icon-tabler icon-tabler-check
-										"
-										width="14"
-										height="14"
-										viewBox="0 0 24 24"
-										stroke-width="3"
-										stroke="#1e1c41"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path
-											stroke="none"
-											d="M0 0h24v24H0z"
-											fill="none"
-										/>
-										<path d="M5 12l5 5l10 -10" /></svg
-								></span>
-							</span>
-							<span class="radio__label">PayPal</span>
-						</label>
-						<label class="checkbox">
-							<span class="checkbox__input">
-								<input type="checkbox" name="checked" />
-								<span class="checkbox__control"
-									><svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="
-											icon icon-tabler icon-tabler-check
-										"
-										width="14"
-										height="14"
-										viewBox="0 0 24 24"
-										stroke-width="3"
-										stroke="#1e1c41"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path
-											stroke="none"
-											d="M0 0h24v24H0z"
-											fill="none"
-										/>
-										<path d="M5 12l5 5l10 -10" /></svg
-								></span>
+						<label class="radio">
+							<span class="radio__input">
+								<input
+									type="radio"
+									name="radio"
+									class="PagamentoNoAto"
+								/>
+								<span class="radio__control"></span>
 							</span>
 							<span class="radio__label">Pagamento no Ato</span>
 						</label>
 					</div>
+					<button id="btnContinue">Continuar</button>
 				</div>
 			</main>
 			<aside>
 				<h4>Resumo</h4>
 			</aside>
 		</div>
-		<script src="../js/index.js"></script>
 		<script type="module" src="../js/app.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 	</body>
 </html>

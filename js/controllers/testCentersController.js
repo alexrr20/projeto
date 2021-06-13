@@ -44,4 +44,18 @@ export default class testCenterController {
 		localStorage.setItem("testCenters", JSON.stringify(this.testCenters));
 		return this.testCenters[testCenter.id].comments;
 	}
+
+	storeTempInfo(testCenterName) {
+		localStorage.setItem("tempTestCenter", testCenterName);
+	}
+
+	getTempInfo() {
+		return localStorage.getItem("tempTestCenter") !== null
+			? localStorage.getItem("tempTestCenter")
+			: null;
+	}
+
+	removeTemp() {
+		localStorage.removeItem("tempTestCenter");
+	}
 }

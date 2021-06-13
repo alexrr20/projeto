@@ -2,6 +2,8 @@ import registerView from "./views/registerView.js";
 import loginView from "./views/loginView.js";
 import navView from "./views/navView.js";
 import testCentersView from "./views/testCentersView.js";
+import newAppointmentView from "./views/newAppointmentView.js";
+import faqView from "./views/faqView.js";
 
 class App {
 	constructor() {
@@ -12,9 +14,9 @@ class App {
 			login: [loginView, navView],
 			signup: [registerView, navView],
 			postos: [testCentersView, navView],
-			faq: [navView],
+			faq: [navView, faqView],
 			info: [navView],
-			marcacao: [navView],
+			marcacao: [navView, newAppointmentView],
 			validacao: [navView],
 		};
 

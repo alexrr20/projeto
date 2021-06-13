@@ -25,10 +25,8 @@ export default class registerView {
 		this.registerButton.addEventListener("click", () => {
 			try {
 				if (this.registerPw.value !== this.registerPw2.value) {
-					console.log("yes");
 					throw Error("As Passwords digitadas não coincidem!");
 				}
-				console.log("no");
 				this.userController.register(
 					this.registerUsersName.value,
 					this.registerDOB.value,
@@ -82,5 +80,4 @@ export default class registerView {
 			timer: 2000,
 		});
 	}
-	
 }
