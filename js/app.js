@@ -4,6 +4,7 @@ import navView from "./views/navView.js";
 import testCentersView from "./views/testCentersView.js";
 import newAppointmentView from "./views/newAppointmentView.js";
 import faqView from "./views/faqView.js";
+import indexView from "./views/indexView.js"
 
 class App {
 	constructor() {
