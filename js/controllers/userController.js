@@ -58,9 +58,17 @@ export default class userController {
 			: false;
 	}
 
-	getUserInfo(index) {
+	getUserInfoById(index) {
 		for (let i = 0; i < this.users.length; i++) {
 			if (i == index) {
+				return this.users[i];
+			}
+		}
+	}
+
+	getUserInfoByEmail(email) {
+		for (let i = 0; i < this.users.length; i++) {
+			if (this.users[i].email == email) {
 				return this.users[i];
 			}
 		}
@@ -75,7 +83,7 @@ export default class userController {
 	}
 
 	checkLike(testCenterId) {
-		let userLoggedInfo = this.getUserInfo(this.getLoggedUser());
+		let userLoggedInfo = this.getUserInfoByEmail(this.getLoggedUser());
 		if (!userLoggedInfo.likes.includes(testCenterId)) {
 			return false;
 		} else {
@@ -84,7 +92,7 @@ export default class userController {
 	}
 
 	addLike(id) {
-		let userLoggedInfo = this.getUserInfo(this.getLoggedUser());
+		let userLoggedInfo = this.getUserInfoByEmail(this.getLoggedUser());
 		if (this.checkLike(id) === false) {
 			userLoggedInfo.likes.push(id);
 			this.users[userLoggedInfo.id].likes = userLoggedInfo.likes;

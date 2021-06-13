@@ -22,6 +22,27 @@ export default class testCentersView {
 		this.search();
 	}
 
+	showRanking() {
+		let sortedArray = this.testCentersController.findRating();
+		let testCenterName =
+			document.querySelectorAll(".container2-1")[0].childNodes[3]
+				.innerHTML;
+		let testCenterInfo =
+			this.testCentersController.getTestCenterInfo(testCenterName);
+
+		for (let i = 0; i < sortedArray.length; i++) {
+			if (sortedArray[i].id == testCenterInfo.id) {
+				let divContainer = document.querySelectorAll(".medalhas")[0];
+				let divMedalha = document.createElement("div");
+				divMedalha.innerHTML = `<p>${i + 1}º Lugar</p><p>Likes</p>`;
+				divContainer.appendChild(divMedalha);
+				console.log(`${i + 1}º Lugar Likes`);
+				return;
+			}
+		}
+		console.log("none");
+	}
+
 	addToggle() {
 		document
 			.querySelectorAll("#filtroToggle")[0]
@@ -462,6 +483,7 @@ export default class testCentersView {
 				this.likeStars(testCenterName);
 				this.bindBtnAddComment();
 				this.bindAddAppointment();
+				this.showRanking();
 			});
 		}
 	}

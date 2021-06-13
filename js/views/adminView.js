@@ -30,7 +30,7 @@ export default class adminView {
 
 	bindSelectUser() {
 		this.selectUser.addEventListener("click", () => {
-			let userInfo = this.userController.getUserInfo(
+			let userInfo = this.userController.getUserInfoById(
 				this.usersDD.selectedIndex
 			);
 			this.inpUser[0].value = userInfo.usersName;

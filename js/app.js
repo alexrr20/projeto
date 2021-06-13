@@ -130,6 +130,32 @@ class App {
 					},
 				],
 			},
+			{
+				id: 3,
+				testCenterName: "testCenterName3",
+				address: "address3",
+				contact: {
+					email: "email3",
+					phone: "phone3",
+				},
+				website: "website3",
+				availableTests: {
+					rapido: true,
+					pcr: true,
+					serologico: true,
+					anticorpos: false,
+				},
+				openHours: "24h",
+				likes: 23,
+				rating: 5,
+				comments: [
+					{
+						userComment: "userComment2",
+						comment: "comment2",
+						userRating: 4,
+					},
+				],
+			},
 		];
 
 		// Load the fixtures in case there is no data in the local storage
