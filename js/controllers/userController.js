@@ -103,4 +103,16 @@ export default class userController {
 		});
 		localStorage.setItem("users", JSON.stringify(filteredArray));
 	}
+
+	editUser(index, usersName, dob, nif, city, gender, email, phone, password) {
+		this.users[index].usersName = usersName;
+		this.users[index].dob = dob;
+		this.users[index].nif = nif;
+		this.users[index].city = city;
+		this.users[index].gender = gender;
+		this.users[index].email = email;
+		this.users[index].phone = phone;
+		this.users[index].password = password;
+		localStorage.setItem("users", JSON.stringify(this.users));
+	}
 }
