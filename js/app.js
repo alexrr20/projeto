@@ -4,6 +4,8 @@ import navView from "./views/navView.js";
 import testCentersView from "./views/testCentersView.js";
 import newAppointmentView from "./views/newAppointmentView.js";
 import faqView from "./views/faqView.js";
+import indexView from "./views/indexView.js";
+import adminView from "./views/adminView.js";
 
 class App {
 	constructor() {
@@ -18,6 +20,7 @@ class App {
 			info: [navView],
 			marcacao: [navView, newAppointmentView],
 			validacao: [navView],
+			admin: [adminView],
 		};
 
 		// importa dados dummy para testes
@@ -50,24 +53,24 @@ class App {
 			{
 				id: 0,
 				usersName: "usersName1",
-				dob: "dob1",
-				nif: "nif1",
+				dob: "2000-09-20",
+				nif: "111111",
 				city: "city1",
 				gender: "gender1",
 				email: "email1",
-				phone: "phone1",
+				phone: "99999999",
 				password: "password1",
 				likes: [],
 			},
 			{
 				id: 1,
 				usersName: "usersName2",
-				dob: "dob2",
-				nif: "nif2",
+				dob: "2003-02-02",
+				nif: "222222",
 				city: "city2",
 				gender: "gender2",
 				email: "email2",
-				phone: "phone2",
+				phone: "88888888",
 				password: "password2",
 				likes: [],
 			},

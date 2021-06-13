@@ -58,9 +58,9 @@ export default class userController {
 			: false;
 	}
 
-	getUserInfo(email) {
+	getUserInfo(index) {
 		for (let i = 0; i < this.users.length; i++) {
-			if (this.users[i].email === email) {
+			if (i == index) {
 				return this.users[i];
 			}
 		}
@@ -85,7 +85,6 @@ export default class userController {
 
 	addLike(id) {
 		let userLoggedInfo = this.getUserInfo(this.getLoggedUser());
-		console.log(this.checkLike(id));
 		if (this.checkLike(id) === false) {
 			userLoggedInfo.likes.push(id);
 			this.users[userLoggedInfo.id].likes = userLoggedInfo.likes;
@@ -96,5 +95,12 @@ export default class userController {
 			this.users[userLoggedInfo.id].likes = userLoggedInfo.likes;
 			localStorage.setItem("users", JSON.stringify(this.users));
 		}
+	}
+
+	removeUser(userIndex) {
+		let filteredArray = this.users.filter(function (value, index, arr) {
+			return index != userIndex;
+		});
+		localStorage.setItem("users", JSON.stringify(filteredArray));
 	}
 }

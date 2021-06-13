@@ -66,16 +66,6 @@
 						<label for="">WEBSITE</label>
 						<input type="text" />
 					</div>
-					<button
-						style="margin-left: 30px; height: 50px; width: 100px"
-					>
-						ADD POSTO
-					</button>
-					<button
-						style="margin-left: 30px; height: 50px; width: 100px"
-					>
-						ADD DEFAULT POSTOS
-					</button>
 				</form>
 			</div>
 			<div class="formContainer">
@@ -90,7 +80,7 @@
 						"
 					>
 						<label for="">NOME</label>
-						<input type="text" />
+						<input type="text" class="inpUser" />
 					</div>
 					<div
 						style="
@@ -101,7 +91,7 @@
 						"
 					>
 						<label for="">DOB</label>
-						<input type="date" />
+						<input type="date" class="inpUser" />
 					</div>
 					<div
 						style="
@@ -112,7 +102,7 @@
 						"
 					>
 						<label for="">NIF</label>
-						<input type="number" />
+						<input type="number" class="inpUser" />
 					</div>
 					<div
 						style="
@@ -123,7 +113,7 @@
 						"
 					>
 						<label for="">CIDADE</label>
-						<input type="text" />
+						<input type="text" class="inpUser" />
 					</div>
 					<div
 						style="
@@ -134,7 +124,7 @@
 						"
 					>
 						<label for="">GENERO</label>
-						<input type="text" />
+						<input type="text" class="inpUser" />
 					</div>
 					<div
 						style="
@@ -145,7 +135,7 @@
 						"
 					>
 						<label for="">EMAIL</label>
-						<input type="email" />
+						<input type="email" class="inpUser" />
 					</div>
 					<div
 						style="
@@ -156,7 +146,7 @@
 						"
 					>
 						<label for="">PHONE</label>
-						<input type="number" />
+						<input type="number" class="inpUser" />
 					</div>
 					<div
 						style="
@@ -167,7 +157,38 @@
 						"
 					>
 						<label for="">PASSWORD</label>
-						<input type="password" />
+						<input type="password" class="inpUser" />
+					</div>
+
+					<button
+						style="margin-left: 30px; height: 50px; width: 100px"
+					>
+						SAVE INFO
+					</button>
+					<select name="users" id="usersDD"></select>
+					<div style="display: flex">
+						<button
+							style="
+								margin-left: 30px;
+								height: 50px;
+								width: 100px;
+							"
+							id="btnSelectUser"
+							type="button"
+						>
+							SELECT USER
+						</button>
+						<button
+							style="
+								margin-left: 30px;
+								height: 50px;
+								width: 100px;
+							"
+							id="btnRemoveUser"
+							type="button"
+						>
+							REMOVE USER
+						</button>
 					</div>
 				</form>
 			</div>
