@@ -135,7 +135,7 @@ nav {
 .icon2 {
 	position: absolute;
 	top: 4px;
-	right: 57px;
+	left: 14%;
 }
 
 .btnTheme {
@@ -511,4 +511,9 @@ h4 {
 
 .checkbox__input input:focus + .checkbox__control {
 	box-shadow: 0 0 0 0.05em #000, 0 0 0.15em 0.1em currentColor;
+}
+
+.swal2-title,
+.swal2-content {
+	color: var(--bege) !important;
 }

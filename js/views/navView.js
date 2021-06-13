@@ -9,9 +9,28 @@ export default class navView {
 		this.imgLogo = document.querySelectorAll("#logo")[0];
 		this.lightSVG = document.querySelectorAll(".lightSVG")[0];
 		this.body = document.getElementsByTagName("body")[0];
+		this.burger = document.querySelectorAll(".burger")[0];
+		this.nav = document.querySelectorAll("#navbar")[0];
 
 		this.bindBtnTheme();
 		this.btnLoginChange();
+		this.bindBtnBurger();
+	}
+
+	bindBtnBurger() {
+		this.burger.addEventListener("click", () => {
+			this.nav.classList.toggle("nav-active");
+			if (this.nav.classList.contains("nav-active")) {
+				for (child in this.burger.children) {
+					this.burger.children[child].style.backgroundColor = "white";
+				}
+			} else {
+				for (child in this.burger.children) {
+					this.burger.children[child].style.backgroundColor =
+						"#1abf5b";
+				}
+			}
+		});
 	}
 
 	bindBtnTheme() {

@@ -22,14 +22,13 @@ export default class loginView {
 				);
 				this.displayMessage(
 					"Utilizador autenticado com sucesso!",
-					"green"
+					"#1e1c41"
 				);
 
 				// Wait 1 second before reloading, so the user can see the login success message
-				/*setTimeout(() => {
-					this.updateButtons("login");
-					location.reload();
-				}, 1000);*/
+				setTimeout(() => {
+					window.history.back;
+				}, 100);
 			} catch (e) {
 				this.displayMessage(e, "orange");
 			}

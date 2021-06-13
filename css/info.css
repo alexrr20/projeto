@@ -135,7 +135,7 @@ nav {
 .icon2 {
 	position: absolute;
 	top: 4px;
-	right: 57px;
+	left: 14%;
 }
 
 .btnTheme {
@@ -239,7 +239,7 @@ h1 {
 	font-size: 100px;
 }
 
-h3{
+h3 {
 	font-size: 23px;
 }
 
@@ -356,6 +356,6 @@ h3{
 	color: var(--verde);
 }
 
-.video{
+.video {
 	margin-left: 14%;
 }

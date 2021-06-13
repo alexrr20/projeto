@@ -27,7 +27,7 @@ export default class newAppointmentView {
 			} else {
 				this.displayMessage(
 					"Necessita de iniciar sessão antes de agendar um teste",
-					"orange"
+					"rgb(240, 135, 55)"
 				);
 				return;
 			}

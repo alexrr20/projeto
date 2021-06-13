@@ -139,7 +139,7 @@ nav {
 .icon2 {
 	position: absolute;
 	top: 4px;
-	right: 57px;
+	left: 14%;
 }
 
 .btnTheme {
@@ -226,6 +226,7 @@ nav ul li a:hover:after {
 	font-size: 11px;
 	color: var(--bege);
 	padding: 9px 10px 9px 40px;
+	cursor: pointer;
 }
 
 main {
@@ -461,4 +462,9 @@ form {
 
 .dark ::selection {
 	background-color: var(--verde);
+}
+
+.swal2-title,
+.swal2-content {
+	color: var(--bege) !important;
 }
