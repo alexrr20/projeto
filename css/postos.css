@@ -148,6 +148,7 @@ nav {
 	position: absolute;
 	top: 4px;
 	left: 14%;
+	z-index: 1000;
 }
 
 .btnTheme {
@@ -839,4 +840,94 @@ path.two {
 .dislike {
 	color: rgb(240, 135, 55);
 	border-color: rgb(240, 135, 55);
+}
+
+@media screen and (max-width: 1030px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	header {
+		display: flex;
+		width: 100vw;
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+
+	nav {
+		position: absolute;
+		right: 0px;
+		height: 100vh;
+		width: 100vw;
+		top: 0;
+		background-color: var(--verde);
+		display: flex;
+		align-items: center;
+		transform: translateX(100%);
+		transition: transform 0.3s;
+		will-change: transform;
+	}
+
+	#navList {
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	#navList li a {
+		font-size: 30px;
+	}
+
+	.burger {
+		display: block;
+		margin-right: 50px;
+		position: relative;
+		z-index: 1000;
+	}
+
+	#logoContainer {
+		padding: 0 0 0 85px;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	#logo {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		margin: auto 0;
+		top: 10%;
+		left: 50%;
+	}
+
+	.divider {
+		display: none;
+	}
+
+	.btnSubmit {
+		font-size: 20px;
+		background-color: var(--azul);
+		height: 45px;
+		width: 100%;
+	}
+
+	.icon1 {
+		top: 11px;
+		left: 29px;
+	}
+
+	.icon2 {
+		top: 11px;
+		left: 15px;
+	}
+}
+
+.nav-active {
+	transform: translateX(0%);
 }

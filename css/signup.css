@@ -130,12 +130,14 @@ nav {
 	position: absolute;
 	top: 4px;
 	right: 100px;
+	z-index: 1000;
 }
 
 .icon2 {
 	position: absolute;
 	top: 4px;
 	left: 14%;
+	z-index: 1000;
 }
 
 .btnTheme {
@@ -372,27 +374,17 @@ h4 {
 	}
 }
 
-@media screen and (max-width: 1050px) {
-	#navList li {
-		padding: 0 10px;
-	}
-}
-
-@media screen and (max-width: 1050px) {
-	#logo {
-		width: 90px;
-	}
+@media screen and (max-width: 1030px) {
 	body {
 		overflow-x: hidden;
 	}
 
-	main {
-		width: 100%;
-	}
-
 	header {
 		display: flex;
-		flex-direction: row;
+		width: 100vw;
+		position: relative;
+		top: 0;
+		left: 0;
 	}
 
 	nav {
@@ -409,40 +401,62 @@ h4 {
 		will-change: transform;
 	}
 
-	header {
-		background-color: transparent;
-		justify-content: center;
-		height: 100px;
-		width: 100%;
+	#navList {
+		height: 60%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	nav {
-		background-color: var(--azul);
+	#navList li a {
+		font-size: 30px;
 	}
 
 	.burger {
 		display: block;
-		margin-left: 80%;
-		position: absolute;
+		margin-right: 50px;
+		position: relative;
 		z-index: 1000;
 	}
 
-	#navList {
-		flex-direction: column;
-		height: 70vh;
-		justify-content: space-between;
-		align-items: flex-start;
-		padding-left: 50px;
-		padding-right: 50px;
+	#logoContainer {
+		padding: 0 0 0 85px;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		position: relative;
+	}
+
+	#logo {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		margin: auto 0;
+		top: 10%;
+		left: 50%;
 	}
 
 	.divider {
 		display: none;
 	}
 
-	li a {
-		font-size: 43px;
-		font-weight: 500;
+	.btnSubmit {
+		font-size: 20px;
+		background-color: var(--azul);
+		height: 45px;
+		width: 100%;
+	}
+
+	.icon1 {
+		top: 11px;
+		left: 29px;
+	}
+
+	.icon2 {
+		top: 11px;
+		left: 15px;
 	}
 }
 

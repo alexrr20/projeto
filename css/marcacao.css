@@ -134,12 +134,14 @@ nav {
 	position: absolute;
 	top: 4px;
 	right: 100px;
+	z-index: 1000;
 }
 
 .icon2 {
 	position: absolute;
 	top: 4px;
 	left: 14%;
+	z-index: 1000;
 }
 
 .btnTheme {
@@ -227,15 +229,19 @@ nav ul li a:hover:after {
 	color: var(--bege);
 	padding: 9px 10px 9px 40px;
 	cursor: pointer;
+	transform: scale(1);
+	transition-duration: 0.25s;
+}
+
+.btnSubmit:hover {
+	transform: scale(1.05);
+	transition-duration: 0.25s;
 }
 
 .mainAsideContainer {
 	display: flex;
 	width: 80%;
 	max-width: 1000px;
-}
-
-.container {
 }
 
 .tipoButtonsContainer {
