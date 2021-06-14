@@ -8,10 +8,10 @@ export default class newAppointmentView {
 		this.testCentersController = new testCentersController();
 		this.userController = new userController();
 
-		this.testCenterImport();
 		this.bindAddTestCenters();
 		this.addDropdown();
 		this.bindTypeButtons();
+		this.infoImport();
 		this.bindAddAppointment();
 		this.search();
 	}
@@ -99,16 +99,41 @@ export default class newAppointmentView {
 		}
 	}
 
-	testCenterImport() {
-		let testCenter = this.testCentersController.getTempInfo();
-		let inpPosto = document.querySelectorAll("#inpPosto")[0];
+	infoImport() {
+		document.referrer.includes("index.html");
+		if (document.referrer.includes("postos.html")) {
+			let testCenter = this.testCentersController.getTempInfo();
+			let inpPosto = document.querySelectorAll("#inpPosto")[0];
 
-		if (testCenter === null) {
-			return;
-		} else {
-			inpPosto.value = testCenter;
+			if (testCenter === null) {
+				return;
+			} else {
+				inpPosto.value = testCenter;
+			}
+			this.testCentersController.removeTemp();
+		} else if (document.referrer.includes("index.html")) {
+			let info = this.appointmentController.getTempInfo();
+			let inpPosto = document.querySelectorAll("#inpPosto")[0];
+			let inpHorario = document.querySelectorAll("#inpHorario")[0];
+
+			if (info === null) {
+				return;
+			} else {
+				inpPosto.value = info.testCenterName;
+				inpHorario.value = info.date;
+
+				let btnTipo = document.querySelectorAll(".btnTipo");
+				let btnTipoList = Array.from(btnTipo);
+
+				btnTipoList[info.testType].classList.add("selected");
+				let newArray = btnTipoList.slice();
+				newArray.splice(info.testType, 1);
+				for (let x = 0; x < newArray.length; x++) {
+					newArray[x].classList.add("faded");
+				}
+			}
+			this.appointmentController.removeTemp();
 		}
-		this.testCentersController.removeTemp();
 	}
 
 	bindAddTestCenters() {

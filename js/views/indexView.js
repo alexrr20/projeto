@@ -6,6 +6,7 @@ export default class indexView {
 	constructor() {
 		this.testCentersController = new testCentersController();
 		this.userController = new userController();
+		this.appointmentController = new appointmentController();
 
 		this.btnSubmit = document.querySelectorAll(".search-item-container");
 		this.bindBtnSubmit();
@@ -17,11 +18,37 @@ export default class indexView {
 
 	bindBtnSubmit() {
 		this.btnSubmit[3].addEventListener("click", () => {
+			let inp = document.querySelectorAll(".search-item");
+
 			if (!this.userController.isLogged()) {
 				window.location.href = "../../html/login.html";
 				return;
 			} else {
+				if (!inp[0].value || !inp[1].value || !inp[2].value) {
+					this.displayMessage(
+						"Preencha o formulário completo",
+						"rgb(240, 135, 55)"
+					);
+					return;
+				}
 			}
+			let testType = 0;
+			if (inp[1].value == "Teste Rápido") {
+				testType = 0;
+			} else if (inp[1].value == "Teste PCR") {
+				testType = 1;
+			} else if (inp[1].value == "Teste Serológico") {
+				testType = 2;
+			} else if (inp[1].value == "Teste Anticorpos") {
+				testType = 3;
+			}
+
+			this.appointmentController.storeTempInfo(
+				inp[0].value,
+				testType,
+				inp[2].value
+			);
+			window.location.href = "../../html/marcacao.html";
 		});
 	}
 
@@ -79,7 +106,7 @@ export default class indexView {
 					} else if (i == 5) {
 						inp[1].value = "Teste Serológico";
 					} else if (i == 7) {
-						inp[1].value = "Teste de Anticorpos";
+						inp[1].value = "Teste Anticorpos";
 					}
 				});
 			}
@@ -109,6 +136,20 @@ export default class indexView {
 			setTimeout(function () {
 				dropdown2.classList.replace("shown", "hidden");
 			}, 140);
+		});
+	}
+
+	displayMessage(message, color) {
+		Swal.fire({
+			title: message,
+			position: "bottom",
+			background: color,
+			allowEscapeKey: false,
+			allowEnterKey: false,
+			showConfirmButton: false,
+			showCancelButton: false,
+			backdrop: false,
+			timer: 2000,
 		});
 	}
 }

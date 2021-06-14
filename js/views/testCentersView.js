@@ -143,7 +143,7 @@ export default class testCentersView {
 				if (!this.userController.isLogged()) {
 					this.displayMessage(
 						"Necessita de iniciar sessão para adicionar um comentário",
-						"orange"
+						"rgb(240, 135, 55)"
 					);
 					return;
 				}
@@ -288,7 +288,7 @@ export default class testCentersView {
 				} else {
 					this.displayMessage(
 						"Necessita de iniciar sessão para adicionar um gosto",
-						"orange"
+						"rgb(240, 135, 55)"
 					);
 				}
 			});

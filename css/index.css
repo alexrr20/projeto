@@ -600,3 +600,7 @@ h6 {
 .nav-active {
 	transform: translateX(0%);
 }
+.swal2-title,
+.swal2-content {
+	color: var(--bege) !important;
+}

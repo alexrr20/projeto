@@ -39,6 +39,26 @@ export default class navView {
 			this.imgLogo.src = "../../img/logo.svg";
 			let svg = document.getElementsByTagName("svg");
 
+			if (document.querySelectorAll("#onda")[0]) {
+				if (this.body.classList.contains("dark")) {
+					document.querySelectorAll("#onda")[0].src =
+						"../../img/onda2.png";
+				} else {
+					document.querySelectorAll("#onda")[0].src =
+						"../../img/onda.png";
+				}
+			}
+
+			if (document.querySelectorAll("#bgImgInfo")[0]) {
+				if (this.body.classList.contains("dark")) {
+					document.querySelectorAll("#bgImgInfo")[0].src =
+						"../../img/bg4.png";
+				} else {
+					document.querySelectorAll("#bgImgInfo")[0].src =
+						"../../img/bg5.png";
+				}
+			}
+
 			for (let i = 0; i < svg.length; i++) {
 				if (svg[i].getAttribute("stroke") == "#1e1c41") {
 					svg[i].setAttribute("stroke", "#fff0d2");
