@@ -79,6 +79,7 @@ body {
 	color: var(--fg);
 	transition: background 200ms ease-in-out, color 700ms ease-in-out;
 	font-family: "Azo Sans", sans-serif;
+	overflow-x: hidden;
 }
 .bgImg {
 	width: 510px;
@@ -256,6 +257,46 @@ main {
 	flex-direction: column;
 	max-width: 711px;
 	min-width: 544px;
+}
+
+.postoContainer {
+	margin-top: 40px;
+}
+
+.postoContainer h3 {
+	margin-bottom: 0;
+}
+
+.postoContainer p {
+	margin-top: 2px;
+}
+
+.tipoContainer {
+	margin-top: 50px;
+}
+
+.tipoContainer h3 {
+	margin-bottom: 0;
+}
+
+.tipoContainer p {
+	margin-top: 2px;
+}
+
+.horarioContainer {
+	margin-top: 50px;
+}
+
+.horarioContainer h3 {
+	margin-bottom: 0;
+}
+
+.horarioContainer p {
+	margin-top: 2px;
+}
+
+.pagamentoContainer {
+	margin-top: 50px;
 }
 
 .tipoButtonsContainer {

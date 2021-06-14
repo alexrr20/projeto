@@ -24,4 +24,14 @@ export default class appointmentController {
 		);
 		localStorage.setItem("appointments", JSON.stringify(this.appointments));
 	}
+
+	storeTempInfo(testCenterName) {
+		localStorage.setItem("tempAppointment", testCenterName);
+	}
+
+	getTempInfo() {
+		return localStorage.getItem("tempAppointment") !== null
+			? localStorage.getItem("tempAppointment")
+			: null;
+	}
 }

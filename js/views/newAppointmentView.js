@@ -13,6 +13,7 @@ export default class newAppointmentView {
 		this.addDropdown();
 		this.bindTypeButtons();
 		this.bindAddAppointment();
+		this.search();
 	}
 
 	bindAddAppointment() {
@@ -139,6 +140,24 @@ export default class newAppointmentView {
 			showCancelButton: false,
 			backdrop: false,
 			timer: 2000,
+		});
+	}
+
+	search() {
+		let inpPosto = document.querySelectorAll("#inpPosto")[0];
+		inpPosto.addEventListener("keyup", () => {
+			let value = inpPosto.value.toUpperCase();
+			let ul = document.querySelectorAll(".dropdownList")[0];
+			let li = ul.getElementsByTagName("li");
+			for (let i = 0; i < li.length; i++) {
+				let h5 = li[i].getElementsByTagName("h5")[0];
+				let txtValue = h5.textContent || h5.innerText;
+				if (txtValue.toUpperCase().indexOf(value) > -1) {
+					li[i].style.display = "";
+				} else {
+					li[i].style.display = "none";
+				}
+			}
 		});
 	}
 }

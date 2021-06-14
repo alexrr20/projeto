@@ -366,5 +366,10 @@ h3 {
 }
 
 .video {
-	margin-left: 14%;
+	width: 100vw;
+}
+
+video {
+	width: 100%;
+	height: auto;
 }

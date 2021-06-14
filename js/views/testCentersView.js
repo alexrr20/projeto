@@ -140,6 +140,13 @@ export default class testCentersView {
 		document
 			.querySelectorAll("#btnAddComment")[0]
 			.addEventListener("click", () => {
+				if (!this.userController.isLogged()) {
+					this.displayMessage(
+						"Necessita de iniciar sessão para adicionar um comentário",
+						"orange"
+					);
+					return;
+				}
 				let commentToAdd =
 					document.querySelectorAll("#addComentario")[0].value;
 				let user = this.userController.getLoggedUser();
@@ -215,6 +222,9 @@ export default class testCentersView {
 		let testCenter =
 			this.testCentersController.getTestCenterInfo(testCenterName);
 		let commentsDiv = document.querySelectorAll(".comentariosContainer")[0];
+		while (commentsDiv.firstChild) {
+			commentsDiv.firstChild.remove();
+		}
 		for (let i = 0; i < testCenter.comments.length; i++) {
 			let newComment = document.createElement("div");
 			newComment.setAttribute("class", "comentario");

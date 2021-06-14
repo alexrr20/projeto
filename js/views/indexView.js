@@ -69,8 +69,6 @@ export default class indexView {
 			});
 		}
 
-		console.log(ul[1].childNodes);
-
 		for (let i = 0; i < ul[1].childNodes.length; i++) {
 			if (i == 1 || i == 3 || i == 5 || i == 7) {
 				ul[1].childNodes[i].addEventListener("click", () => {
