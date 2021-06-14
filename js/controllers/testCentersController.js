@@ -59,7 +59,7 @@ export default class testCenterController {
 		localStorage.removeItem("tempTestCenter");
 	}
 
-	findRating() {
+	findLikes() {
 		return this.testCenters.sort((a, b) => (a.likes < b.likes ? 1 : -1));
 	}
 }

@@ -102,6 +102,7 @@ class App {
 						userRating: 4,
 					},
 				],
+				Latlng: "41.16197621222838,-8.650129656631044",
 			},
 
 			{
@@ -129,9 +130,10 @@ class App {
 						userRating: 4,
 					},
 				],
+				Latlng: "41.17586111735044,-8.669205650213955",
 			},
 			{
-				id: 3,
+				id: 2,
 				testCenterName: "testCenterName3",
 				address: "address3",
 				contact: {
@@ -155,6 +157,7 @@ class App {
 						userRating: 4,
 					},
 				],
+				Latlng: "41.15227556940346,-8.609546584649845",
 			},
 		];
 

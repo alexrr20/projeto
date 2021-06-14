@@ -20,10 +20,38 @@ export default class testCentersView {
 		this.addToggle();
 		this.rangeSlide();
 		this.search();
+		this.addMarkers();
+	}
+
+	addMarkers() {
+		let testCenters = this.testCentersController.getTestCenters();
+
+		testCenters.forEach((item, index) => {
+			let location = item.Latlng.split(",");
+			let Lat = parseFloat(location[0]);
+			let lng = parseFloat(location[1]);
+			let myLatlng = new google.maps.LatLng(Lat, lng);
+
+			let contentString = `<div><h4>${item.testCenterName}</h4></div>`;
+			let infowindow = new google.maps.InfoWindow({
+				content: contentString,
+			});
+
+			let marker = new google.maps.Marker({
+				position: myLatlng,
+			});
+
+			// To add the marker to the map, call setMap();
+			marker.setMap(window.map);
+
+			marker.addListener("click", () => {
+				infowindow.open(window.map, marker);
+			});
+		});
 	}
 
 	showRanking() {
-		let sortedArray = this.testCentersController.findRating();
+		let sortedArray = this.testCentersController.findLikes();
 		let testCenterName =
 			document.querySelectorAll(".container2-1")[0].childNodes[3]
 				.innerHTML;
@@ -34,10 +62,10 @@ export default class testCentersView {
 			if (sortedArray[i].id == testCenterInfo.id) {
 				let divContainer = document.querySelectorAll(".medalhas")[0];
 				let divMedalha = document.createElement("div");
-				divMedalha.innerHTML = `<p>${i + 1}º Lugar</p><p>Likes</p>`;
+				divMedalha.innerHTML = `<p><span class="bold">${
+					i + 1
+				}º</span> Lugar</p><p>Likes</p>`;
 				divContainer.appendChild(divMedalha);
-				console.log(`${i + 1}º Lugar Likes`);
-				return;
 			}
 		}
 		console.log("none");
@@ -67,6 +95,9 @@ export default class testCentersView {
 				).innerHTML = `<span class="bold">${
 					document.querySelectorAll(".range")[0].value
 				}</span> Km`;
+				let valueM =
+					document.querySelectorAll(".range")[0].value * 1000;
+				window.circle.setRadius(valueM);
 			})
 		);
 	}

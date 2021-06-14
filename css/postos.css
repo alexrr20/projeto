@@ -544,28 +544,47 @@ h6 {
 }
 
 #container2 h2 {
-	font-size: 79px;
+	font-size: 6vw;
 	margin: 0;
+}
+
+.medalhas div p {
+	font-size: 20px;
+}
+
+.medalhas div p:first-child {
+	margin: 14px 0 2px 0;
+}
+
+.medalhas div p:nth-child(2) {
+	margin: 2px 0 2px 0;
+	font-weight: bold;
+	color: var(--verde);
 }
 
 .postoInfoContainer {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	margin-top: 70px;
+	margin-top: 30px;
 }
 
 .postoInfo {
 	display: flex;
 }
 
+.postoInfoText {
+	margin-left: 5px;
+}
+
 .postoInfo h4 {
 	margin: 0;
+	padding-top: 2px;
 	color: var(--azulClaro);
 }
 
 .container2-1bottom {
-	margin-top: 10px;
+	margin-top: 40px;
 }
 
 .btnContainer {
@@ -703,7 +722,7 @@ path.two {
 	position: relative;
 	height: 50px;
 	line-height: 50px;
-	font-size: 25px;
+	font-size: 2vw;
 }
 
 .rating label {
@@ -818,6 +837,7 @@ path.two {
 	box-shadow: none;
 	border-bottom: 2px solid var(--azul);
 	font-size: 13px;
+	background-color: transparent;
 }
 
 #btnAddComment {
@@ -835,6 +855,23 @@ path.two {
 .dark h3,
 .dark h4 {
 	color: var(--begeEscuro) !important;
+}
+
+.dark #addComentario {
+	border-bottom: 2px solid var(--bege);
+}
+
+.dark #addComentario::placeholder {
+	color: var(--begeEscuro);
+}
+
+.dark .rating label:last-child .icon {
+	color: var(--begeEscuro);
+}
+
+.dark .rating label input:focus:not(:checked) ~ .icon:last-child {
+	color: var(--begeEscuro);
+	text-shadow: 0 0 5px var(--verde);
 }
 
 .dislike {
@@ -930,4 +967,46 @@ path.two {
 
 .nav-active {
 	transform: translateX(0%);
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 875px) {
+	#container2 {
+		flex-direction: column;
+	}
+
+	.container2-1 {
+		width: 130%;
+	}
+
+	.container2-2 {
+		margin-top: 100px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1 2fr;
+		grid-template-rows: 250px 1fr;
+	}
+
+	.addComentarioContainer {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+
+	.avaliacoesContainer div:nth-child(2) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.avaliacoesContainer div:nth-child(2) p {
+		margin: 10px 0 0 0;
+		font-size: 20px;
+	}
+
+	.rating {
+		font-size: 20px;
+	}
 }

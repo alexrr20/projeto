@@ -9,7 +9,8 @@ export default class postoModel {
 		openHours,
 		likes,
 		rating,
-		comments
+		comments,
+		Latlng
 	) {
 		this.id = id;
 		this.testCenterName = testCenterName;
@@ -35,5 +36,6 @@ export default class postoModel {
 				userRating: comments.userRating,
 			},
 		];
+		this.Latlng = Latlng;
 	}
 }

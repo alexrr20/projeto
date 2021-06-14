@@ -37,6 +37,13 @@ export default class navView {
 		this.btnTheme.addEventListener("click", () => {
 			this.body.classList.toggle("dark");
 			this.imgLogo.src = "../../img/logo.svg";
+			let svg = document.getElementsByTagName("svg");
+
+			for (let i = 0; i < svg.length; i++) {
+				if (svg[i].getAttribute("stroke") == "#1e1c41") {
+					svg[i].setAttribute("stroke", "#fff0d2");
+				}
+			}
 		});
 
 		this.btnTheme.addEventListener("mousedown", () => {

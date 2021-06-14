@@ -80,6 +80,13 @@ body {
 	transition: background 200ms ease-in-out, color 700ms ease-in-out;
 	font-family: "Azo Sans", sans-serif;
 }
+.bgImg {
+	width: 510px;
+	position: absolute;
+	right: 0;
+	bottom: 437px;
+	right: -90px;
+}
 
 header {
 	box-sizing: border-box;
@@ -240,8 +247,13 @@ nav ul li a:hover:after {
 
 .mainAsideContainer {
 	display: flex;
-	width: 80%;
-	max-width: 1000px;
+	padding: 30px 190px;
+}
+
+main {
+	width: 65%;
+	display: flex;
+	flex-direction: column;
 }
 
 .tipoButtonsContainer {
