@@ -134,7 +134,7 @@ class App {
 			},
 			{
 				id: 2,
-				testCenterName: "testCenterName3",
+				testCenterName: "test Center Name 3",
 				address: "address3",
 				contact: {
 					email: "email3",

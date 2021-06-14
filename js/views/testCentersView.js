@@ -450,8 +450,10 @@ export default class testCentersView {
               <p><span class="bold" id="likeCounter">${testCenter.likes}</span> Gostos</p>
             </div>
           </div>
-          <div class="comentariosContainer">
-          </div>
+		  <div>
+		  <h4 id="commentsHeader">Comentários</h4>
+		  <div class="comentariosContainer">
+          </div></div>
           <div class="addComentarioContainer">
             <h4>Deixar Avaliação</h4>
             <form class="addComentario">

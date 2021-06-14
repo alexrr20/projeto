@@ -84,7 +84,9 @@ export default class userController {
 
 	checkLike(testCenterId) {
 		let userLoggedInfo = this.getUserInfoByEmail(this.getLoggedUser());
-		if (!userLoggedInfo.likes.includes(testCenterId)) {
+		if (!userLoggedInfo) {
+			return false;
+		} else if (!userLoggedInfo.likes.includes(testCenterId)) {
 			return false;
 		} else {
 			return true;

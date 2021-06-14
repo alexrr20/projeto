@@ -535,6 +535,10 @@ h6 {
 
 .container2-2 {
 	width: 35%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: 100px 2fr 1fr;
 }
 
 #container2 h3 {
@@ -544,8 +548,12 @@ h6 {
 }
 
 #container2 h2 {
-	font-size: 6vw;
+	font-size: 80px;
 	margin: 0;
+}
+
+.medalhas {
+	margin-top: 20px;
 }
 
 .medalhas div p {
@@ -803,6 +811,24 @@ path.two {
 	grid-template-rows: 30px 1fr;
 	grid-template-columns: 30px 1fr;
 	margin: 20px 0;
+}
+
+.comentariosContainer2 {
+	max-height: 300px;
+	overflow-x: auto;
+	margin: 0 0 15px 0;
+}
+
+#commentsHeader {
+	color: var(--azulClaro);
+	font-size: 20px;
+	margin: 5px 0 0 0;
+}
+
+.comentariosContainer2 h4 {
+	color: var(--azulClaro);
+	font-size: 20px;
+	margin: 0;
 }
 
 .comentarioIcon {

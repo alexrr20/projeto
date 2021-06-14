@@ -247,13 +247,15 @@ nav ul li a:hover:after {
 
 .mainAsideContainer {
 	display: flex;
-	padding: 30px 190px;
+	padding: 30px 12vw;
 }
 
 main {
 	width: 65%;
 	display: flex;
 	flex-direction: column;
+	max-width: 711px;
+	min-width: 544px;
 }
 
 .tipoButtonsContainer {
@@ -300,7 +302,7 @@ main {
 h1 {
 	font-size: 79px;
 	font-weight: bold;
-	margin-top: 90px;
+	margin-top: 40px;
 	margin-bottom: 5px;
 }
 

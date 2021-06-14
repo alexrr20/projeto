@@ -145,55 +145,6 @@ if (body.classList.contains("inicioBody")) {
 	let dropdownList = document.querySelectorAll(".dropdownList");
 	let inp = document.querySelectorAll("input");
 
-	input[0].addEventListener("focus", () => {
-		dropdown[0].classList.replace("hidden", "shown");
-	});
-
-	input[0].addEventListener("focusout", () => {
-		setTimeout(function () {
-			dropdown[0].classList.replace("shown", "hidden");
-		}, 100);
-	});
-
-	for (let i = 0; i < dropdownList[0].childNodes.length; i++) {
-		if (dropdownList[0].childNodes[i].nodeName == "LI") {
-			dropdownList[0].childNodes[i].addEventListener("click", () => {
-				inp[0].value =
-					dropdownList[0].childNodes[i].childNodes[1].innerHTML;
-			});
-		}
-	}
-
-	input[1].addEventListener("focus", () => {
-		dropdown2[0].classList.replace("hidden", "shown");
-	});
-
-	input[1].addEventListener("focusout", () => {
-		setTimeout(function () {
-			dropdown2[0].classList.replace("shown", "hidden");
-		}, 100);
-	});
-
-	for (let i = 0; i < dropdownList[1].childNodes.length; i++) {
-		if (dropdownList[1].childNodes[i].nodeName == "LI") {
-			dropdownList[1].childNodes[i].addEventListener("click", () => {
-				inp[1].value = "Teste Rápido";
-				/*inp[1].value =
-					dropdownList[1].childNodes[i].childNodes[1].innerHTML;*/
-			});
-		}
-	}
-
-	/*input[2].addEventListener("focus", () => {
-		dropdown3[0].classList.replace("hidden", "shown");
-	});
-
-	input[2].addEventListener("focusout", () => {
-		setTimeout(function () {
-			dropdown3[0].classList.replace("shown", "hidden");
-		}, 100);
-	});*/
-
 	btnTheme[0].addEventListener("click", () => {
 		body.classList.toggle("dark");
 		imgLogo[0].src = "logo.svg";
