@@ -123,4 +123,35 @@ export default class testCenterController {
 			}
 		});
 	}
+
+	newTestCenter(
+		testCenterName,
+		address,
+		email,
+		phone,
+		openHours,
+		website,
+		latlng
+	) {
+		const newId =
+			this.testCenters.length > 0
+				? this.testCenters[this.testCenters.length - 1].id + 1
+				: 1;
+		const contact = {
+			email: email,
+			phone: phone,
+		};
+		this.testCenters.push(
+			new testCenterModel(
+				newId,
+				testCenterName,
+				address,
+				contact,
+				website,
+				openHours,
+				latlng
+			)
+		);
+		localStorage.setItem("testCenters", JSON.stringify(this.testCenters));
+	}
 }

@@ -20,6 +20,7 @@ export default class adminView {
 		this.testCenters = this.testCentersController.testCenters;
 		this.inpCenter = document.querySelectorAll(".inpCenter");
 		this.inpUser = document.querySelectorAll(".inpUser");
+		this.addTestCenter = document.querySelectorAll("#btnAddCenter")[0];
 
 		this.fillDDUser();
 		this.bindRemoveUser();
@@ -29,6 +30,7 @@ export default class adminView {
 		this.bindSelectTestCenter();
 		this.bindRemoveCenter();
 		this.bindSaveChangesCenter();
+		this.bindAddCenter();
 	}
 
 	fillDDCenter() {
@@ -105,6 +107,20 @@ export default class adminView {
 		this.saveChangesCenter.addEventListener("click", () => {
 			this.testCentersController.editCenter(
 				this.centerDD.selectedIndex,
+				this.inpCenter[0].value,
+				this.inpCenter[1].value,
+				this.inpCenter[2].value,
+				this.inpCenter[3].value,
+				this.inpCenter[4].value,
+				this.inpCenter[5].value,
+				this.inpCenter[6].value
+			);
+		});
+	}
+
+	bindAddCenter() {
+		this.addTestCenter.addEventListener("click", () => {
+			this.testCentersController.newTestCenter(
 				this.inpCenter[0].value,
 				this.inpCenter[1].value,
 				this.inpCenter[2].value,

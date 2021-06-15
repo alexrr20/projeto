@@ -1,17 +1,12 @@
-export default class postoModel {
+export default class testCenterModel {
 	constructor(
 		id,
 		testCenterName,
 		address,
 		contact,
 		website,
-		availableTests,
 		openHours,
-		likes,
-		rating,
-		comments,
-		Latlng,
-		testsMade
+		Latlng
 	) {
 		this.id = id;
 		this.testCenterName = testCenterName;
@@ -22,22 +17,16 @@ export default class postoModel {
 		};
 		this.website = website;
 		this.availableTests = {
-			rapido: availableTests.rapido,
-			pcr: availableTests.pcr,
-			serologico: availableTests.serologico,
-			anticorpos: availableTests.anticorpos,
+			rapido: true,
+			pcr: true,
+			serologico: true,
+			anticorpos: true,
 		};
 		this.openHours = openHours;
-		this.likes = likes;
-		this.rating = rating;
-		this.comments = [
-			{
-				userComment: comments.userComment,
-				comment: comments.comment,
-				userRating: comments.userRating,
-			},
-		];
+		this.likes = 0;
+		this.rating = 0;
+		this.comments = [];
 		this.Latlng = Latlng;
-		this.testsDone = testsDone;
+		this.testsDone = 0;
 	}
 }
