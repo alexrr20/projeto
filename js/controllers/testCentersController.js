@@ -63,6 +63,24 @@ export default class testCenterController {
 		return this.testCenters.sort((a, b) => (a.likes < b.likes ? 1 : -1));
 	}
 
+	findComments() {
+		return this.testCenters.sort((a, b) =>
+			a.comments.length < b.comments.length ? 1 : -1
+		);
+	}
+
+	findTestsDone() {
+		for (let i = 0; i < this.testCenters.length; i++) {
+			console.log(
+				this.testCenters[i].testCenterName,
+				this.testCenters[i].testsDone
+			);
+		}
+		return this.testCenters.sort((a, b) =>
+			a.testsDone < b.testsDone ? 1 : -1
+		);
+	}
+
 	removeTestCenter(centerIndex) {
 		let filteredArray = this.testCenters.filter(function (
 			value,
@@ -92,5 +110,17 @@ export default class testCenterController {
 		this.testCenters[index].website = website;
 		this.testCenters[index].Latlng = Latlng;
 		localStorage.setItem("testCenters", JSON.stringify(this.testCenters));
+	}
+
+	addTestDone(testCenterName) {
+		this.testCenters.forEach((testCenter) => {
+			if (testCenter.testCenterName == testCenterName) {
+				testCenter.testsDone += 1;
+				localStorage.setItem(
+					"testCenters",
+					JSON.stringify(this.testCenters)
+				);
+			}
+		});
 	}
 }

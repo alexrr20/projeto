@@ -10,7 +10,8 @@ export default class postoModel {
 		likes,
 		rating,
 		comments,
-		Latlng
+		Latlng,
+		testsMade
 	) {
 		this.id = id;
 		this.testCenterName = testCenterName;
@@ -37,5 +38,6 @@ export default class postoModel {
 			},
 		];
 		this.Latlng = Latlng;
+		this.testsDone = testsDone;
 	}
 }

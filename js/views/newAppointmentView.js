@@ -49,6 +49,7 @@ export default class newAppointmentView {
 				schedule,
 				radioSelected
 			);
+			this.testCentersController.addTestDone(testCenter);
 			window.location.href = "../../html/validacao.html";
 		});
 	}

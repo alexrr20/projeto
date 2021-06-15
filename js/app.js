@@ -102,8 +102,19 @@ class App {
 						comment: "comment1",
 						userRating: 4,
 					},
+					{
+						userComment: "userComment2",
+						comment: "comment2",
+						userRating: 4,
+					},
+					{
+						userComment: "userComment3",
+						comment: "comment3",
+						userRating: 4,
+					},
 				],
 				Latlng: "41.16197621222838,-8.650129656631044",
+				testsDone: 18,
 			},
 
 			{
@@ -132,6 +143,7 @@ class App {
 					},
 				],
 				Latlng: "41.17586111735044,-8.669205650213955",
+				testsDone: 10,
 			},
 			{
 				id: 2,
@@ -157,8 +169,47 @@ class App {
 						comment: "comment2",
 						userRating: 4,
 					},
+					{
+						userComment: "userComment2",
+						comment: "comment2",
+						userRating: 4,
+					},
 				],
 				Latlng: "41.15227556940346,-8.609546584649845",
+				testsDone: 5,
+			},
+			{
+				id: 3,
+				testCenterName: "test Center Name 4",
+				address: "address4",
+				contact: {
+					email: "email4",
+					phone: "phone4",
+				},
+				website: "website4",
+				availableTests: {
+					rapido: true,
+					pcr: true,
+					serologico: true,
+					anticorpos: false,
+				},
+				openHours: "24h",
+				likes: 0,
+				rating: 1,
+				comments: [
+					{
+						userComment: "userComment1",
+						comment: "comment1",
+						userRating: 4,
+					},
+					{
+						userComment: "userComment2",
+						comment: "comment2",
+						userRating: 4,
+					},
+				],
+				Latlng: "41.17110852790969,-8.629422419102033",
+				testsDone: 0,
 			},
 		];
 

@@ -22,6 +22,7 @@ export default class testCentersView {
 		this.search();
 		this.initMap();
 		this.addMarkers();
+		this.markerList = [];
 	}
 
 	// Initialize and add the map
@@ -246,17 +247,17 @@ export default class testCentersView {
 		});
 	}
 
-	showRanking() {
+	showRankingLikes() {
 		let sortedArray = this.testCentersController.findLikes();
 		let testCenterName =
 			document.querySelectorAll(".container2-1")[0].childNodes[3]
 				.innerHTML;
 		let testCenterInfo =
 			this.testCentersController.getTestCenterInfo(testCenterName);
-
-		for (let i = 0; i < sortedArray.length; i++) {
+		for (let i = 0; i < 3; i++) {
 			if (sortedArray[i].id == testCenterInfo.id) {
-				let divContainer = document.querySelectorAll(".medalhas")[0];
+				let divContainer =
+					document.querySelectorAll(".medalhasContainer")[0];
 				let divMedalha = document.createElement("div");
 				divMedalha.innerHTML = `<p><span class="bold">${
 					i + 1
@@ -265,6 +266,46 @@ export default class testCentersView {
 			}
 		}
 		console.log("none");
+	}
+
+	showRankingComments() {
+		let sortedArray = this.testCentersController.findComments();
+		let testCenterName =
+			document.querySelectorAll(".container2-1")[0].childNodes[3]
+				.innerHTML;
+		let testCenterInfo =
+			this.testCentersController.getTestCenterInfo(testCenterName);
+		for (let i = 0; i < 3; i++) {
+			if (sortedArray[i].id == testCenterInfo.id) {
+				let divContainer =
+					document.querySelectorAll(".medalhasContainer")[0];
+				let divMedalha = document.createElement("div");
+				divMedalha.innerHTML = `<p><span class="bold">${
+					i + 1
+				}º</span> Lugar</p><p>Comentários</p>`;
+				divContainer.appendChild(divMedalha);
+			}
+		}
+	}
+
+	showRankingTestsDone() {
+		let sortedArray = this.testCentersController.findTestsDone();
+		let testCenterName =
+			document.querySelectorAll(".container2-1")[0].childNodes[3]
+				.innerHTML;
+		let testCenterInfo =
+			this.testCentersController.getTestCenterInfo(testCenterName);
+		for (let i = 0; i < 3; i++) {
+			if (sortedArray[i].id == testCenterInfo.id) {
+				let divContainer =
+					document.querySelectorAll(".medalhasContainer")[0];
+				let divMedalha = document.createElement("div");
+				divMedalha.innerHTML = `<p><span class="bold">${
+					i + 1
+				}º</span> Lugar</p><p>Testes Feitos</p>`;
+				divContainer.appendChild(divMedalha);
+			}
+		}
 	}
 
 	addToggle() {
@@ -294,6 +335,10 @@ export default class testCentersView {
 				let valueM =
 					document.querySelectorAll(".range")[0].value * 1000;
 				window.circle.setRadius(valueM);
+				/*
+				for (let i = 0; i < markerList.length; i++) {
+					console.log(window.circle.distanceFrom(markerList[i]));
+				}*/
 			})
 		);
 	}
@@ -541,6 +586,8 @@ export default class testCentersView {
             <h2>${testCenter.testCenterName}</h2>
             <div class="medalhas">
               <h3>Medalhas</h3>
+			  <div class="medalhasContainer">
+			  </div>
             </div>
             <div class="postoInfoContainer">
               <div class="postoInfo">
@@ -722,7 +769,9 @@ export default class testCentersView {
 				this.likeStars(testCenterName);
 				this.bindBtnAddComment();
 				this.bindAddAppointment();
-				this.showRanking();
+				this.showRankingComments();
+				this.showRankingLikes();
+				this.showRankingTestsDone();
 			});
 		}
 	}
