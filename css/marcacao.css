@@ -482,6 +482,10 @@ aside {
 	color: var(--bege);
 }
 
+.dark #btnContinue {
+	background-color: var(--verde);
+}
+
 .dark #btnLogin {
 	background-color: var(--verde);
 }

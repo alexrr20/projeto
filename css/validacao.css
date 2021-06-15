@@ -498,6 +498,10 @@ li {
 	color: var(--bege);
 }
 
+.dark #btnVoltar {
+	background-color: var(--verde);
+}
+
 .dark #btnLogin {
 	background-color: var(--verde);
 }
