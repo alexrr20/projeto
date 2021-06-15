@@ -23,6 +23,7 @@ export default class testCentersView {
 		this.initMap();
 		this.addMarkers();
 		this.markerList = [];
+		this.addDropdown();
 	}
 
 	// Initialize and add the map
@@ -247,6 +248,38 @@ export default class testCentersView {
 		});
 	}
 
+	addDropdown() {
+		let inpOrdem = document.querySelectorAll("#inpOrdem")[0];
+		let dropdown = document.querySelectorAll(".dropdownOrdem")[0];
+		let dropdownList = document.querySelectorAll(".dropdownList2")[0];
+
+		inpOrdem.addEventListener("focus", () => {
+			dropdown.classList.replace("hidden2", "shown");
+		});
+
+		inpOrdem.addEventListener("focusout", () => {
+			setTimeout(function () {
+				dropdown.classList.replace("shown", "hidden2");
+			}, 140);
+		});
+
+		for (let i = 0; i < dropdownList.childNodes.length; i++) {
+			if (dropdownList.childNodes[i].nodeName == "LI") {
+				dropdownList.childNodes[i].addEventListener("click", () => {
+					if (i == 1) {
+						window.location.href = "faq.html#resultHeaderTest";
+					} else if (i == 3) {
+						window.location.href = "faq.html#resultHeaderCOVID";
+					} else if (i == 5) {
+						window.location.href = "faq.html#resultHeaderViagem";
+					} else if (i == 7) {
+						window.location.href = "faq.html#resultHeaderTTT";
+					}
+				});
+			}
+		}
+	}
+
 	showRankingLikes() {
 		let sortedArray = this.testCentersController.findLikes();
 		let testCenterName =
@@ -313,7 +346,6 @@ export default class testCentersView {
 			.querySelectorAll("#filtroToggle")[0]
 			.addEventListener("click", () => {
 				let panel = document.querySelectorAll(".filtros1")[0];
-				console.log(panel);
 				if (panel.style.maxHeight) {
 					panel.style.maxHeight = null;
 					filtroToggle.innerHTML = "Mostrar";
