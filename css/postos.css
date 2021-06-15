@@ -220,7 +220,7 @@ nav ul li a:hover:after {
 .burger div {
 	width: 25px;
 	height: 4px;
-	background-color: var(--azul);
+	background-color: var(--bege);
 	margin: 5px;
 }
 
@@ -983,7 +983,7 @@ path.two {
 
 	.icon1 {
 		top: 11px;
-		left: 29px;
+		left: 40px;
 	}
 
 	.icon2 {

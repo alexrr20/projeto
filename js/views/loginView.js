@@ -27,8 +27,8 @@ export default class loginView {
 
 				// Wait 1 second before reloading, so the user can see the login success message
 				setTimeout(() => {
-					window.history.back;
-				}, 100);
+					history.go(-1);
+				}, 1000);
 			} catch (e) {
 				this.displayMessage(e, "orange");
 			}

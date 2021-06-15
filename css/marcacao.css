@@ -496,6 +496,7 @@ aside {
 	display: grid;
 	grid-template-columns: min-content auto;
 	grid-gap: 0.5em;
+	margin: 5px 0;
 }
 
 .radio__input input {
@@ -518,7 +519,7 @@ aside {
 	width: 1em;
 	height: 1em;
 	border-radius: 50%;
-	border: 0.1em solid currentColor;
+	border: 0.2em solid currentColor;
 	transform: translateY(-0.15em);
 }
 
@@ -552,6 +553,7 @@ input:checked + .radio__control::before {
 	cursor: pointer;
 	transform: scale(1);
 	transition-duration: 0.25s;
+	margin-top: 20px;
 	margin-left: 30px;
 	font-family: "Azo Sans", sans-serif;
 	font-weight: bold;
@@ -561,6 +563,13 @@ input:checked + .radio__control::before {
 	padding-left: 40px;
 	padding-right: 40px;
 	text-align: center;
+	transform: scale(1);
+	transition-duration: 0.25s;
+}
+
+#btnContinue:hover {
+	transform: scale(1.2);
+	transition-duration: 0.25s;
 }
 
 .faded {
@@ -644,6 +653,7 @@ input:checked + .radio__control::before {
 
 	.icon1 {
 		top: 11px;
+		left: 38px;
 	}
 
 	.icon2 {

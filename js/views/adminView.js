@@ -6,26 +6,65 @@ export default class adminView {
 		this.userController = new userController();
 		this.testCentersController = new testCentersController();
 
+		this.centerDD = document.querySelectorAll("#centerDD")[0];
 		this.usersDD = document.querySelectorAll("#usersDD")[0];
+		this.selectCenter = document.querySelectorAll("#btnSelectCenter")[0];
 		this.selectUser = document.querySelectorAll("#btnSelectUser")[0];
+		this.removeCenter = document.querySelectorAll("#btnRemoveCenter")[0];
 		this.removeUser = document.querySelectorAll("#btnRemoveUser")[0];
 		this.saveChanges = document.querySelectorAll("#btnSaveChanges")[0];
+		this.saveChangesCenter = document.querySelectorAll(
+			"#btnSaveChangesCenter"
+		)[0];
 		this.users = this.userController.users;
+		this.testCenters = this.testCentersController.testCenters;
+		this.inpCenter = document.querySelectorAll(".inpCenter");
 		this.inpUser = document.querySelectorAll(".inpUser");
 
-		this.fillDD();
+		this.fillDDUser();
 		this.bindRemoveUser();
 		this.bindSelectUser();
 		this.bindSaveChanges();
+		this.fillDDCenter();
+		this.bindSelectTestCenter();
+		this.bindRemoveCenter();
+		this.bindSaveChangesCenter();
 	}
 
-	fillDD() {
+	fillDDCenter() {
+		for (let i = 0; i < this.testCenters.length; i++) {
+			let option = document.createElement("option");
+			option.innerHTML = `${this.testCenters[i].testCenterName}`;
+			option.setAttribute(
+				"value",
+				`${this.testCenters[i].testCenterName}`
+			);
+			this.centerDD.appendChild(option);
+		}
+	}
+
+	fillDDUser() {
 		for (let i = 0; i < this.users.length; i++) {
 			let option = document.createElement("option");
 			option.innerHTML = `${this.users[i].usersName} / ${this.users[i].email}`;
 			option.setAttribute("value", `${this.users[i].email}`);
 			this.usersDD.appendChild(option);
 		}
+	}
+
+	bindSelectTestCenter() {
+		this.selectCenter.addEventListener("click", () => {
+			let testCenterInfo = this.testCentersController.getTestCenterInfo(
+				this.centerDD.value
+			);
+			this.inpCenter[0].value = testCenterInfo.testCenterName;
+			this.inpCenter[1].value = testCenterInfo.address;
+			this.inpCenter[2].value = testCenterInfo.contact.email;
+			this.inpCenter[3].value = testCenterInfo.contact.phone;
+			this.inpCenter[4].value = testCenterInfo.openHours;
+			this.inpCenter[5].value = testCenterInfo.website;
+			this.inpCenter[6].value = testCenterInfo.Latlng;
+		});
 	}
 
 	bindSelectUser() {
@@ -44,11 +83,35 @@ export default class adminView {
 		});
 	}
 
+	bindRemoveCenter() {
+		this.removeCenter.addEventListener("click", () => {
+			this.testCentersController.removeTestCenter(
+				this.centerDD.selectedIndex
+			);
+
+			history.go(0);
+		});
+	}
+
 	bindRemoveUser() {
 		this.removeUser.addEventListener("click", () => {
 			this.userController.removeUser(this.usersDD.selectedIndex);
-			this.usersDD.remove(
-				this.usersDD.options[this.usersDD.selectedIndex].text
+
+			history.go(0);
+		});
+	}
+
+	bindSaveChangesCenter() {
+		this.saveChangesCenter.addEventListener("click", () => {
+			this.testCentersController.editCenter(
+				this.centerDD.selectedIndex,
+				this.inpCenter[0].value,
+				this.inpCenter[1].value,
+				this.inpCenter[2].value,
+				this.inpCenter[3].value,
+				this.inpCenter[4].value,
+				this.inpCenter[5].value,
+				this.inpCenter[6].value
 			);
 		});
 	}

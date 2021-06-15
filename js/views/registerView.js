@@ -17,53 +17,73 @@ export default class registerView {
 		this.registerButton = document.getElementById("btnCriar");
 		this.bindRegisterForm();
 
-		this.messages = document.querySelector("#messages");
-		this.checkLoginStatus();
+		this.addDropdown();
 	}
 
 	bindRegisterForm() {
 		this.registerButton.addEventListener("click", () => {
-			try {
-				if (this.registerPw.value !== this.registerPw2.value) {
-					throw Error("As Passwords digitadas não coincidem!");
+			for (let i = 0; i < this.userController.users.length; i++) {
+				if (
+					this.registerEmail.value ==
+					this.userController.users[i].email
+				) {
+					this.displayMessage(
+						"Existe uma conta com o email introduzido",
+						"rgb(240, 135, 55)"
+					);
+					return;
 				}
-				this.userController.register(
-					this.registerUsersName.value,
-					this.registerDOB.value,
-					this.registerNIF.value,
-					this.registerCity.value,
-					this.registerGender.value,
-					this.registerEmail.value,
-					this.registerPhone.value,
-					this.registerPw.value
-				);
-				this.displayMessage(
-					"Utilizador registado com sucesso!",
-					"success"
-				);
-			} catch (e) {
-				this.displayMessage(e, "danger");
 			}
+			if (this.registerPw.value !== this.registerPw2.value) {
+				this.displayMessage(
+					"As palavras-passe não coincidem!",
+					"rgb(240, 135, 55)"
+				);
+				return;
+			}
+			if (!document.querySelectorAll("#chk18")[0].checked) {
+				this.displayMessage(
+					"Tem de ter mais de 18 anos para se registar",
+					"rgb(240, 135, 55)"
+				);
+				return;
+			}
+			this.userController.register(
+				this.registerUsersName.value,
+				this.registerDOB.value,
+				this.registerNIF.value,
+				this.registerCity.value,
+				this.registerGender.value,
+				this.registerEmail.value,
+				this.registerPhone.value,
+				this.registerPw.value
+			);
+			this.displayMessage("Utilizador registado com sucesso!", "#1e1c41");
 		});
 	}
 
-	checkLoginStatus() {
-		if (this.userController.isLogged()) {
-			this.updateButtons("login");
-		} else {
-			this.updateButtons("logout");
-		}
-	}
+	addDropdown() {
+		let inpGender = document.querySelectorAll("#inpGender")[0];
+		let dropdown = document.querySelectorAll(".dropdown")[0];
+		let dropdownList = document.querySelectorAll(".dropdownList")[0];
 
-	updateButtons(event) {
-		switch (event) {
-			case "login":
-				this.loginButton.style.visibility = "hidden";
-				this.logoutButton.style.visibility = "visible";
-				break;
-			case "logout":
-				this.loginButton.style.visibility = "visible";
-				this.logoutButton.style.visibility = "hidden";
+		inpGender.addEventListener("focus", () => {
+			dropdown.classList.replace("hidden", "shown");
+		});
+
+		inpGender.addEventListener("focusout", () => {
+			setTimeout(function () {
+				dropdown.classList.replace("shown", "hidden");
+			}, 140);
+		});
+
+		for (let i = 0; i < dropdownList.childNodes.length; i++) {
+			if (dropdownList.childNodes[i].nodeName == "LI") {
+				dropdownList.childNodes[i].addEventListener("click", () => {
+					console.log(dropdownList.childNodes[i].innerHTML);
+					inpGender.value = dropdownList.childNodes[i].innerHTML;
+				});
+			}
 		}
 	}
 

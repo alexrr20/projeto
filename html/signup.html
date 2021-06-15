@@ -12,7 +12,7 @@
 		<img src="../img/bg2.png" class="bgImg" />
 		<header>
 			<div id="logoContainer">
-				<img src="../img/logo.svg" alt="logo" id="logo" />
+				<img src="../img/testlogo2.png" alt="logo" id="logo" />
 			</div>
 			<nav id="navbar">
 				<ul id="navList">
@@ -245,8 +245,6 @@
 									class="inpUser"
 									min="1"
 									max="999999999"
-									onkeypress="return isNumeric(event)"
-									oninput="maxLengthCheck(this)"
 								/>
 							</div>
 						</div>
@@ -323,7 +321,17 @@
 									placeholder="Gênero"
 									id="inpGender"
 									class="inpUser"
+									autocomplete="off"
 								/>
+								<div class="dropdown hidden">
+									<div class="list-container">
+										<ul class="dropdownList">
+											<li>Masculino</li>
+											<li>Feminino</li>
+											<li>Outro</li>
+										</ul>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -532,8 +540,9 @@
 												fill="none"
 											/>
 											<circle cx="12" cy="12" r="9" />
-											<path d="M9 12l2 2l4 -4" /></svg
-										>Pelo menos 8 caracteres
+											<path d="M9 12l2 2l4 -4" />
+										</svg>
+										<p>Pelo menos 8 caracteres</p>
 									</li>
 									<li>
 										<svg
@@ -558,8 +567,9 @@
 												fill="none"
 											/>
 											<circle cx="12" cy="12" r="9" />
-											<path d="M9 12l2 2l4 -4" /></svg
-										>Caracteres especiais (!”#$%&/=)
+											<path d="M9 12l2 2l4 -4" />
+										</svg>
+										<p>Caracteres especiais (!”#$%&/=)</p>
 									</li>
 									<li>
 										<svg
@@ -584,8 +594,9 @@
 												fill="none"
 											/>
 											<circle cx="12" cy="12" r="9" />
-											<path d="M9 12l2 2l4 -4" /></svg
-										>Números
+											<path d="M9 12l2 2l4 -4" />
+										</svg>
+										<p>Números</p>
 									</li>
 									<li>
 										<svg
@@ -610,8 +621,9 @@
 												fill="none"
 											/>
 											<circle cx="12" cy="12" r="9" />
-											<path d="M9 12l2 2l4 -4" /></svg
-										>Letras especiais
+											<path d="M9 12l2 2l4 -4" />
+										</svg>
+										<p>Letras especiais</p>
 									</li>
 									<li>
 										<svg
@@ -636,8 +648,12 @@
 												fill="none"
 											/>
 											<circle cx="12" cy="12" r="9" />
-											<path d="M9 12l2 2l4 -4" /></svg
-										>Diferente de outras palavras-passe suas
+											<path d="M9 12l2 2l4 -4" />
+										</svg>
+										<p>
+											Diferente de outras palavras-passe
+											suas
+										</p>
 									</li>
 								</ul>
 							</div>
@@ -646,7 +662,7 @@
 				</form>
 				<label class="checkbox">
 					<span class="checkbox__input">
-						<input type="checkbox" name="checked" checked />
+						<input type="checkbox" name="checked" id="chk18" />
 						<span class="checkbox__control"
 							><svg
 								xmlns="http://www.w3.org/2000/svg"

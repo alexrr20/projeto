@@ -294,9 +294,17 @@ form {
 	border: 0;
 	color: var(--bege);
 	font-family: "Azo Sans", sans-serif;
-	font-weight: 900;
+	font-weight: 700;
 	border-radius: 4px;
 	font-size: 25px;
+	cursor: pointer;
+	transform: scale(1);
+	transition-duration: 0.25s;
+}
+
+#btnLogin:hover {
+	transform: scale(1.2);
+	transition-duration: 0.25s;
 }
 
 #forgotpw {

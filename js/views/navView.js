@@ -20,16 +20,6 @@ export default class navView {
 	bindBtnBurger() {
 		this.burger.addEventListener("click", () => {
 			this.nav.classList.toggle("nav-active");
-			if (this.nav.classList.contains("nav-active")) {
-				for (child in this.burger.children) {
-					this.burger.children[child].style.backgroundColor = "white";
-				}
-			} else {
-				for (child in this.burger.children) {
-					this.burger.children[child].style.backgroundColor =
-						"#1abf5b";
-				}
-			}
 		});
 	}
 

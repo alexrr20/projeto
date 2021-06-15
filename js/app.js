@@ -21,6 +21,7 @@ class App {
 			marcacao: [navView, newAppointmentView],
 			validacao: [navView],
 			admin: [adminView],
+			recover: [navView],
 		};
 
 		// importa dados dummy para testes

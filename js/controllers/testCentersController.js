@@ -62,4 +62,35 @@ export default class testCenterController {
 	findLikes() {
 		return this.testCenters.sort((a, b) => (a.likes < b.likes ? 1 : -1));
 	}
+
+	removeTestCenter(centerIndex) {
+		let filteredArray = this.testCenters.filter(function (
+			value,
+			index,
+			arr
+		) {
+			return index != centerIndex;
+		});
+		localStorage.setItem("testCenters", JSON.stringify(filteredArray));
+	}
+
+	editCenter(
+		index,
+		testCenterName,
+		address,
+		email,
+		phone,
+		openHours,
+		website,
+		Latlng
+	) {
+		this.testCenters[index].testCenterName = testCenterName;
+		this.testCenters[index].address = address;
+		this.testCenters[index].contact.email = email;
+		this.testCenters[index].contact.phone = phone;
+		this.testCenters[index].openHours = openHours;
+		this.testCenters[index].website = website;
+		this.testCenters[index].Latlng = Latlng;
+		localStorage.setItem("testCenters", JSON.stringify(this.testCenters));
+	}
 }

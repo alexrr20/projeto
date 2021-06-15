@@ -20,7 +20,7 @@
 						"
 					>
 						<label for="">NOME</label>
-						<input type="text" />
+						<input type="text" class="inpCenter" />
 					</div>
 					<div
 						style="
@@ -31,7 +31,7 @@
 						"
 					>
 						<label for="">MORADA</label>
-						<input type="text" />
+						<input type="text" class="inpCenter" />
 					</div>
 					<div
 						style="
@@ -41,8 +41,19 @@
 							margin: 20px;
 						"
 					>
-						<label for="">CONTACTO</label>
-						<input type="text" />
+						<label for="">EMAIL</label>
+						<input type="text" class="inpCenter" />
+					</div>
+					<div
+						style="
+							display: flex;
+							flex-direction: column;
+							width: 200px;
+							margin: 20px;
+						"
+					>
+						<label for="">PHONE</label>
+						<input type="text" class="inpCenter" />
 					</div>
 					<div
 						style="
@@ -53,7 +64,7 @@
 						"
 					>
 						<label for="">HORARIO</label>
-						<input type="text" />
+						<input type="text" class="inpCenter" />
 					</div>
 					<div
 						style="
@@ -64,7 +75,50 @@
 						"
 					>
 						<label for="">WEBSITE</label>
-						<input type="text" />
+						<input type="text" class="inpCenter" />
+					</div>
+					<div
+						style="
+							display: flex;
+							flex-direction: column;
+							width: 200px;
+							margin: 20px;
+						"
+					>
+						<label for="">LATITUDE/LONGITUDE</label>
+						<input type="text" class="inpCenter" />
+					</div>
+					<button
+						style="margin-left: 30px; height: 50px; width: 100px"
+						id="btnSaveChangesCenter"
+						type="button"
+					>
+						SAVE INFO
+					</button>
+					<select name="users" id="centerDD"></select>
+					<div style="display: flex">
+						<button
+							style="
+								margin-left: 30px;
+								height: 50px;
+								width: 100px;
+							"
+							id="btnSelectCenter"
+							type="button"
+						>
+							SELECT TEST CENTER
+						</button>
+						<button
+							style="
+								margin-left: 30px;
+								height: 50px;
+								width: 100px;
+							"
+							id="btnRemoveCenter"
+							type="button"
+						>
+							REMOVE TEST CENTER
+						</button>
 					</div>
 				</form>
 			</div>

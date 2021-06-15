@@ -4,15 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../css/login.css" />
+		<link rel="stylesheet" href="../css/recover.css" />
 		<link rel="icon" href="../img/logo3.png" />
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css"
 		/>
-		<title>Login / TEST TEST TEST</title>
+		<title>Recuperar palavra-passe / TEST TEST TEST</title>
 	</head>
-	<body class="light loginBody">
+	<body class="light recoverBody">
 		<header>
 			<div id="logoContainer">
 				<img src="../img/testlogo2.png" alt="logo" id="logo" />
@@ -121,63 +121,18 @@
 		</header>
 		<main>
 			<div class="container">
-				<h1>Iniciar Sessão</h1>
+				<h1>Recuperar palavra-passe</h1>
 				<div class="form">
 					<form action="">
 						<input
 							type="text"
-							placeholder="Utilizador"
+							placeholder="Email associado"
 							id="inpEmail"
 							class="input"
 						/>
-						<input
-							type="password"
-							placeholder="Palavra-Passe"
-							id="inpPw"
-							class="input"
-						/>
-						<a href="recover.html" id="forgotpw"
-							>Esqueceu-se da palavra-passe?</a
-						>
-						<label class="checkbox">
-							<span class="checkbox__input">
-								<input
-									type="checkbox"
-									name="checked"
-									id="chkSession"
-								/>
-								<span class="checkbox__control"
-									><svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="
-											icon icon-tabler icon-tabler-check
-										"
-										width="14"
-										height="14"
-										viewBox="0 0 24 24"
-										stroke-width="3"
-										stroke="#1e1c41"
-										fill="none"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									>
-										<path
-											stroke="none"
-											d="M0 0h24v24H0z"
-											fill="none"
-										/>
-										<path d="M5 12l5 5l10 -10" /></svg
-								></span>
-							</span>
-							<span class="radio__label"
-								>Manter a sessão iniciada</span
-							>
-						</label>
-						<button type="button" id="btnLogin">Entrar</button>
-						<p id="linkNewAccount">
-							<span><a href="signup.html">Clique aqui</a></span
-							><br />se ainda não tem conta
-						</p>
+						<button type="button" id="btnRecover">
+							Enviar email de recuperação
+						</button>
 					</form>
 				</div>
 			</div>

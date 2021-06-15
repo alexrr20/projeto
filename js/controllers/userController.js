@@ -6,28 +6,24 @@ export default class userController {
 	}
 
 	register(usersName, dob, nif, city, gender, email, phone, password) {
-		if (this.users.find((user) => user.email === email)) {
-			throw Error(`Utilizador com o email "${email}" já existe!`);
-		} else {
-			const newId =
-				this.users.length > 0
-					? this.users[this.users.length - 1].id + 1
-					: 1;
-			this.users.push(
-				new userModel(
-					newId,
-					usersName,
-					dob,
-					nif,
-					city,
-					gender,
-					email,
-					phone,
-					password
-				)
-			);
-			localStorage.setItem("users", JSON.stringify(this.users));
-		}
+		const newId =
+			this.users.length > 0
+				? this.users[this.users.length - 1].id + 1
+				: 1;
+		this.users.push(
+			new userModel(
+				newId,
+				usersName,
+				dob,
+				nif,
+				city,
+				gender,
+				email,
+				phone,
+				password
+			)
+		);
+		localStorage.setItem("users", JSON.stringify(this.users));
 	}
 
 	login(email, password, check) {
